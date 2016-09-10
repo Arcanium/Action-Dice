@@ -1,0 +1,9 @@
+c:\users\arcanium\documents\visual studio 2015\Projects\Action Dice\Action Dice\bin\Debug\Action Dice.exe.config
+c:\users\arcanium\documents\visual studio 2015\Projects\Action Dice\Action Dice\bin\Debug\Action Dice.exe
+c:\users\arcanium\documents\visual studio 2015\Projects\Action Dice\Action Dice\bin\Debug\Action Dice.pdb
+c:\users\arcanium\documents\visual studio 2015\Projects\Action Dice\Action Dice\obj\Debug\Action Dice.csprojResolveAssemblyReference.cache
+c:\users\arcanium\documents\visual studio 2015\Projects\Action Dice\Action Dice\obj\Debug\Action_Dice.Form1.resources
+c:\users\arcanium\documents\visual studio 2015\Projects\Action Dice\Action Dice\obj\Debug\Action_Dice.Properties.Resources.resources
+c:\users\arcanium\documents\visual studio 2015\Projects\Action Dice\Action Dice\obj\Debug\Action Dice.csproj.GenerateResource.Cache
+c:\users\arcanium\documents\visual studio 2015\Projects\Action Dice\Action Dice\obj\Debug\Action Dice.exe
+c:\users\arcanium\documents\visual studio 2015\Projects\Action Dice\Action Dice\obj\Debug\Action Dice.pdb
