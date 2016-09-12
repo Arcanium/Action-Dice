@@ -120,12 +120,12 @@ namespace Action_Dice
 
                 string[] contents = value.Split(' ');
                 //Grab the first character of the first string.
-                attackRoll = Convert.ToInt32(contents[0][0]);
+                attackRoll = Convert.ToInt32(contents[0][0].ToString());
                 attackBonus = Convert.ToInt32(contents[2]);
-                if (contents.Length > 2)
+                defenseType = contents[3];
+                if (contents.Length > 4)
                 {
-                    defenseType = contents[3];
-                    defenseRoll = Convert.ToInt32(contents[4][0]);
+                    defenseRoll = Convert.ToInt32(contents[4][0].ToString());
                     defenseBonus = Convert.ToInt32(contents[6]);
                 }
             }

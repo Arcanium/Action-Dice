@@ -262,20 +262,57 @@ namespace Action_Dice
 
         #endregion
 
+        #region Battle
         private void Attack_Click(object sender, EventArgs e)
         {
-            if(BattleTextBox.Text != "")
+            if (BattleTextBox.Text != "")
             {
                 try
                 {
                     string[] contents = BattleTextBox.Text.Split(' ');
+                    BattleTextBox.Text = "";
                     BattleManager.AddAttack(BattleListBox, Convert.ToInt32(contents[0]), Convert.ToInt32(contents[1]));
                 }
-                catch (DivideByZeroException) //Placeholder.
+                catch (IndexOutOfRangeException) //Placeholder.
                 {
 
                 }
             }
         }
+
+        private void Defend_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (BattleTextBox.Text != "")
+                {
+                    string[] contents = BattleTextBox.Text.Split(' ');
+                    BattleTextBox.Text = "";
+                    BattleManager.AddDefend(BattleListBox, contents[0], Convert.ToInt32(contents[1]), Convert.ToInt32(contents[2]));
+                }
+                else
+                {
+                    BattleManager.AddDefend(BattleListBox, BattleManager.PASS);
+                }
+            }
+            catch (IndexOutOfRangeException)
+            {
+
+            }
+        }
+
+        private void Resolve_Click(object sender, EventArgs e)
+        {
+            BattleManager.Resolve(BattleListBox, DamageListBox);
+        }
+
+
+
+
+
+
+
+
+        #endregion
     }
 }

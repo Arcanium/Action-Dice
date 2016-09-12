@@ -238,6 +238,7 @@
             this.Defend.TabIndex = 20;
             this.Defend.Text = "Add Defend";
             this.Defend.UseVisualStyleBackColor = true;
+            this.Defend.Click += new System.EventHandler(this.Defend_Click);
             // 
             // Resolve
             // 
@@ -247,6 +248,7 @@
             this.Resolve.TabIndex = 21;
             this.Resolve.Text = "Resolve";
             this.Resolve.UseVisualStyleBackColor = true;
+            this.Resolve.Click += new System.EventHandler(this.Resolve_Click);
             // 
             // DamageListBox
             // 
@@ -312,6 +314,11 @@
             this.Redo.Text = "Redo";
             this.Redo.UseVisualStyleBackColor = true;
             this.Redo.Click += new System.EventHandler(this.Redo_Click);
+            //
+            //
+            //
+            BattleManager.Start(this.BattleListBox, this.DamageListBox);
+            InitiativeManager.Start(this.InitiativeListBox, this.PlayerTurnLabel);
             // 
             // Form1
             // 
