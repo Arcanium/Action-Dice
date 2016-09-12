@@ -306,13 +306,19 @@ namespace Action_Dice
             BattleManager.Resolve(BattleListBox, DamageListBox);
         }
 
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            DamageListBox.Items.Clear();
+            DamageListBox.Items.Add(0);
+        }
 
-
-
-
-
-
+        private void BattleClear_Click(object sender, EventArgs e)
+        {
+            BattleManager.Start(BattleListBox, DamageListBox);
+        }
 
         #endregion
+
+
     }
 }

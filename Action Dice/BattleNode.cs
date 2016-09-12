@@ -30,11 +30,11 @@ namespace Action_Dice
         {
             get
             {
-                return defenseRoll;
+                return attackBonus;
             }
             set
             {
-                defenseRoll = value;
+                attackBonus = value;
             }
         }
 
@@ -120,12 +120,12 @@ namespace Action_Dice
 
                 string[] contents = value.Split(' ');
                 //Grab the first character of the first string.
-                attackRoll = Convert.ToInt32(contents[0][0].ToString());
+                attackRoll = Convert.ToInt32(contents[0].Replace("d6", ""));
                 attackBonus = Convert.ToInt32(contents[2]);
                 defenseType = contents[3];
                 if (contents.Length > 4)
                 {
-                    defenseRoll = Convert.ToInt32(contents[4][0].ToString());
+                    defenseRoll = Convert.ToInt32(contents[4].Replace("d6", ""));
                     defenseBonus = Convert.ToInt32(contents[6]);
                 }
             }

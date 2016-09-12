@@ -275,6 +275,7 @@
             this.Reset.TabIndex = 24;
             this.Reset.Text = "Reset";
             this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
             // 
             // BattleClear
             // 
@@ -284,6 +285,7 @@
             this.BattleClear.TabIndex = 25;
             this.BattleClear.Text = "Clear";
             this.BattleClear.UseVisualStyleBackColor = true;
+            this.BattleClear.Click += new System.EventHandler(this.BattleClear_Click);
             // 
             // Down
             // 
@@ -315,10 +317,10 @@
             this.Redo.UseVisualStyleBackColor = true;
             this.Redo.Click += new System.EventHandler(this.Redo_Click);
             //
+            //Initialize components.
             //
-            //
-            BattleManager.Start(this.BattleListBox, this.DamageListBox);
             InitiativeManager.Start(this.InitiativeListBox, this.PlayerTurnLabel);
+            BattleManager.Start(this.BattleListBox, DamageListBox);
             // 
             // Form1
             // 

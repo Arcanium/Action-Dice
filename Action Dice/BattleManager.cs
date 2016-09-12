@@ -43,7 +43,7 @@ namespace Action_Dice
                         if (defenseType.ToLower().Contains(BLOCK.ToLower()) || defenseType.ToUpper().Contains(BLOCK.ToUpper()))
                             item = item + " " + BLOCK + " " + Convert.ToString(defenseRoll) + "d6 + " + Convert.ToString(defenseBonus);
                         else if (defenseType.ToLower().Contains(DODGE.ToLower()) || defenseType.ToUpper().Contains(DODGE.ToUpper()))
-                            item = item + " " + BLOCK + " " + Convert.ToString(defenseRoll) + "d6 + " + Convert.ToString(defenseBonus);
+                            item = item + " " + DODGE + " " + Convert.ToString(defenseRoll) + "d6 + " + Convert.ToString(defenseBonus);
                     }
                     box.Items.RemoveAt(index);
                     box.Items.Insert(index, item);
