@@ -273,7 +273,11 @@ namespace Action_Dice
                     BattleTextBox.Text = "";
                     BattleManager.AddAttack(BattleListBox, Convert.ToInt32(contents[0]), Convert.ToInt32(contents[1]));
                 }
-                catch (IndexOutOfRangeException) //Placeholder.
+                catch (IndexOutOfRangeException)
+                {
+
+                }
+                catch (FormatException)
                 {
 
                 }
@@ -296,6 +300,10 @@ namespace Action_Dice
                 }
             }
             catch (IndexOutOfRangeException)
+            {
+
+            }
+            catch (FormatException)
             {
 
             }
