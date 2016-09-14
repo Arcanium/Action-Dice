@@ -13,6 +13,7 @@ namespace Action_Dice
 
         public const string TOP_OF_ROUND = "0 Top Of The Round";
         public const string TOP_LABEL_TEXT = "Top of the Round -- All Action Dice refill!";
+        public const string DOWN = " Down";
 
         #endregion
 
@@ -25,9 +26,9 @@ namespace Action_Dice
             label.Text = TOP_LABEL_TEXT;
         }
 
-        public static void AddListPlace(System.Windows.Forms.ListBox box, string name, int position)
+        public static void AddListPlace(System.Windows.Forms.ListBox box, string name, int position = -1)
         {
-            if (position > box.Items.Count)
+            if (position > box.Items.Count || position < 0)
                 position = box.Items.Count;
 
             InitiativeListNode node = new InitiativeListNode();
@@ -116,6 +117,14 @@ namespace Action_Dice
             {
                 undoBox.RemoveAt(undoBox.Count - 1);
             }
+        }
+
+        public static string UpdatePlayerTurnLabel(System.Windows.Forms.ListBox box)
+        {
+            if (!box.Items[0].ToString().Contains(InitiativeManager.TOP_OF_ROUND))
+                return box.Items[0].ToString().Split(' ')[1];
+            else
+                return InitiativeManager.TOP_LABEL_TEXT;
         }
 
         #endregion

@@ -33,8 +33,10 @@ namespace Action_Dice
                 InitiativeTextBox.Text = "";
                 try
                 {
-                    InitiativeManager.AddListPlace(InitiativeListBox, contents[0], Convert.ToInt32(contents[1]));
-
+                    if(contents.Length == 1)
+                        InitiativeManager.AddListPlace(InitiativeListBox, contents[0]);
+                    else
+                        InitiativeManager.AddListPlace(InitiativeListBox, contents[0], Convert.ToInt32(contents[1]));
                     undoRedoTracker = InitiativeManager.UpdateUndoBox(InitiativeListBox, undoInitiativeListBox, undoRedoTracker);
                 }
                 catch (IndexOutOfRangeException)
@@ -62,11 +64,7 @@ namespace Action_Dice
                         InitiativeManager.AddRollPlace(InitiativeListBox, contents[0], Convert.ToInt32(contents[1]));
 
                     undoRedoTracker = InitiativeManager.UpdateUndoBox(InitiativeListBox, undoInitiativeListBox, undoRedoTracker);
-
-                    if (!InitiativeListBox.Items[0].ToString().Contains(InitiativeManager.TOP_OF_ROUND))
-                        PlayerTurnLabel.Text = InitiativeListBox.Items[0].ToString().Split(' ')[1];
-                    else
-                        PlayerTurnLabel.Text = InitiativeManager.TOP_LABEL_TEXT;
+                    PlayerTurnLabel.Text = InitiativeManager.UpdatePlayerTurnLabel(InitiativeListBox);
                 }
                 catch (IndexOutOfRangeException)
                 {
@@ -94,11 +92,7 @@ namespace Action_Dice
                     }
 
                     undoRedoTracker = InitiativeManager.UpdateUndoBox(InitiativeListBox, undoInitiativeListBox, undoRedoTracker);
-
-                    if (!InitiativeListBox.Items[0].ToString().Contains(InitiativeManager.TOP_OF_ROUND))
-                        PlayerTurnLabel.Text = InitiativeListBox.Items[0].ToString().Split(' ')[1];
-                    else
-                        PlayerTurnLabel.Text = InitiativeManager.TOP_LABEL_TEXT;
+                    PlayerTurnLabel.Text = InitiativeManager.UpdatePlayerTurnLabel(InitiativeListBox);
                 }
                 catch (IndexOutOfRangeException)
                 {
@@ -118,13 +112,9 @@ namespace Action_Dice
                 InitiativeListBox.Items.RemoveAt(0);
                 InitiativeListBox.Items.Insert(InitiativeListBox.Items.Count, tmpNext);
             }
-            while (InitiativeListBox.Items[0].ToString().EndsWith(" Down"));
+            while (InitiativeListBox.Items[0].ToString().EndsWith(InitiativeManager.DOWN));
 
-            if (!InitiativeListBox.Items[0].ToString().Contains(InitiativeManager.TOP_OF_ROUND))
-                PlayerTurnLabel.Text = InitiativeListBox.Items[0].ToString().Split(' ')[1];
-            else
-                PlayerTurnLabel.Text = InitiativeManager.TOP_LABEL_TEXT;
-
+            PlayerTurnLabel.Text = InitiativeManager.UpdatePlayerTurnLabel(InitiativeListBox);
             undoRedoTracker = InitiativeManager.UpdateUndoBox(InitiativeListBox, undoInitiativeListBox, undoRedoTracker);
         }
 
@@ -135,11 +125,7 @@ namespace Action_Dice
             InitiativeListBox.Items.RemoveAt(0);
             InitiativeListBox.Items.Insert(InitiativeListBox.Items.Count, tmpStep);
 
-            if (!InitiativeListBox.Items[0].ToString().Contains(InitiativeManager.TOP_OF_ROUND))
-                PlayerTurnLabel.Text = InitiativeListBox.Items[0].ToString().Split(' ')[1];
-            else
-                PlayerTurnLabel.Text = InitiativeManager.TOP_LABEL_TEXT;
-
+            PlayerTurnLabel.Text = InitiativeManager.UpdatePlayerTurnLabel(InitiativeListBox);
             undoRedoTracker = InitiativeManager.UpdateUndoBox(InitiativeListBox, undoInitiativeListBox, undoRedoTracker);
         }
 
@@ -170,12 +156,7 @@ namespace Action_Dice
                     }
 
                     undoRedoTracker = InitiativeManager.UpdateUndoBox(InitiativeListBox, undoInitiativeListBox, undoRedoTracker);
-
-                    if (!InitiativeListBox.Items[0].ToString().Contains(InitiativeManager.TOP_OF_ROUND))
-                        PlayerTurnLabel.Text = InitiativeListBox.Items[0].ToString().Split(' ')[1];
-                    else
-                        PlayerTurnLabel.Text = InitiativeManager.TOP_LABEL_TEXT;
-
+                    PlayerTurnLabel.Text = InitiativeManager.UpdatePlayerTurnLabel(InitiativeListBox);
                     InitiativeManager.UpdatePositions(InitiativeListBox);
                 }
                 catch (IndexOutOfRangeException)
@@ -199,15 +180,15 @@ namespace Action_Dice
         {
             if (!InitiativeListBox.Items[0].ToString().Contains(InitiativeManager.TOP_OF_ROUND))
             {
-                if (InitiativeListBox.Items[0].ToString().EndsWith(" Down"))
+                if (InitiativeListBox.Items[0].ToString().EndsWith(InitiativeManager.DOWN))
                 {
-                    string replace = InitiativeListBox.Items[0].ToString().Replace(" Down", "");
+                    string replace = InitiativeListBox.Items[0].ToString().Replace(InitiativeManager.DOWN, "");
                     InitiativeListBox.Items.RemoveAt(0);
                     InitiativeListBox.Items.Insert(0, replace);
                 }
                 else
                 {
-                    string insert = InitiativeListBox.Items[0].ToString().Insert(InitiativeListBox.Items[0].ToString().Length, " Down");
+                    string insert = InitiativeListBox.Items[0].ToString().Insert(InitiativeListBox.Items[0].ToString().Length, InitiativeManager.DOWN);
                     InitiativeListBox.Items.RemoveAt(0);
                     InitiativeListBox.Items.Insert(0, insert);
                 }
@@ -223,10 +204,7 @@ namespace Action_Dice
                 InitiativeListBox.Items.Clear();
                 InitiativeListBox.Items.AddRange(undoInitiativeListBox[undoRedoTracker - 1].Items);
 
-                if (!InitiativeListBox.Items[0].ToString().Contains(InitiativeManager.TOP_OF_ROUND))
-                    PlayerTurnLabel.Text = InitiativeListBox.Items[0].ToString().Split(' ')[1];
-                else
-                    PlayerTurnLabel.Text = InitiativeManager.TOP_LABEL_TEXT;
+                PlayerTurnLabel.Text = InitiativeManager.UpdatePlayerTurnLabel(InitiativeListBox);
             }
         }
 
@@ -237,6 +215,8 @@ namespace Action_Dice
                 undoRedoTracker++;
                 InitiativeListBox.Items.Clear();
                 InitiativeListBox.Items.AddRange(undoInitiativeListBox[undoRedoTracker - 1].Items);
+
+                PlayerTurnLabel.Text = InitiativeManager.UpdatePlayerTurnLabel(InitiativeListBox);
             }
         }
 
