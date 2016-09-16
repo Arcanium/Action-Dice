@@ -54,7 +54,9 @@ namespace Action_Dice
         public static void AddRollPlace(System.Windows.Forms.ListBox box, string name, int roll = -1)
         {
             Dice roller = new Dice();
-            if (roll > 12 || roll < 2)
+            if (roll > 12)
+                roll = 12;
+            else if (roll < 2)
                 roll = roller.roll(6, 2);
 
             InitiativeListNode node = new InitiativeListNode();
