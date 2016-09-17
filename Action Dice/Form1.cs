@@ -231,7 +231,7 @@ namespace Action_Dice
                 {
                     TreasureListBox.Items.Clear();
                     TreasureListBox.Items.Add(Treasure.compute(Convert.ToInt32(TreasureTextBox.Text)));
-                    TreasureTextBox.Text = "";
+                    TreasureTextBox.Focus();
                 }
                 catch (FormatException)
                 {
@@ -305,8 +305,8 @@ namespace Action_Dice
             BattleManager.Start(BattleListBox, DamageListBox);
         }
 
+
         #endregion
-
-
+        
     }
 }

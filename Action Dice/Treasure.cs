@@ -31,11 +31,15 @@ namespace Action_Dice
 
             int lootType = roller.roll(20);
 
-            if (lootType <= 3)
+            if (lootType == 1)
+            {
+                return "+" + (1 + dungeonBonus) + " Potion of Healing";
+            }
+            else if (lootType <= 4)
             {
                 result = result + "+" + (1 + dungeonBonus) + " Potion of ";
             }
-            else if (lootType <= 6)
+            else if (lootType <= 7)
             {
                 result = result + "+" + (2 + dungeonBonus) + " Potion of ";
             }

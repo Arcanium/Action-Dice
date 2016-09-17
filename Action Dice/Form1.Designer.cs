@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.AddList = new System.Windows.Forms.Button();
             this.AddRoll = new System.Windows.Forms.Button();
@@ -57,6 +58,16 @@
             this.Down = new System.Windows.Forms.Button();
             this.Undo = new System.Windows.Forms.Button();
             this.Redo = new System.Windows.Forms.Button();
+            this.AddListTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.AddRollTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.AddCountTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.DownTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.NextTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.StepTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.MoveListTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.AttackTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.DefendTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.ResolveTooltip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // AddList
@@ -66,6 +77,7 @@
             this.AddList.Size = new System.Drawing.Size(75, 23);
             this.AddList.TabIndex = 0;
             this.AddList.Text = "Add List";
+            this.AddListTooltip.SetToolTip(this.AddList, "Enter a name and number, for the position of the list to place it on.");
             this.AddList.UseVisualStyleBackColor = true;
             this.AddList.Click += new System.EventHandler(this.AddList_Click);
             // 
@@ -76,6 +88,7 @@
             this.AddRoll.Size = new System.Drawing.Size(75, 23);
             this.AddRoll.TabIndex = 1;
             this.AddRoll.Text = "Add Roll";
+            this.AddRollTooltip.SetToolTip(this.AddRoll, "Enter a name and number, to assign the player a roll.");
             this.AddRoll.UseVisualStyleBackColor = true;
             this.AddRoll.Click += new System.EventHandler(this.AddRoll_Click);
             // 
@@ -86,6 +99,7 @@
             this.AddCount.Size = new System.Drawing.Size(75, 23);
             this.AddCount.TabIndex = 2;
             this.AddCount.Text = "Add Count";
+            this.AddCountTooltip.SetToolTip(this.AddCount, "Enter a name and number, for the number of mobs wanted.");
             this.AddCount.UseVisualStyleBackColor = true;
             this.AddCount.Click += new System.EventHandler(this.AddCount_Click);
             // 
@@ -96,6 +110,7 @@
             this.Next.Size = new System.Drawing.Size(75, 23);
             this.Next.TabIndex = 3;
             this.Next.Text = "Next";
+            this.NextTooltip.SetToolTip(this.Next, "Moves to the next player that isn't down.");
             this.Next.UseVisualStyleBackColor = true;
             this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
@@ -106,6 +121,7 @@
             this.Step.Size = new System.Drawing.Size(75, 23);
             this.Step.TabIndex = 4;
             this.Step.Text = "Step";
+            this.StepTooltip.SetToolTip(this.Step, "Moves to the next item in the list.");
             this.Step.UseVisualStyleBackColor = true;
             this.Step.Click += new System.EventHandler(this.Step_Click);
             // 
@@ -116,6 +132,7 @@
             this.MoveList.Size = new System.Drawing.Size(75, 23);
             this.MoveList.TabIndex = 5;
             this.MoveList.Text = "Move List";
+            this.MoveListTooltip.SetToolTip(this.MoveList, "Enter a name and number, to move the character to that position.");
             this.MoveList.UseVisualStyleBackColor = true;
             this.MoveList.Click += new System.EventHandler(this.MoveList_Click);
             // 
@@ -216,9 +233,9 @@
             this.BattleLabel.AutoSize = true;
             this.BattleLabel.Location = new System.Drawing.Point(1024, 33);
             this.BattleLabel.Name = "BattleLabel";
-            this.BattleLabel.Size = new System.Drawing.Size(105, 13);
+            this.BattleLabel.Size = new System.Drawing.Size(110, 13);
             this.BattleLabel.TabIndex = 18;
-            this.BattleLabel.Text = "Attack and Defends:";
+            this.BattleLabel.Text = "Attacks and Defends:";
             // 
             // Attack
             // 
@@ -227,6 +244,7 @@
             this.Attack.Size = new System.Drawing.Size(75, 23);
             this.Attack.TabIndex = 19;
             this.Attack.Text = "Add Attack";
+            this.AttackTooltip.SetToolTip(this.Attack, "Enter two numbers separated by a space, for the attack roll and attack bonus.");
             this.Attack.UseVisualStyleBackColor = true;
             this.Attack.Click += new System.EventHandler(this.Attack_Click);
             // 
@@ -237,6 +255,7 @@
             this.Defend.Size = new System.Drawing.Size(75, 23);
             this.Defend.TabIndex = 20;
             this.Defend.Text = "Add Defend";
+            this.DefendTooltip.SetToolTip(this.Defend, "Enter nothing to pass, or block or dodge followed by two numbers all separated by a space, for the defense roll and bonus.");
             this.Defend.UseVisualStyleBackColor = true;
             this.Defend.Click += new System.EventHandler(this.Defend_Click);
             // 
@@ -247,6 +266,7 @@
             this.Resolve.Size = new System.Drawing.Size(75, 23);
             this.Resolve.TabIndex = 21;
             this.Resolve.Text = "Resolve";
+            this.ResolveTooltip.SetToolTip(this.Resolve, "Resolves all complete attacks and defends.");
             this.Resolve.UseVisualStyleBackColor = true;
             this.Resolve.Click += new System.EventHandler(this.Resolve_Click);
             // 
@@ -294,6 +314,7 @@
             this.Down.Size = new System.Drawing.Size(75, 23);
             this.Down.TabIndex = 26;
             this.Down.Text = "Down";
+            this.DownTooltip.SetToolTip(this.Down, "Marks a character or enemy as downed.");
             this.Down.UseVisualStyleBackColor = true;
             this.Down.Click += new System.EventHandler(this.Down_Click);
             // 
@@ -317,10 +338,10 @@
             this.Redo.UseVisualStyleBackColor = true;
             this.Redo.Click += new System.EventHandler(this.Redo_Click);
             //
-            //Initialize components.
+            //Initialize Components
             //
             InitiativeManager.Start(this.InitiativeListBox, this.PlayerTurnLabel);
-            BattleManager.Start(this.BattleListBox, DamageListBox);
+            BattleManager.Start(this.BattleListBox, this.DamageListBox);
             // 
             // Form1
             // 
@@ -393,6 +414,16 @@
         private System.Windows.Forms.Button Down;
         private System.Windows.Forms.Button Undo;
         private System.Windows.Forms.Button Redo;
+        private System.Windows.Forms.ToolTip AddListTooltip;
+        private System.Windows.Forms.ToolTip AddRollTooltip;
+        private System.Windows.Forms.ToolTip AddCountTooltip;
+        private System.Windows.Forms.ToolTip DownTooltip;
+        private System.Windows.Forms.ToolTip NextTooltip;
+        private System.Windows.Forms.ToolTip StepTooltip;
+        private System.Windows.Forms.ToolTip MoveListTooltip;
+        private System.Windows.Forms.ToolTip AttackTooltip;
+        private System.Windows.Forms.ToolTip DefendTooltip;
+        private System.Windows.Forms.ToolTip ResolveTooltip;
     }
 }
 
