@@ -11,8 +11,6 @@ namespace Action_Dice
 
         public static string compute(int dungeonLevel)
         {
-            int dungeonBonus = dungeonLevel / 4;
-
             Dice roller = new Dice();
             String result = "";
             bool gear = false;
@@ -33,37 +31,37 @@ namespace Action_Dice
 
             if (lootType == 1)
             {
-                return "+" + (1 + dungeonBonus) + " Potion of Healing";
+                return "+" + (1 + dungeonLevel / 4) + " Potion of Healing";
             }
             else if (lootType <= 4)
             {
-                result = result + "+" + (1 + dungeonBonus) + " Potion of ";
+                result = result + "+" + (1 + dungeonLevel / 4) + " Potion of ";
             }
             else if (lootType <= 7)
             {
-                result = result + "+" + (2 + dungeonBonus) + " Potion of ";
+                result = result + "+" + (1 + dungeonLevel / 3) + " Potion of ";
             }
             else if (lootType <= 9)
             {
-                result = result + "+" + (3 + dungeonBonus) + " Potion of ";
+                result = result + "+" + (1 + dungeonLevel / 2) + " Potion of ";
             }
             else if (lootType <= 10)
             {
-                result = result + "+" + (4 + dungeonBonus) + " Potion of ";
+                result = result + "+" + (1 + (2 * dungeonLevel) / 3) + " Potion of ";
             }
             else if (lootType <= 15)
             {
-                result = result + "+" + (1 + dungeonBonus) + " ";
+                result = result + "+" + (1 + dungeonLevel / 4) + " ";
                 gear = true;
             }
             else if (lootType <= 19)
             {
-                result = result + "+" + (2 + dungeonBonus) + " ";
+                result = result + "+" + (1 + dungeonLevel / 3) + " ";
                 gear = true;
             }
             else if (lootType == 20)
             {
-                result = result + "+" + (3 + dungeonBonus) + " ";
+                result = result + "+" + (1 + dungeonLevel / 2) + " ";
                 gear = true;
             }
             else
