@@ -19,9 +19,16 @@ namespace Action_Dice
             damageBox.Items.Add(0);
         }
 
-        public static void AddAttack(System.Windows.Forms.ListBox box, int attackRoll, int attackBonus)
+        public static void AddAttack(System.Windows.Forms.ListBox box, int attackRoll, int attackBonus = 0, string defenseType = "", int defenseRoll = 0, int defenseBonus = 0)
         {
-            box.Items.Add(attackRoll + "d6 + " + attackBonus);
+            if (defenseType == "")
+                box.Items.Add(attackRoll + "d6 + " + attackBonus);
+            else if (defenseType.ToLower().Contains(PASS.ToLower()) || defenseType.ToUpper().Contains(PASS.ToUpper()))
+                box.Items.Add(attackRoll + "d6 + " + attackBonus + " " + PASS);
+            else if (defenseType.ToLower().Contains(BLOCK.ToLower()) || defenseType.ToUpper().Contains(BLOCK.ToUpper()))
+                box.Items.Add(attackRoll + "d6 + " + attackBonus + " " + BLOCK + " " + defenseRoll + "d6 + " + defenseBonus);
+            if (defenseType.ToLower().Contains(DODGE.ToLower()) || defenseType.ToUpper().Contains(DODGE.ToUpper()))
+                box.Items.Add(attackRoll + "d6 + " + attackBonus + " " + DODGE + " " + defenseRoll + "d6 + " + defenseBonus);
         }
 
         public static void AddDefend(System.Windows.Forms.ListBox box, string defenseType, int defenseRoll = 0, int defenseBonus = 0)

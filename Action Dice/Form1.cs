@@ -33,7 +33,7 @@ namespace Action_Dice
                 InitiativeTextBox.Text = "";
                 try
                 {
-                    if(contents.Length == 1)
+                    if (contents.Length == 1)
                         InitiativeManager.AddListPlace(InitiativeListBox, contents[0]);
                     else
                         InitiativeManager.AddListPlace(InitiativeListBox, contents[0], Convert.ToInt32(contents[1]));
@@ -251,7 +251,16 @@ namespace Action_Dice
                 {
                     string[] contents = BattleTextBox.Text.Split(' ');
                     BattleTextBox.Text = "";
-                    BattleManager.AddAttack(BattleListBox, Convert.ToInt32(contents[0]), Convert.ToInt32(contents[1]));
+                    if (contents.Length == 1)
+                        BattleManager.AddAttack(BattleListBox, Convert.ToInt32(contents[0]));
+                    else if (contents.Length == 2)
+                        BattleManager.AddAttack(BattleListBox, Convert.ToInt32(contents[0]), Convert.ToInt32(contents[1]));
+                    else if (contents.Length == 3)
+                        BattleManager.AddAttack(BattleListBox, Convert.ToInt32(contents[0]), Convert.ToInt32(contents[1]), BattleManager.PASS);
+                    else if (contents.Length == 4)
+                        BattleManager.AddAttack(BattleListBox, Convert.ToInt32(contents[0]), Convert.ToInt32(contents[1]), contents[2], Convert.ToInt32(contents[3]));
+                    else if (contents.Length == 5)
+                        BattleManager.AddAttack(BattleListBox, Convert.ToInt32(contents[0]), Convert.ToInt32(contents[1]), contents[2], Convert.ToInt32(contents[3]), Convert.ToInt32(contents[4]));
                 }
                 catch (IndexOutOfRangeException)
                 {
@@ -272,7 +281,10 @@ namespace Action_Dice
                 {
                     string[] contents = BattleTextBox.Text.Split(' ');
                     BattleTextBox.Text = "";
-                    BattleManager.AddDefend(BattleListBox, contents[0], Convert.ToInt32(contents[1]), Convert.ToInt32(contents[2]));
+                    if (contents.Length == 2)
+                        BattleManager.AddDefend(BattleListBox, contents[0], Convert.ToInt32(contents[1]));
+                    else if (contents.Length == 3)
+                        BattleManager.AddDefend(BattleListBox, contents[0], Convert.ToInt32(contents[1]), Convert.ToInt32(contents[2]));
                 }
                 else
                 {
@@ -307,6 +319,6 @@ namespace Action_Dice
 
 
         #endregion
-        
+
     }
 }
