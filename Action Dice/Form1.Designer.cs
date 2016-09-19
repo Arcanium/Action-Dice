@@ -98,25 +98,25 @@
             this.AddCount.Name = "AddCount";
             this.AddCount.Size = new System.Drawing.Size(75, 23);
             this.AddCount.TabIndex = 2;
-            this.AddCount.Text = "Add Count";
+            this.AddCount.Text = "Add Stack";
             this.AddCountTooltip.SetToolTip(this.AddCount, "Enter a name and number, for the number of mobs wanted.");
             this.AddCount.UseVisualStyleBackColor = true;
             this.AddCount.Click += new System.EventHandler(this.AddCount_Click);
             // 
             // Next
             // 
-            this.Next.Location = new System.Drawing.Point(682, 173);
+            this.Next.Location = new System.Drawing.Point(682, 144);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(75, 23);
             this.Next.TabIndex = 3;
             this.Next.Text = "Next";
-            this.NextTooltip.SetToolTip(this.Next, "Moves to the next player that isn't down.");
+            this.NextTooltip.SetToolTip(this.Next, "Moves to the next player that isn\'t down.");
             this.Next.UseVisualStyleBackColor = true;
             this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
             // Step
             // 
-            this.Step.Location = new System.Drawing.Point(682, 202);
+            this.Step.Location = new System.Drawing.Point(682, 173);
             this.Step.Name = "Step";
             this.Step.Size = new System.Drawing.Size(75, 23);
             this.Step.TabIndex = 4;
@@ -255,7 +255,8 @@
             this.Defend.Size = new System.Drawing.Size(75, 23);
             this.Defend.TabIndex = 20;
             this.Defend.Text = "Add Defend";
-            this.DefendTooltip.SetToolTip(this.Defend, "Enter nothing to pass, or block or dodge followed by two numbers all separated by a space, for the defense roll and bonus.");
+            this.DefendTooltip.SetToolTip(this.Defend, "Enter nothing to pass, or block or dodge followed by two numbers all separated by" +
+        " a space, for the defense roll and bonus.");
             this.Defend.UseVisualStyleBackColor = true;
             this.Defend.Click += new System.EventHandler(this.Defend_Click);
             // 
@@ -309,7 +310,7 @@
             // 
             // Down
             // 
-            this.Down.Location = new System.Drawing.Point(683, 144);
+            this.Down.Location = new System.Drawing.Point(682, 202);
             this.Down.Name = "Down";
             this.Down.Size = new System.Drawing.Size(75, 23);
             this.Down.TabIndex = 26;
@@ -337,11 +338,6 @@
             this.Redo.Text = "Redo";
             this.Redo.UseVisualStyleBackColor = true;
             this.Redo.Click += new System.EventHandler(this.Redo_Click);
-            //
-            //Initialize Components
-            //
-            InitiativeManager.Start(this.InitiativeListBox, this.PlayerTurnLabel);
-            BattleManager.Start(this.BattleListBox, this.DamageListBox);
             // 
             // Form1
             // 
