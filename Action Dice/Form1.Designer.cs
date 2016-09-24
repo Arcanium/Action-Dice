@@ -338,6 +338,11 @@
             this.Redo.Text = "Redo";
             this.Redo.UseVisualStyleBackColor = true;
             this.Redo.Click += new System.EventHandler(this.Redo_Click);
+            //
+            // Initialize components
+            //
+            InitiativeManager.Start(this.InitiativeListBox, this.PlayerTurnLabel);
+            BattleManager.Start(this.BattleListBox, this.DamageListBox);
             // 
             // Form1
             // 
