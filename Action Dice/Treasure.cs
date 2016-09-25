@@ -139,19 +139,19 @@ namespace Action_Dice
                         result = result + "Athletics";
                         break;
                     case 4:
-                        result = result + "Speech";
-                        break;
-                    case 5:
-                        result = result + "Stealth";
-                        break;
-                    case 6:
                         result = result + "Perception";
                         break;
-                    case 7:
+                    case 5:
                         result = result + "Practical";
                         break;
-                    case 8:
+                    case 6:
                         result = result + "Precision";
+                        break;
+                    case 7:
+                        result = result + "Speech";
+                        break;
+                    case 8:
+                        result = result + "Stealth";
                         break;
                     default:
                         result = result + "-2-combatSkills is broken--";
