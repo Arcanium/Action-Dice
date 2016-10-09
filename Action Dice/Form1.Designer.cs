@@ -68,11 +68,16 @@
             this.AttackTooltip = new System.Windows.Forms.ToolTip(this.components);
             this.DefendTooltip = new System.Windows.Forms.ToolTip(this.components);
             this.ResolveTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.ManagerTab = new System.Windows.Forms.TabPage();
+            this.GeneratorTab = new System.Windows.Forms.TabPage();
+            this.tabControl1.SuspendLayout();
+            this.ManagerTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // AddList
             // 
-            this.AddList.Location = new System.Drawing.Point(682, 56);
+            this.AddList.Location = new System.Drawing.Point(678, 80);
             this.AddList.Name = "AddList";
             this.AddList.Size = new System.Drawing.Size(75, 23);
             this.AddList.TabIndex = 0;
@@ -83,7 +88,7 @@
             // 
             // AddRoll
             // 
-            this.AddRoll.Location = new System.Drawing.Point(682, 85);
+            this.AddRoll.Location = new System.Drawing.Point(678, 109);
             this.AddRoll.Name = "AddRoll";
             this.AddRoll.Size = new System.Drawing.Size(75, 23);
             this.AddRoll.TabIndex = 1;
@@ -94,7 +99,7 @@
             // 
             // AddCount
             // 
-            this.AddCount.Location = new System.Drawing.Point(682, 114);
+            this.AddCount.Location = new System.Drawing.Point(678, 138);
             this.AddCount.Name = "AddCount";
             this.AddCount.Size = new System.Drawing.Size(75, 23);
             this.AddCount.TabIndex = 2;
@@ -105,7 +110,7 @@
             // 
             // Next
             // 
-            this.Next.Location = new System.Drawing.Point(682, 144);
+            this.Next.Location = new System.Drawing.Point(678, 167);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(75, 23);
             this.Next.TabIndex = 3;
@@ -116,7 +121,7 @@
             // 
             // Step
             // 
-            this.Step.Location = new System.Drawing.Point(682, 173);
+            this.Step.Location = new System.Drawing.Point(678, 196);
             this.Step.Name = "Step";
             this.Step.Size = new System.Drawing.Size(75, 23);
             this.Step.TabIndex = 4;
@@ -127,7 +132,7 @@
             // 
             // MoveList
             // 
-            this.MoveList.Location = new System.Drawing.Point(682, 231);
+            this.MoveList.Location = new System.Drawing.Point(678, 254);
             this.MoveList.Name = "MoveList";
             this.MoveList.Size = new System.Drawing.Size(75, 23);
             this.MoveList.TabIndex = 5;
@@ -138,7 +143,7 @@
             // 
             // InitiativeClear
             // 
-            this.InitiativeClear.Location = new System.Drawing.Point(763, 56);
+            this.InitiativeClear.Location = new System.Drawing.Point(759, 80);
             this.InitiativeClear.Name = "InitiativeClear";
             this.InitiativeClear.Size = new System.Drawing.Size(75, 23);
             this.InitiativeClear.TabIndex = 7;
@@ -149,14 +154,14 @@
             // InitiativeListBox
             // 
             this.InitiativeListBox.FormattingEnabled = true;
-            this.InitiativeListBox.Location = new System.Drawing.Point(35, 85);
+            this.InitiativeListBox.Location = new System.Drawing.Point(31, 80);
             this.InitiativeListBox.Name = "InitiativeListBox";
             this.InitiativeListBox.Size = new System.Drawing.Size(641, 472);
             this.InitiativeListBox.TabIndex = 8;
             // 
             // InitiativeTextBox
             // 
-            this.InitiativeTextBox.Location = new System.Drawing.Point(35, 59);
+            this.InitiativeTextBox.Location = new System.Drawing.Point(31, 48);
             this.InitiativeTextBox.Name = "InitiativeTextBox";
             this.InitiativeTextBox.Size = new System.Drawing.Size(641, 20);
             this.InitiativeTextBox.TabIndex = 9;
@@ -164,14 +169,14 @@
             // TreasureListBox
             // 
             this.TreasureListBox.FormattingEnabled = true;
-            this.TreasureListBox.Location = new System.Drawing.Point(35, 668);
+            this.TreasureListBox.Location = new System.Drawing.Point(31, 657);
             this.TreasureListBox.Name = "TreasureListBox";
             this.TreasureListBox.Size = new System.Drawing.Size(641, 30);
             this.TreasureListBox.TabIndex = 10;
             // 
             // TreasureButton
             // 
-            this.TreasureButton.Location = new System.Drawing.Point(682, 668);
+            this.TreasureButton.Location = new System.Drawing.Point(678, 657);
             this.TreasureButton.Name = "TreasureButton";
             this.TreasureButton.Size = new System.Drawing.Size(75, 23);
             this.TreasureButton.TabIndex = 11;
@@ -181,7 +186,7 @@
             // 
             // TreasureTextBox
             // 
-            this.TreasureTextBox.Location = new System.Drawing.Point(35, 642);
+            this.TreasureTextBox.Location = new System.Drawing.Point(31, 631);
             this.TreasureTextBox.Name = "TreasureTextBox";
             this.TreasureTextBox.Size = new System.Drawing.Size(641, 20);
             this.TreasureTextBox.TabIndex = 12;
@@ -198,7 +203,7 @@
             // InitiativeLabel
             // 
             this.InitiativeLabel.AutoSize = true;
-            this.InitiativeLabel.Location = new System.Drawing.Point(32, 33);
+            this.InitiativeLabel.Location = new System.Drawing.Point(28, 22);
             this.InitiativeLabel.Name = "InitiativeLabel";
             this.InitiativeLabel.Size = new System.Drawing.Size(69, 13);
             this.InitiativeLabel.TabIndex = 14;
@@ -207,7 +212,7 @@
             // BattleListBox
             // 
             this.BattleListBox.FormattingEnabled = true;
-            this.BattleListBox.Location = new System.Drawing.Point(1024, 85);
+            this.BattleListBox.Location = new System.Drawing.Point(1000, 74);
             this.BattleListBox.Name = "BattleListBox";
             this.BattleListBox.Size = new System.Drawing.Size(288, 472);
             this.BattleListBox.TabIndex = 15;
@@ -215,7 +220,7 @@
             // PlayerTurnLabel
             // 
             this.PlayerTurnLabel.AutoSize = true;
-            this.PlayerTurnLabel.Location = new System.Drawing.Point(106, 32);
+            this.PlayerTurnLabel.Location = new System.Drawing.Point(103, 22);
             this.PlayerTurnLabel.Name = "PlayerTurnLabel";
             this.PlayerTurnLabel.Size = new System.Drawing.Size(84, 13);
             this.PlayerTurnLabel.TabIndex = 16;
@@ -223,7 +228,7 @@
             // 
             // BattleTextBox
             // 
-            this.BattleTextBox.Location = new System.Drawing.Point(1024, 59);
+            this.BattleTextBox.Location = new System.Drawing.Point(1000, 48);
             this.BattleTextBox.Name = "BattleTextBox";
             this.BattleTextBox.Size = new System.Drawing.Size(288, 20);
             this.BattleTextBox.TabIndex = 17;
@@ -231,7 +236,7 @@
             // BattleLabel
             // 
             this.BattleLabel.AutoSize = true;
-            this.BattleLabel.Location = new System.Drawing.Point(1024, 33);
+            this.BattleLabel.Location = new System.Drawing.Point(997, 22);
             this.BattleLabel.Name = "BattleLabel";
             this.BattleLabel.Size = new System.Drawing.Size(110, 13);
             this.BattleLabel.TabIndex = 18;
@@ -239,7 +244,7 @@
             // 
             // Attack
             // 
-            this.Attack.Location = new System.Drawing.Point(1319, 85);
+            this.Attack.Location = new System.Drawing.Point(1294, 74);
             this.Attack.Name = "Attack";
             this.Attack.Size = new System.Drawing.Size(75, 23);
             this.Attack.TabIndex = 19;
@@ -250,7 +255,7 @@
             // 
             // Defend
             // 
-            this.Defend.Location = new System.Drawing.Point(1319, 114);
+            this.Defend.Location = new System.Drawing.Point(1295, 103);
             this.Defend.Name = "Defend";
             this.Defend.Size = new System.Drawing.Size(75, 23);
             this.Defend.TabIndex = 20;
@@ -262,7 +267,7 @@
             // 
             // Resolve
             // 
-            this.Resolve.Location = new System.Drawing.Point(1318, 143);
+            this.Resolve.Location = new System.Drawing.Point(1294, 132);
             this.Resolve.Name = "Resolve";
             this.Resolve.Size = new System.Drawing.Size(75, 23);
             this.Resolve.TabIndex = 21;
@@ -274,7 +279,7 @@
             // DamageListBox
             // 
             this.DamageListBox.FormattingEnabled = true;
-            this.DamageListBox.Location = new System.Drawing.Point(1318, 59);
+            this.DamageListBox.Location = new System.Drawing.Point(1294, 48);
             this.DamageListBox.Name = "DamageListBox";
             this.DamageListBox.Size = new System.Drawing.Size(76, 17);
             this.DamageListBox.TabIndex = 22;
@@ -282,7 +287,7 @@
             // DamageLabel
             // 
             this.DamageLabel.AutoSize = true;
-            this.DamageLabel.Location = new System.Drawing.Point(1319, 31);
+            this.DamageLabel.Location = new System.Drawing.Point(1291, 22);
             this.DamageLabel.Name = "DamageLabel";
             this.DamageLabel.Size = new System.Drawing.Size(50, 13);
             this.DamageLabel.TabIndex = 23;
@@ -290,7 +295,7 @@
             // 
             // Reset
             // 
-            this.Reset.Location = new System.Drawing.Point(1318, 172);
+            this.Reset.Location = new System.Drawing.Point(1294, 161);
             this.Reset.Name = "Reset";
             this.Reset.Size = new System.Drawing.Size(75, 23);
             this.Reset.TabIndex = 24;
@@ -300,7 +305,7 @@
             // 
             // BattleClear
             // 
-            this.BattleClear.Location = new System.Drawing.Point(1318, 201);
+            this.BattleClear.Location = new System.Drawing.Point(1294, 190);
             this.BattleClear.Name = "BattleClear";
             this.BattleClear.Size = new System.Drawing.Size(75, 23);
             this.BattleClear.TabIndex = 25;
@@ -310,7 +315,7 @@
             // 
             // Down
             // 
-            this.Down.Location = new System.Drawing.Point(682, 202);
+            this.Down.Location = new System.Drawing.Point(678, 225);
             this.Down.Name = "Down";
             this.Down.Size = new System.Drawing.Size(75, 23);
             this.Down.TabIndex = 26;
@@ -321,7 +326,7 @@
             // 
             // Undo
             // 
-            this.Undo.Location = new System.Drawing.Point(763, 85);
+            this.Undo.Location = new System.Drawing.Point(759, 109);
             this.Undo.Name = "Undo";
             this.Undo.Size = new System.Drawing.Size(75, 23);
             this.Undo.TabIndex = 27;
@@ -331,55 +336,85 @@
             // 
             // Redo
             // 
-            this.Redo.Location = new System.Drawing.Point(764, 115);
+            this.Redo.Location = new System.Drawing.Point(759, 138);
             this.Redo.Name = "Redo";
             this.Redo.Size = new System.Drawing.Size(75, 23);
             this.Redo.TabIndex = 28;
             this.Redo.Text = "Redo";
             this.Redo.UseVisualStyleBackColor = true;
             this.Redo.Click += new System.EventHandler(this.Redo_Click);
-            //
-            // Initialize components
-            //
-            InitiativeManager.Start(this.InitiativeListBox, this.PlayerTurnLabel);
-            BattleManager.Start(this.BattleListBox, this.DamageListBox);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.ManagerTab);
+            this.tabControl1.Controls.Add(this.GeneratorTab);
+            this.tabControl1.Location = new System.Drawing.Point(-5, 3);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.ShowToolTips = true;
+            this.tabControl1.Size = new System.Drawing.Size(1475, 770);
+            this.tabControl1.TabIndex = 29;
+            // 
+            // ManagerTab
+            // 
+            this.ManagerTab.BackColor = System.Drawing.Color.Transparent;
+            this.ManagerTab.Controls.Add(this.InitiativeLabel);
+            this.ManagerTab.Controls.Add(this.BattleClear);
+            this.ManagerTab.Controls.Add(this.Redo);
+            this.ManagerTab.Controls.Add(this.Reset);
+            this.ManagerTab.Controls.Add(this.PlayerTurnLabel);
+            this.ManagerTab.Controls.Add(this.Resolve);
+            this.ManagerTab.Controls.Add(this.DamageListBox);
+            this.ManagerTab.Controls.Add(this.Defend);
+            this.ManagerTab.Controls.Add(this.DamageLabel);
+            this.ManagerTab.Controls.Add(this.Attack);
+            this.ManagerTab.Controls.Add(this.Undo);
+            this.ManagerTab.Controls.Add(this.InitiativeTextBox);
+            this.ManagerTab.Controls.Add(this.Down);
+            this.ManagerTab.Controls.Add(this.InitiativeListBox);
+            this.ManagerTab.Controls.Add(this.AddList);
+            this.ManagerTab.Controls.Add(this.BattleListBox);
+            this.ManagerTab.Controls.Add(this.BattleTextBox);
+            this.ManagerTab.Controls.Add(this.BattleLabel);
+            this.ManagerTab.Controls.Add(this.AddRoll);
+            this.ManagerTab.Controls.Add(this.AddCount);
+            this.ManagerTab.Controls.Add(this.Next);
+            this.ManagerTab.Controls.Add(this.Step);
+            this.ManagerTab.Controls.Add(this.TreasureButton);
+            this.ManagerTab.Controls.Add(this.TreasureTextBox);
+            this.ManagerTab.Controls.Add(this.TreasureListBox);
+            this.ManagerTab.Controls.Add(this.MoveList);
+            this.ManagerTab.Controls.Add(this.InitiativeClear);
+            this.ManagerTab.Location = new System.Drawing.Point(4, 22);
+            this.ManagerTab.Name = "ManagerTab";
+            this.ManagerTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ManagerTab.Size = new System.Drawing.Size(1467, 744);
+            this.ManagerTab.TabIndex = 0;
+            this.ManagerTab.Text = "GM Assistant";
+            // 
+            // GeneratorTab
+            // 
+            this.GeneratorTab.BackColor = System.Drawing.Color.LightGray;
+            this.GeneratorTab.Location = new System.Drawing.Point(4, 22);
+            this.GeneratorTab.Name = "GeneratorTab";
+            this.GeneratorTab.Padding = new System.Windows.Forms.Padding(3);
+            this.GeneratorTab.Size = new System.Drawing.Size(1467, 744);
+            this.GeneratorTab.TabIndex = 1;
+            this.GeneratorTab.Text = "Character Generator";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1462, 749);
-            this.Controls.Add(this.Redo);
-            this.Controls.Add(this.Undo);
-            this.Controls.Add(this.Down);
-            this.Controls.Add(this.BattleClear);
-            this.Controls.Add(this.Reset);
-            this.Controls.Add(this.DamageLabel);
-            this.Controls.Add(this.DamageListBox);
-            this.Controls.Add(this.Resolve);
-            this.Controls.Add(this.Defend);
-            this.Controls.Add(this.Attack);
-            this.Controls.Add(this.BattleLabel);
-            this.Controls.Add(this.BattleTextBox);
-            this.Controls.Add(this.PlayerTurnLabel);
-            this.Controls.Add(this.BattleListBox);
-            this.Controls.Add(this.InitiativeLabel);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.TreasureLabel);
-            this.Controls.Add(this.TreasureTextBox);
-            this.Controls.Add(this.TreasureButton);
-            this.Controls.Add(this.TreasureListBox);
-            this.Controls.Add(this.InitiativeTextBox);
-            this.Controls.Add(this.InitiativeListBox);
-            this.Controls.Add(this.InitiativeClear);
-            this.Controls.Add(this.MoveList);
-            this.Controls.Add(this.Step);
-            this.Controls.Add(this.Next);
-            this.Controls.Add(this.AddCount);
-            this.Controls.Add(this.AddRoll);
-            this.Controls.Add(this.AddList);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Action Dice";
+            this.tabControl1.ResumeLayout(false);
+            this.ManagerTab.ResumeLayout(false);
+            this.ManagerTab.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -425,6 +460,9 @@
         private System.Windows.Forms.ToolTip AttackTooltip;
         private System.Windows.Forms.ToolTip DefendTooltip;
         private System.Windows.Forms.ToolTip ResolveTooltip;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage ManagerTab;
+        private System.Windows.Forms.TabPage GeneratorTab;
     }
 }
 

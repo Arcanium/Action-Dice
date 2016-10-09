@@ -16,6 +16,8 @@ namespace Action_Dice
         public Form1()
         {
             InitializeComponent();
+            InitiativeManager.Start(InitiativeListBox, PlayerTurnLabel);
+            BattleManager.Start(BattleListBox, DamageListBox);
         }
 
         #region Initiative
