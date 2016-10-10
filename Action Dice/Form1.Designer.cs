@@ -68,17 +68,24 @@
             this.AttackTooltip = new System.Windows.Forms.ToolTip(this.components);
             this.DefendTooltip = new System.Windows.Forms.ToolTip(this.components);
             this.ResolveTooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.ActionDiceTabControl = new System.Windows.Forms.TabControl();
             this.ManagerTab = new System.Windows.Forms.TabPage();
             this.GeneratorTab = new System.Windows.Forms.TabPage();
+            this.GeneratorLabel = new System.Windows.Forms.Label();
+            this.Generate = new System.Windows.Forms.Button();
+            this.GeneratorClear = new System.Windows.Forms.Button();
+            this.GeneratorListBox = new System.Windows.Forms.ListBox();
+            this.NonCombatGroupBox = new System.Windows.Forms.GroupBox();
+            this.CombatGroupBox = new System.Windows.Forms.GroupBox();
             this.EncounterTab = new System.Windows.Forms.TabPage();
-            this.tabControl1.SuspendLayout();
+            this.ActionDiceTabControl.SuspendLayout();
             this.ManagerTab.SuspendLayout();
+            this.GeneratorTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // AddList
             // 
-            this.AddList.Location = new System.Drawing.Point(678, 80);
+            this.AddList.Location = new System.Drawing.Point(678, 74);
             this.AddList.Name = "AddList";
             this.AddList.Size = new System.Drawing.Size(75, 23);
             this.AddList.TabIndex = 0;
@@ -89,7 +96,7 @@
             // 
             // AddRoll
             // 
-            this.AddRoll.Location = new System.Drawing.Point(678, 109);
+            this.AddRoll.Location = new System.Drawing.Point(678, 103);
             this.AddRoll.Name = "AddRoll";
             this.AddRoll.Size = new System.Drawing.Size(75, 23);
             this.AddRoll.TabIndex = 1;
@@ -100,7 +107,7 @@
             // 
             // AddCount
             // 
-            this.AddCount.Location = new System.Drawing.Point(678, 138);
+            this.AddCount.Location = new System.Drawing.Point(678, 132);
             this.AddCount.Name = "AddCount";
             this.AddCount.Size = new System.Drawing.Size(75, 23);
             this.AddCount.TabIndex = 2;
@@ -111,7 +118,7 @@
             // 
             // Next
             // 
-            this.Next.Location = new System.Drawing.Point(678, 167);
+            this.Next.Location = new System.Drawing.Point(678, 161);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(75, 23);
             this.Next.TabIndex = 3;
@@ -122,7 +129,7 @@
             // 
             // Step
             // 
-            this.Step.Location = new System.Drawing.Point(678, 196);
+            this.Step.Location = new System.Drawing.Point(678, 190);
             this.Step.Name = "Step";
             this.Step.Size = new System.Drawing.Size(75, 23);
             this.Step.TabIndex = 4;
@@ -133,7 +140,7 @@
             // 
             // MoveList
             // 
-            this.MoveList.Location = new System.Drawing.Point(678, 254);
+            this.MoveList.Location = new System.Drawing.Point(678, 248);
             this.MoveList.Name = "MoveList";
             this.MoveList.Size = new System.Drawing.Size(75, 23);
             this.MoveList.TabIndex = 5;
@@ -144,7 +151,7 @@
             // 
             // InitiativeClear
             // 
-            this.InitiativeClear.Location = new System.Drawing.Point(759, 80);
+            this.InitiativeClear.Location = new System.Drawing.Point(759, 74);
             this.InitiativeClear.Name = "InitiativeClear";
             this.InitiativeClear.Size = new System.Drawing.Size(75, 23);
             this.InitiativeClear.TabIndex = 7;
@@ -155,7 +162,7 @@
             // InitiativeListBox
             // 
             this.InitiativeListBox.FormattingEnabled = true;
-            this.InitiativeListBox.Location = new System.Drawing.Point(31, 80);
+            this.InitiativeListBox.Location = new System.Drawing.Point(31, 74);
             this.InitiativeListBox.Name = "InitiativeListBox";
             this.InitiativeListBox.Size = new System.Drawing.Size(641, 472);
             this.InitiativeListBox.TabIndex = 8;
@@ -245,7 +252,7 @@
             // 
             // Attack
             // 
-            this.Attack.Location = new System.Drawing.Point(1294, 74);
+            this.Attack.Location = new System.Drawing.Point(1295, 74);
             this.Attack.Name = "Attack";
             this.Attack.Size = new System.Drawing.Size(75, 23);
             this.Attack.TabIndex = 19;
@@ -306,7 +313,7 @@
             // 
             // BattleClear
             // 
-            this.BattleClear.Location = new System.Drawing.Point(1294, 190);
+            this.BattleClear.Location = new System.Drawing.Point(1295, 190);
             this.BattleClear.Name = "BattleClear";
             this.BattleClear.Size = new System.Drawing.Size(75, 23);
             this.BattleClear.TabIndex = 25;
@@ -316,7 +323,7 @@
             // 
             // Down
             // 
-            this.Down.Location = new System.Drawing.Point(678, 225);
+            this.Down.Location = new System.Drawing.Point(678, 219);
             this.Down.Name = "Down";
             this.Down.Size = new System.Drawing.Size(75, 23);
             this.Down.TabIndex = 26;
@@ -327,7 +334,7 @@
             // 
             // Undo
             // 
-            this.Undo.Location = new System.Drawing.Point(759, 109);
+            this.Undo.Location = new System.Drawing.Point(759, 103);
             this.Undo.Name = "Undo";
             this.Undo.Size = new System.Drawing.Size(75, 23);
             this.Undo.TabIndex = 27;
@@ -337,7 +344,7 @@
             // 
             // Redo
             // 
-            this.Redo.Location = new System.Drawing.Point(759, 138);
+            this.Redo.Location = new System.Drawing.Point(759, 132);
             this.Redo.Name = "Redo";
             this.Redo.Size = new System.Drawing.Size(75, 23);
             this.Redo.TabIndex = 28;
@@ -345,17 +352,17 @@
             this.Redo.UseVisualStyleBackColor = true;
             this.Redo.Click += new System.EventHandler(this.Redo_Click);
             // 
-            // tabControl1
+            // ActionDiceTabControl
             // 
-            this.tabControl1.Controls.Add(this.ManagerTab);
-            this.tabControl1.Controls.Add(this.GeneratorTab);
-            this.tabControl1.Controls.Add(this.EncounterTab);
-            this.tabControl1.Location = new System.Drawing.Point(-5, 3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.ShowToolTips = true;
-            this.tabControl1.Size = new System.Drawing.Size(1475, 753);
-            this.tabControl1.TabIndex = 29;
+            this.ActionDiceTabControl.Controls.Add(this.ManagerTab);
+            this.ActionDiceTabControl.Controls.Add(this.GeneratorTab);
+            this.ActionDiceTabControl.Controls.Add(this.EncounterTab);
+            this.ActionDiceTabControl.Location = new System.Drawing.Point(-5, 3);
+            this.ActionDiceTabControl.Name = "ActionDiceTabControl";
+            this.ActionDiceTabControl.SelectedIndex = 0;
+            this.ActionDiceTabControl.ShowToolTips = true;
+            this.ActionDiceTabControl.Size = new System.Drawing.Size(1475, 753);
+            this.ActionDiceTabControl.TabIndex = 29;
             // 
             // ManagerTab
             // 
@@ -397,13 +404,74 @@
             // 
             // GeneratorTab
             // 
-            this.GeneratorTab.BackColor = System.Drawing.Color.LightGray;
+            this.GeneratorTab.BackColor = System.Drawing.Color.Transparent;
+            this.GeneratorTab.Controls.Add(this.GeneratorLabel);
+            this.GeneratorTab.Controls.Add(this.Generate);
+            this.GeneratorTab.Controls.Add(this.GeneratorClear);
+            this.GeneratorTab.Controls.Add(this.GeneratorListBox);
+            this.GeneratorTab.Controls.Add(this.NonCombatGroupBox);
+            this.GeneratorTab.Controls.Add(this.CombatGroupBox);
             this.GeneratorTab.Location = new System.Drawing.Point(4, 22);
             this.GeneratorTab.Name = "GeneratorTab";
             this.GeneratorTab.Padding = new System.Windows.Forms.Padding(3);
             this.GeneratorTab.Size = new System.Drawing.Size(1467, 727);
             this.GeneratorTab.TabIndex = 1;
             this.GeneratorTab.Text = "Character Generator";
+            // 
+            // GeneratorLabel
+            // 
+            this.GeneratorLabel.AutoSize = true;
+            this.GeneratorLabel.Location = new System.Drawing.Point(1019, 16);
+            this.GeneratorLabel.Name = "GeneratorLabel";
+            this.GeneratorLabel.Size = new System.Drawing.Size(61, 13);
+            this.GeneratorLabel.TabIndex = 4;
+            this.GeneratorLabel.Text = "Characters:";
+            // 
+            // Generate
+            // 
+            this.Generate.Location = new System.Drawing.Point(1214, 508);
+            this.Generate.Name = "Generate";
+            this.Generate.Size = new System.Drawing.Size(75, 23);
+            this.Generate.TabIndex = 3;
+            this.Generate.Text = "Generate";
+            this.Generate.UseVisualStyleBackColor = true;
+            // 
+            // GeneratorClear
+            // 
+            this.GeneratorClear.Location = new System.Drawing.Point(1133, 508);
+            this.GeneratorClear.Name = "GeneratorClear";
+            this.GeneratorClear.Size = new System.Drawing.Size(75, 23);
+            this.GeneratorClear.TabIndex = 2;
+            this.GeneratorClear.Text = "Clear";
+            this.GeneratorClear.UseVisualStyleBackColor = true;
+            // 
+            // GeneratorListBox
+            // 
+            this.GeneratorListBox.FormattingEnabled = true;
+            this.GeneratorListBox.Location = new System.Drawing.Point(1019, 43);
+            this.GeneratorListBox.Name = "GeneratorListBox";
+            this.GeneratorListBox.Size = new System.Drawing.Size(387, 459);
+            this.GeneratorListBox.TabIndex = 1;
+            // 
+            // NonCombatGroupBox
+            // 
+            this.NonCombatGroupBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.NonCombatGroupBox.Location = new System.Drawing.Point(13, 362);
+            this.NonCombatGroupBox.Name = "NonCombatGroupBox";
+            this.NonCombatGroupBox.Size = new System.Drawing.Size(1000, 350);
+            this.NonCombatGroupBox.TabIndex = 0;
+            this.NonCombatGroupBox.TabStop = false;
+            this.NonCombatGroupBox.Text = "Non-Combat";
+            // 
+            // CombatGroupBox
+            // 
+            this.CombatGroupBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.CombatGroupBox.Location = new System.Drawing.Point(13, 6);
+            this.CombatGroupBox.Name = "CombatGroupBox";
+            this.CombatGroupBox.Size = new System.Drawing.Size(1000, 350);
+            this.CombatGroupBox.TabIndex = 0;
+            this.CombatGroupBox.TabStop = false;
+            this.CombatGroupBox.Text = "Combat";
             // 
             // EncounterTab
             // 
@@ -419,13 +487,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1462, 749);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.ActionDiceTabControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Action Dice";
-            this.tabControl1.ResumeLayout(false);
+            this.ActionDiceTabControl.ResumeLayout(false);
             this.ManagerTab.ResumeLayout(false);
             this.ManagerTab.PerformLayout();
+            this.GeneratorTab.ResumeLayout(false);
+            this.GeneratorTab.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -470,10 +540,16 @@
         private System.Windows.Forms.ToolTip AttackTooltip;
         private System.Windows.Forms.ToolTip DefendTooltip;
         private System.Windows.Forms.ToolTip ResolveTooltip;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl ActionDiceTabControl;
         private System.Windows.Forms.TabPage ManagerTab;
         private System.Windows.Forms.TabPage GeneratorTab;
         private System.Windows.Forms.TabPage EncounterTab;
+        private System.Windows.Forms.GroupBox CombatGroupBox;
+        private System.Windows.Forms.GroupBox NonCombatGroupBox;
+        private System.Windows.Forms.Button Generate;
+        private System.Windows.Forms.Button GeneratorClear;
+        private System.Windows.Forms.ListBox GeneratorListBox;
+        private System.Windows.Forms.Label GeneratorLabel;
     }
 }
 
