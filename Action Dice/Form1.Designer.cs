@@ -71,6 +71,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.ManagerTab = new System.Windows.Forms.TabPage();
             this.GeneratorTab = new System.Windows.Forms.TabPage();
+            this.EncounterTab = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.ManagerTab.SuspendLayout();
             this.SuspendLayout();
@@ -194,7 +195,7 @@
             // TreasureLabel
             // 
             this.TreasureLabel.AutoSize = true;
-            this.TreasureLabel.Location = new System.Drawing.Point(32, 613);
+            this.TreasureLabel.Location = new System.Drawing.Point(28, 606);
             this.TreasureLabel.Name = "TreasureLabel";
             this.TreasureLabel.Size = new System.Drawing.Size(110, 13);
             this.TreasureLabel.TabIndex = 13;
@@ -348,17 +349,19 @@
             // 
             this.tabControl1.Controls.Add(this.ManagerTab);
             this.tabControl1.Controls.Add(this.GeneratorTab);
+            this.tabControl1.Controls.Add(this.EncounterTab);
             this.tabControl1.Location = new System.Drawing.Point(-5, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.ShowToolTips = true;
-            this.tabControl1.Size = new System.Drawing.Size(1475, 770);
+            this.tabControl1.Size = new System.Drawing.Size(1475, 753);
             this.tabControl1.TabIndex = 29;
             // 
             // ManagerTab
             // 
             this.ManagerTab.BackColor = System.Drawing.Color.Transparent;
             this.ManagerTab.Controls.Add(this.InitiativeLabel);
+            this.ManagerTab.Controls.Add(this.TreasureLabel);
             this.ManagerTab.Controls.Add(this.BattleClear);
             this.ManagerTab.Controls.Add(this.Redo);
             this.ManagerTab.Controls.Add(this.Reset);
@@ -388,7 +391,7 @@
             this.ManagerTab.Location = new System.Drawing.Point(4, 22);
             this.ManagerTab.Name = "ManagerTab";
             this.ManagerTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ManagerTab.Size = new System.Drawing.Size(1467, 744);
+            this.ManagerTab.Size = new System.Drawing.Size(1467, 727);
             this.ManagerTab.TabIndex = 0;
             this.ManagerTab.Text = "GM Assistant";
             // 
@@ -398,9 +401,18 @@
             this.GeneratorTab.Location = new System.Drawing.Point(4, 22);
             this.GeneratorTab.Name = "GeneratorTab";
             this.GeneratorTab.Padding = new System.Windows.Forms.Padding(3);
-            this.GeneratorTab.Size = new System.Drawing.Size(1467, 744);
+            this.GeneratorTab.Size = new System.Drawing.Size(1467, 727);
             this.GeneratorTab.TabIndex = 1;
             this.GeneratorTab.Text = "Character Generator";
+            // 
+            // EncounterTab
+            // 
+            this.EncounterTab.BackColor = System.Drawing.Color.Silver;
+            this.EncounterTab.Location = new System.Drawing.Point(4, 22);
+            this.EncounterTab.Name = "EncounterTab";
+            this.EncounterTab.Size = new System.Drawing.Size(1467, 727);
+            this.EncounterTab.TabIndex = 2;
+            this.EncounterTab.Text = "Encounter";
             // 
             // Form1
             // 
@@ -408,7 +420,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1462, 749);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.TreasureLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Action Dice";
@@ -416,7 +427,6 @@
             this.ManagerTab.ResumeLayout(false);
             this.ManagerTab.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -463,6 +473,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage ManagerTab;
         private System.Windows.Forms.TabPage GeneratorTab;
+        private System.Windows.Forms.TabPage EncounterTab;
     }
 }
 
