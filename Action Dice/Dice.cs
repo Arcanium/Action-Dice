@@ -15,7 +15,7 @@ namespace Action_Dice
         {
             int dieSum = 0;
 
-            for (int i = 0; i<numberOfDice; i++)
+            for (int i = 0; i < numberOfDice; i++)
             {
                 dieSum += (rando.Next() % diceSize) + 1;
             }

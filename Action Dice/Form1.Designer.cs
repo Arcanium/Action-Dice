@@ -71,16 +71,55 @@
             this.ActionDiceTabControl = new System.Windows.Forms.TabControl();
             this.ManagerTab = new System.Windows.Forms.TabPage();
             this.GeneratorTab = new System.Windows.Forms.TabPage();
+            this.GeneratorNameTextBox = new System.Windows.Forms.TextBox();
+            this.GeneratorNameLabel = new System.Windows.Forms.Label();
+            this.GeneratorLevelLabel = new System.Windows.Forms.Label();
+            this.GeneratorLevelTextBox = new System.Windows.Forms.TextBox();
             this.GeneratorLabel = new System.Windows.Forms.Label();
             this.Generate = new System.Windows.Forms.Button();
             this.GeneratorClear = new System.Windows.Forms.Button();
             this.GeneratorListBox = new System.Windows.Forms.ListBox();
             this.NonCombatGroupBox = new System.Windows.Forms.GroupBox();
+            this.NonCombatThirdPreference = new System.Windows.Forms.GroupBox();
+            this.NonCombatSecondPreference = new System.Windows.Forms.GroupBox();
+            this.NonCombatFirstPreference = new System.Windows.Forms.GroupBox();
             this.CombatGroupBox = new System.Windows.Forms.GroupBox();
+            this.CombatThirdPreference = new System.Windows.Forms.GroupBox();
+            this.SupriseCombatThirdPreference = new System.Windows.Forms.RadioButton();
+            this.RandomCombatThirdPreference = new System.Windows.Forms.RadioButton();
+            this.DodgeCombatThirdPreference = new System.Windows.Forms.RadioButton();
+            this.BlockCombatThirdPreference = new System.Windows.Forms.RadioButton();
+            this.MagicCombatThirdPreference = new System.Windows.Forms.RadioButton();
+            this.RangedCombatThirdPreference = new System.Windows.Forms.RadioButton();
+            this.MeleeCombatThirdPreference = new System.Windows.Forms.RadioButton();
+            this.MoveCombatThirdPreference = new System.Windows.Forms.RadioButton();
+            this.CombatSecondPreference = new System.Windows.Forms.GroupBox();
+            this.SupriseCombatSecondPreference = new System.Windows.Forms.RadioButton();
+            this.RandomCombatSecondPreference = new System.Windows.Forms.RadioButton();
+            this.DodgeCombatSecondPreference = new System.Windows.Forms.RadioButton();
+            this.BlockCombatSecondPreference = new System.Windows.Forms.RadioButton();
+            this.MagicCombatSecondPreference = new System.Windows.Forms.RadioButton();
+            this.RangedCombatSecondPreference = new System.Windows.Forms.RadioButton();
+            this.MeleeCombatSecondPreference = new System.Windows.Forms.RadioButton();
+            this.MoveCombatSecondPreference = new System.Windows.Forms.RadioButton();
+            this.CombatFirstPreference = new System.Windows.Forms.GroupBox();
+            this.SurpriseCombatFirstPreference = new System.Windows.Forms.RadioButton();
+            this.RandomCombatFirstPreference = new System.Windows.Forms.RadioButton();
+            this.DodgeCombatFirstPreference = new System.Windows.Forms.RadioButton();
+            this.BlockCombatFirstPreference = new System.Windows.Forms.RadioButton();
+            this.MagicCombatFirstPreference = new System.Windows.Forms.RadioButton();
+            this.RangedCombatFirstPreference = new System.Windows.Forms.RadioButton();
+            this.MeleeCombatFirstPreference = new System.Windows.Forms.RadioButton();
+            this.MoveCombatFirstPreference = new System.Windows.Forms.RadioButton();
             this.EncounterTab = new System.Windows.Forms.TabPage();
             this.ActionDiceTabControl.SuspendLayout();
             this.ManagerTab.SuspendLayout();
             this.GeneratorTab.SuspendLayout();
+            this.NonCombatGroupBox.SuspendLayout();
+            this.CombatGroupBox.SuspendLayout();
+            this.CombatThirdPreference.SuspendLayout();
+            this.CombatSecondPreference.SuspendLayout();
+            this.CombatFirstPreference.SuspendLayout();
             this.SuspendLayout();
             // 
             // AddList
@@ -405,6 +444,10 @@
             // GeneratorTab
             // 
             this.GeneratorTab.BackColor = System.Drawing.Color.Transparent;
+            this.GeneratorTab.Controls.Add(this.GeneratorNameTextBox);
+            this.GeneratorTab.Controls.Add(this.GeneratorNameLabel);
+            this.GeneratorTab.Controls.Add(this.GeneratorLevelLabel);
+            this.GeneratorTab.Controls.Add(this.GeneratorLevelTextBox);
             this.GeneratorTab.Controls.Add(this.GeneratorLabel);
             this.GeneratorTab.Controls.Add(this.Generate);
             this.GeneratorTab.Controls.Add(this.GeneratorClear);
@@ -418,10 +461,42 @@
             this.GeneratorTab.TabIndex = 1;
             this.GeneratorTab.Text = "Character Generator";
             // 
+            // GeneratorNameTextBox
+            // 
+            this.GeneratorNameTextBox.Location = new System.Drawing.Point(314, 21);
+            this.GeneratorNameTextBox.Name = "GeneratorNameTextBox";
+            this.GeneratorNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.GeneratorNameTextBox.TabIndex = 8;
+            // 
+            // GeneratorNameLabel
+            // 
+            this.GeneratorNameLabel.AutoSize = true;
+            this.GeneratorNameLabel.Location = new System.Drawing.Point(222, 24);
+            this.GeneratorNameLabel.Name = "GeneratorNameLabel";
+            this.GeneratorNameLabel.Size = new System.Drawing.Size(84, 13);
+            this.GeneratorNameLabel.TabIndex = 7;
+            this.GeneratorNameLabel.Text = "Name (optional):";
+            // 
+            // GeneratorLevelLabel
+            // 
+            this.GeneratorLevelLabel.AutoSize = true;
+            this.GeneratorLevelLabel.Location = new System.Drawing.Point(25, 24);
+            this.GeneratorLevelLabel.Name = "GeneratorLevelLabel";
+            this.GeneratorLevelLabel.Size = new System.Drawing.Size(36, 13);
+            this.GeneratorLevelLabel.TabIndex = 6;
+            this.GeneratorLevelLabel.Text = "Level:";
+            // 
+            // GeneratorLevelTextBox
+            // 
+            this.GeneratorLevelTextBox.Location = new System.Drawing.Point(67, 21);
+            this.GeneratorLevelTextBox.Name = "GeneratorLevelTextBox";
+            this.GeneratorLevelTextBox.Size = new System.Drawing.Size(100, 20);
+            this.GeneratorLevelTextBox.TabIndex = 5;
+            // 
             // GeneratorLabel
             // 
             this.GeneratorLabel.AutoSize = true;
-            this.GeneratorLabel.Location = new System.Drawing.Point(1019, 16);
+            this.GeneratorLabel.Location = new System.Drawing.Point(1016, 31);
             this.GeneratorLabel.Name = "GeneratorLabel";
             this.GeneratorLabel.Size = new System.Drawing.Size(61, 13);
             this.GeneratorLabel.TabIndex = 4;
@@ -429,7 +504,7 @@
             // 
             // Generate
             // 
-            this.Generate.Location = new System.Drawing.Point(1214, 508);
+            this.Generate.Location = new System.Drawing.Point(1214, 521);
             this.Generate.Name = "Generate";
             this.Generate.Size = new System.Drawing.Size(75, 23);
             this.Generate.TabIndex = 3;
@@ -438,7 +513,7 @@
             // 
             // GeneratorClear
             // 
-            this.GeneratorClear.Location = new System.Drawing.Point(1133, 508);
+            this.GeneratorClear.Location = new System.Drawing.Point(1133, 521);
             this.GeneratorClear.Name = "GeneratorClear";
             this.GeneratorClear.Size = new System.Drawing.Size(75, 23);
             this.GeneratorClear.TabIndex = 2;
@@ -448,7 +523,7 @@
             // GeneratorListBox
             // 
             this.GeneratorListBox.FormattingEnabled = true;
-            this.GeneratorListBox.Location = new System.Drawing.Point(1019, 43);
+            this.GeneratorListBox.Location = new System.Drawing.Point(1019, 56);
             this.GeneratorListBox.Name = "GeneratorListBox";
             this.GeneratorListBox.Size = new System.Drawing.Size(387, 459);
             this.GeneratorListBox.TabIndex = 1;
@@ -456,6 +531,9 @@
             // NonCombatGroupBox
             // 
             this.NonCombatGroupBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.NonCombatGroupBox.Controls.Add(this.NonCombatThirdPreference);
+            this.NonCombatGroupBox.Controls.Add(this.NonCombatSecondPreference);
+            this.NonCombatGroupBox.Controls.Add(this.NonCombatFirstPreference);
             this.NonCombatGroupBox.Location = new System.Drawing.Point(13, 362);
             this.NonCombatGroupBox.Name = "NonCombatGroupBox";
             this.NonCombatGroupBox.Size = new System.Drawing.Size(1000, 350);
@@ -463,15 +541,366 @@
             this.NonCombatGroupBox.TabStop = false;
             this.NonCombatGroupBox.Text = "Non-Combat";
             // 
+            // NonCombatThirdPreference
+            // 
+            this.NonCombatThirdPreference.BackColor = System.Drawing.Color.White;
+            this.NonCombatThirdPreference.Location = new System.Drawing.Point(667, 19);
+            this.NonCombatThirdPreference.Name = "NonCombatThirdPreference";
+            this.NonCombatThirdPreference.Size = new System.Drawing.Size(320, 325);
+            this.NonCombatThirdPreference.TabIndex = 2;
+            this.NonCombatThirdPreference.TabStop = false;
+            this.NonCombatThirdPreference.Text = "3rd Preference";
+            // 
+            // NonCombatSecondPreference
+            // 
+            this.NonCombatSecondPreference.BackColor = System.Drawing.Color.White;
+            this.NonCombatSecondPreference.Location = new System.Drawing.Point(341, 19);
+            this.NonCombatSecondPreference.Name = "NonCombatSecondPreference";
+            this.NonCombatSecondPreference.Size = new System.Drawing.Size(320, 325);
+            this.NonCombatSecondPreference.TabIndex = 1;
+            this.NonCombatSecondPreference.TabStop = false;
+            this.NonCombatSecondPreference.Text = "2nd Preference";
+            // 
+            // NonCombatFirstPreference
+            // 
+            this.NonCombatFirstPreference.BackColor = System.Drawing.Color.White;
+            this.NonCombatFirstPreference.Location = new System.Drawing.Point(15, 19);
+            this.NonCombatFirstPreference.Name = "NonCombatFirstPreference";
+            this.NonCombatFirstPreference.Size = new System.Drawing.Size(320, 325);
+            this.NonCombatFirstPreference.TabIndex = 0;
+            this.NonCombatFirstPreference.TabStop = false;
+            this.NonCombatFirstPreference.Text = "1st Preference";
+            // 
             // CombatGroupBox
             // 
             this.CombatGroupBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CombatGroupBox.Location = new System.Drawing.Point(13, 6);
+            this.CombatGroupBox.Controls.Add(this.CombatThirdPreference);
+            this.CombatGroupBox.Controls.Add(this.CombatSecondPreference);
+            this.CombatGroupBox.Controls.Add(this.CombatFirstPreference);
+            this.CombatGroupBox.Location = new System.Drawing.Point(13, 56);
             this.CombatGroupBox.Name = "CombatGroupBox";
-            this.CombatGroupBox.Size = new System.Drawing.Size(1000, 350);
+            this.CombatGroupBox.Size = new System.Drawing.Size(1000, 300);
             this.CombatGroupBox.TabIndex = 0;
             this.CombatGroupBox.TabStop = false;
             this.CombatGroupBox.Text = "Combat";
+            // 
+            // CombatThirdPreference
+            // 
+            this.CombatThirdPreference.BackColor = System.Drawing.Color.White;
+            this.CombatThirdPreference.Controls.Add(this.SupriseCombatThirdPreference);
+            this.CombatThirdPreference.Controls.Add(this.RandomCombatThirdPreference);
+            this.CombatThirdPreference.Controls.Add(this.DodgeCombatThirdPreference);
+            this.CombatThirdPreference.Controls.Add(this.BlockCombatThirdPreference);
+            this.CombatThirdPreference.Controls.Add(this.MagicCombatThirdPreference);
+            this.CombatThirdPreference.Controls.Add(this.RangedCombatThirdPreference);
+            this.CombatThirdPreference.Controls.Add(this.MeleeCombatThirdPreference);
+            this.CombatThirdPreference.Controls.Add(this.MoveCombatThirdPreference);
+            this.CombatThirdPreference.Location = new System.Drawing.Point(667, 19);
+            this.CombatThirdPreference.Name = "CombatThirdPreference";
+            this.CombatThirdPreference.Size = new System.Drawing.Size(320, 275);
+            this.CombatThirdPreference.TabIndex = 2;
+            this.CombatThirdPreference.TabStop = false;
+            this.CombatThirdPreference.Text = "3rd Preference";
+            // 
+            // SupriseCombatThirdPreference
+            // 
+            this.SupriseCombatThirdPreference.AutoSize = true;
+            this.SupriseCombatThirdPreference.Location = new System.Drawing.Point(188, 42);
+            this.SupriseCombatThirdPreference.Name = "SupriseCombatThirdPreference";
+            this.SupriseCombatThirdPreference.Size = new System.Drawing.Size(93, 17);
+            this.SupriseCombatThirdPreference.TabIndex = 7;
+            this.SupriseCombatThirdPreference.TabStop = true;
+            this.SupriseCombatThirdPreference.Text = "Choose for me";
+            this.SupriseCombatThirdPreference.UseVisualStyleBackColor = true;
+            // 
+            // RandomCombatThirdPreference
+            // 
+            this.RandomCombatThirdPreference.AutoSize = true;
+            this.RandomCombatThirdPreference.Location = new System.Drawing.Point(188, 19);
+            this.RandomCombatThirdPreference.Name = "RandomCombatThirdPreference";
+            this.RandomCombatThirdPreference.Size = new System.Drawing.Size(65, 17);
+            this.RandomCombatThirdPreference.TabIndex = 6;
+            this.RandomCombatThirdPreference.TabStop = true;
+            this.RandomCombatThirdPreference.Text = "Random";
+            this.RandomCombatThirdPreference.UseVisualStyleBackColor = true;
+            // 
+            // DodgeCombatThirdPreference
+            // 
+            this.DodgeCombatThirdPreference.AutoSize = true;
+            this.DodgeCombatThirdPreference.Location = new System.Drawing.Point(7, 135);
+            this.DodgeCombatThirdPreference.Name = "DodgeCombatThirdPreference";
+            this.DodgeCombatThirdPreference.Size = new System.Drawing.Size(57, 17);
+            this.DodgeCombatThirdPreference.TabIndex = 5;
+            this.DodgeCombatThirdPreference.TabStop = true;
+            this.DodgeCombatThirdPreference.Text = "Dodge";
+            this.DodgeCombatThirdPreference.UseVisualStyleBackColor = true;
+            // 
+            // BlockCombatThirdPreference
+            // 
+            this.BlockCombatThirdPreference.AutoSize = true;
+            this.BlockCombatThirdPreference.Location = new System.Drawing.Point(7, 112);
+            this.BlockCombatThirdPreference.Name = "BlockCombatThirdPreference";
+            this.BlockCombatThirdPreference.Size = new System.Drawing.Size(52, 17);
+            this.BlockCombatThirdPreference.TabIndex = 4;
+            this.BlockCombatThirdPreference.TabStop = true;
+            this.BlockCombatThirdPreference.Text = "Block";
+            this.BlockCombatThirdPreference.UseVisualStyleBackColor = true;
+            // 
+            // MagicCombatThirdPreference
+            // 
+            this.MagicCombatThirdPreference.AutoSize = true;
+            this.MagicCombatThirdPreference.Location = new System.Drawing.Point(7, 89);
+            this.MagicCombatThirdPreference.Name = "MagicCombatThirdPreference";
+            this.MagicCombatThirdPreference.Size = new System.Drawing.Size(54, 17);
+            this.MagicCombatThirdPreference.TabIndex = 3;
+            this.MagicCombatThirdPreference.TabStop = true;
+            this.MagicCombatThirdPreference.Text = "Magic";
+            this.MagicCombatThirdPreference.UseVisualStyleBackColor = true;
+            // 
+            // RangedCombatThirdPreference
+            // 
+            this.RangedCombatThirdPreference.AutoSize = true;
+            this.RangedCombatThirdPreference.Location = new System.Drawing.Point(7, 65);
+            this.RangedCombatThirdPreference.Name = "RangedCombatThirdPreference";
+            this.RangedCombatThirdPreference.Size = new System.Drawing.Size(63, 17);
+            this.RangedCombatThirdPreference.TabIndex = 2;
+            this.RangedCombatThirdPreference.TabStop = true;
+            this.RangedCombatThirdPreference.Text = "Ranged";
+            this.RangedCombatThirdPreference.UseVisualStyleBackColor = true;
+            // 
+            // MeleeCombatThirdPreference
+            // 
+            this.MeleeCombatThirdPreference.AutoSize = true;
+            this.MeleeCombatThirdPreference.Location = new System.Drawing.Point(7, 42);
+            this.MeleeCombatThirdPreference.Name = "MeleeCombatThirdPreference";
+            this.MeleeCombatThirdPreference.Size = new System.Drawing.Size(54, 17);
+            this.MeleeCombatThirdPreference.TabIndex = 1;
+            this.MeleeCombatThirdPreference.TabStop = true;
+            this.MeleeCombatThirdPreference.Text = "Melee";
+            this.MeleeCombatThirdPreference.UseVisualStyleBackColor = true;
+            // 
+            // MoveCombatThirdPreference
+            // 
+            this.MoveCombatThirdPreference.AutoSize = true;
+            this.MoveCombatThirdPreference.Location = new System.Drawing.Point(7, 20);
+            this.MoveCombatThirdPreference.Name = "MoveCombatThirdPreference";
+            this.MoveCombatThirdPreference.Size = new System.Drawing.Size(52, 17);
+            this.MoveCombatThirdPreference.TabIndex = 0;
+            this.MoveCombatThirdPreference.TabStop = true;
+            this.MoveCombatThirdPreference.Text = "Move";
+            this.MoveCombatThirdPreference.UseVisualStyleBackColor = true;
+            // 
+            // CombatSecondPreference
+            // 
+            this.CombatSecondPreference.BackColor = System.Drawing.Color.White;
+            this.CombatSecondPreference.Controls.Add(this.SupriseCombatSecondPreference);
+            this.CombatSecondPreference.Controls.Add(this.RandomCombatSecondPreference);
+            this.CombatSecondPreference.Controls.Add(this.DodgeCombatSecondPreference);
+            this.CombatSecondPreference.Controls.Add(this.BlockCombatSecondPreference);
+            this.CombatSecondPreference.Controls.Add(this.MagicCombatSecondPreference);
+            this.CombatSecondPreference.Controls.Add(this.RangedCombatSecondPreference);
+            this.CombatSecondPreference.Controls.Add(this.MeleeCombatSecondPreference);
+            this.CombatSecondPreference.Controls.Add(this.MoveCombatSecondPreference);
+            this.CombatSecondPreference.Location = new System.Drawing.Point(341, 19);
+            this.CombatSecondPreference.Name = "CombatSecondPreference";
+            this.CombatSecondPreference.Size = new System.Drawing.Size(320, 275);
+            this.CombatSecondPreference.TabIndex = 1;
+            this.CombatSecondPreference.TabStop = false;
+            this.CombatSecondPreference.Text = "2nd Preference";
+            // 
+            // SupriseCombatSecondPreference
+            // 
+            this.SupriseCombatSecondPreference.AutoSize = true;
+            this.SupriseCombatSecondPreference.Location = new System.Drawing.Point(195, 44);
+            this.SupriseCombatSecondPreference.Name = "SupriseCombatSecondPreference";
+            this.SupriseCombatSecondPreference.Size = new System.Drawing.Size(93, 17);
+            this.SupriseCombatSecondPreference.TabIndex = 7;
+            this.SupriseCombatSecondPreference.TabStop = true;
+            this.SupriseCombatSecondPreference.Text = "Choose for me";
+            this.SupriseCombatSecondPreference.UseVisualStyleBackColor = true;
+            // 
+            // RandomCombatSecondPreference
+            // 
+            this.RandomCombatSecondPreference.AutoSize = true;
+            this.RandomCombatSecondPreference.Location = new System.Drawing.Point(195, 19);
+            this.RandomCombatSecondPreference.Name = "RandomCombatSecondPreference";
+            this.RandomCombatSecondPreference.Size = new System.Drawing.Size(65, 17);
+            this.RandomCombatSecondPreference.TabIndex = 6;
+            this.RandomCombatSecondPreference.TabStop = true;
+            this.RandomCombatSecondPreference.Text = "Random";
+            this.RandomCombatSecondPreference.UseVisualStyleBackColor = true;
+            // 
+            // DodgeCombatSecondPreference
+            // 
+            this.DodgeCombatSecondPreference.AutoSize = true;
+            this.DodgeCombatSecondPreference.Location = new System.Drawing.Point(7, 137);
+            this.DodgeCombatSecondPreference.Name = "DodgeCombatSecondPreference";
+            this.DodgeCombatSecondPreference.Size = new System.Drawing.Size(57, 17);
+            this.DodgeCombatSecondPreference.TabIndex = 5;
+            this.DodgeCombatSecondPreference.TabStop = true;
+            this.DodgeCombatSecondPreference.Text = "Dodge";
+            this.DodgeCombatSecondPreference.UseVisualStyleBackColor = true;
+            // 
+            // BlockCombatSecondPreference
+            // 
+            this.BlockCombatSecondPreference.AutoSize = true;
+            this.BlockCombatSecondPreference.Location = new System.Drawing.Point(7, 113);
+            this.BlockCombatSecondPreference.Name = "BlockCombatSecondPreference";
+            this.BlockCombatSecondPreference.Size = new System.Drawing.Size(52, 17);
+            this.BlockCombatSecondPreference.TabIndex = 4;
+            this.BlockCombatSecondPreference.TabStop = true;
+            this.BlockCombatSecondPreference.Text = "Block";
+            this.BlockCombatSecondPreference.UseVisualStyleBackColor = true;
+            // 
+            // MagicCombatSecondPreference
+            // 
+            this.MagicCombatSecondPreference.AutoSize = true;
+            this.MagicCombatSecondPreference.Location = new System.Drawing.Point(7, 89);
+            this.MagicCombatSecondPreference.Name = "MagicCombatSecondPreference";
+            this.MagicCombatSecondPreference.Size = new System.Drawing.Size(54, 17);
+            this.MagicCombatSecondPreference.TabIndex = 3;
+            this.MagicCombatSecondPreference.TabStop = true;
+            this.MagicCombatSecondPreference.Text = "Magic";
+            this.MagicCombatSecondPreference.UseVisualStyleBackColor = true;
+            // 
+            // RangedCombatSecondPreference
+            // 
+            this.RangedCombatSecondPreference.AutoSize = true;
+            this.RangedCombatSecondPreference.Location = new System.Drawing.Point(6, 65);
+            this.RangedCombatSecondPreference.Name = "RangedCombatSecondPreference";
+            this.RangedCombatSecondPreference.Size = new System.Drawing.Size(63, 17);
+            this.RangedCombatSecondPreference.TabIndex = 2;
+            this.RangedCombatSecondPreference.TabStop = true;
+            this.RangedCombatSecondPreference.Text = "Ranged";
+            this.RangedCombatSecondPreference.UseVisualStyleBackColor = true;
+            // 
+            // MeleeCombatSecondPreference
+            // 
+            this.MeleeCombatSecondPreference.AutoSize = true;
+            this.MeleeCombatSecondPreference.Location = new System.Drawing.Point(6, 42);
+            this.MeleeCombatSecondPreference.Name = "MeleeCombatSecondPreference";
+            this.MeleeCombatSecondPreference.Size = new System.Drawing.Size(54, 17);
+            this.MeleeCombatSecondPreference.TabIndex = 1;
+            this.MeleeCombatSecondPreference.TabStop = true;
+            this.MeleeCombatSecondPreference.Text = "Melee";
+            this.MeleeCombatSecondPreference.UseVisualStyleBackColor = true;
+            // 
+            // MoveCombatSecondPreference
+            // 
+            this.MoveCombatSecondPreference.AutoSize = true;
+            this.MoveCombatSecondPreference.Location = new System.Drawing.Point(6, 19);
+            this.MoveCombatSecondPreference.Name = "MoveCombatSecondPreference";
+            this.MoveCombatSecondPreference.Size = new System.Drawing.Size(52, 17);
+            this.MoveCombatSecondPreference.TabIndex = 0;
+            this.MoveCombatSecondPreference.TabStop = true;
+            this.MoveCombatSecondPreference.Text = "Move";
+            this.MoveCombatSecondPreference.UseVisualStyleBackColor = true;
+            // 
+            // CombatFirstPreference
+            // 
+            this.CombatFirstPreference.BackColor = System.Drawing.Color.White;
+            this.CombatFirstPreference.Controls.Add(this.SurpriseCombatFirstPreference);
+            this.CombatFirstPreference.Controls.Add(this.RandomCombatFirstPreference);
+            this.CombatFirstPreference.Controls.Add(this.DodgeCombatFirstPreference);
+            this.CombatFirstPreference.Controls.Add(this.BlockCombatFirstPreference);
+            this.CombatFirstPreference.Controls.Add(this.MagicCombatFirstPreference);
+            this.CombatFirstPreference.Controls.Add(this.RangedCombatFirstPreference);
+            this.CombatFirstPreference.Controls.Add(this.MeleeCombatFirstPreference);
+            this.CombatFirstPreference.Controls.Add(this.MoveCombatFirstPreference);
+            this.CombatFirstPreference.Location = new System.Drawing.Point(15, 19);
+            this.CombatFirstPreference.Name = "CombatFirstPreference";
+            this.CombatFirstPreference.Size = new System.Drawing.Size(320, 275);
+            this.CombatFirstPreference.TabIndex = 0;
+            this.CombatFirstPreference.TabStop = false;
+            this.CombatFirstPreference.Text = "1st Preference";
+            // 
+            // SurpriseCombatFirstPreference
+            // 
+            this.SurpriseCombatFirstPreference.AutoSize = true;
+            this.SurpriseCombatFirstPreference.Location = new System.Drawing.Point(197, 44);
+            this.SurpriseCombatFirstPreference.Name = "SurpriseCombatFirstPreference";
+            this.SurpriseCombatFirstPreference.Size = new System.Drawing.Size(93, 17);
+            this.SurpriseCombatFirstPreference.TabIndex = 7;
+            this.SurpriseCombatFirstPreference.TabStop = true;
+            this.SurpriseCombatFirstPreference.Text = "Choose for me";
+            this.SurpriseCombatFirstPreference.UseVisualStyleBackColor = true;
+            // 
+            // RandomCombatFirstPreference
+            // 
+            this.RandomCombatFirstPreference.AutoSize = true;
+            this.RandomCombatFirstPreference.Location = new System.Drawing.Point(197, 19);
+            this.RandomCombatFirstPreference.Name = "RandomCombatFirstPreference";
+            this.RandomCombatFirstPreference.Size = new System.Drawing.Size(65, 17);
+            this.RandomCombatFirstPreference.TabIndex = 6;
+            this.RandomCombatFirstPreference.TabStop = true;
+            this.RandomCombatFirstPreference.Text = "Random";
+            this.RandomCombatFirstPreference.UseVisualStyleBackColor = true;
+            // 
+            // DodgeCombatFirstPreference
+            // 
+            this.DodgeCombatFirstPreference.AutoSize = true;
+            this.DodgeCombatFirstPreference.Location = new System.Drawing.Point(6, 135);
+            this.DodgeCombatFirstPreference.Name = "DodgeCombatFirstPreference";
+            this.DodgeCombatFirstPreference.Size = new System.Drawing.Size(57, 17);
+            this.DodgeCombatFirstPreference.TabIndex = 5;
+            this.DodgeCombatFirstPreference.TabStop = true;
+            this.DodgeCombatFirstPreference.Text = "Dodge";
+            this.DodgeCombatFirstPreference.UseVisualStyleBackColor = true;
+            // 
+            // BlockCombatFirstPreference
+            // 
+            this.BlockCombatFirstPreference.AutoSize = true;
+            this.BlockCombatFirstPreference.Location = new System.Drawing.Point(6, 112);
+            this.BlockCombatFirstPreference.Name = "BlockCombatFirstPreference";
+            this.BlockCombatFirstPreference.Size = new System.Drawing.Size(52, 17);
+            this.BlockCombatFirstPreference.TabIndex = 4;
+            this.BlockCombatFirstPreference.TabStop = true;
+            this.BlockCombatFirstPreference.Text = "Block";
+            this.BlockCombatFirstPreference.UseVisualStyleBackColor = true;
+            // 
+            // MagicCombatFirstPreference
+            // 
+            this.MagicCombatFirstPreference.AutoSize = true;
+            this.MagicCombatFirstPreference.Location = new System.Drawing.Point(6, 89);
+            this.MagicCombatFirstPreference.Name = "MagicCombatFirstPreference";
+            this.MagicCombatFirstPreference.Size = new System.Drawing.Size(54, 17);
+            this.MagicCombatFirstPreference.TabIndex = 3;
+            this.MagicCombatFirstPreference.TabStop = true;
+            this.MagicCombatFirstPreference.Text = "Magic";
+            this.MagicCombatFirstPreference.UseVisualStyleBackColor = true;
+            // 
+            // RangedCombatFirstPreference
+            // 
+            this.RangedCombatFirstPreference.AutoSize = true;
+            this.RangedCombatFirstPreference.Location = new System.Drawing.Point(6, 66);
+            this.RangedCombatFirstPreference.Name = "RangedCombatFirstPreference";
+            this.RangedCombatFirstPreference.Size = new System.Drawing.Size(63, 17);
+            this.RangedCombatFirstPreference.TabIndex = 2;
+            this.RangedCombatFirstPreference.TabStop = true;
+            this.RangedCombatFirstPreference.Text = "Ranged";
+            this.RangedCombatFirstPreference.UseVisualStyleBackColor = true;
+            // 
+            // MeleeCombatFirstPreference
+            // 
+            this.MeleeCombatFirstPreference.AutoSize = true;
+            this.MeleeCombatFirstPreference.Location = new System.Drawing.Point(6, 43);
+            this.MeleeCombatFirstPreference.Name = "MeleeCombatFirstPreference";
+            this.MeleeCombatFirstPreference.Size = new System.Drawing.Size(54, 17);
+            this.MeleeCombatFirstPreference.TabIndex = 1;
+            this.MeleeCombatFirstPreference.TabStop = true;
+            this.MeleeCombatFirstPreference.Text = "Melee";
+            this.MeleeCombatFirstPreference.UseVisualStyleBackColor = true;
+            // 
+            // MoveCombatFirstPreference
+            // 
+            this.MoveCombatFirstPreference.AutoSize = true;
+            this.MoveCombatFirstPreference.Location = new System.Drawing.Point(6, 20);
+            this.MoveCombatFirstPreference.Name = "MoveCombatFirstPreference";
+            this.MoveCombatFirstPreference.Size = new System.Drawing.Size(52, 17);
+            this.MoveCombatFirstPreference.TabIndex = 0;
+            this.MoveCombatFirstPreference.TabStop = true;
+            this.MoveCombatFirstPreference.Text = "Move";
+            this.MoveCombatFirstPreference.UseVisualStyleBackColor = true;
             // 
             // EncounterTab
             // 
@@ -496,6 +925,14 @@
             this.ManagerTab.PerformLayout();
             this.GeneratorTab.ResumeLayout(false);
             this.GeneratorTab.PerformLayout();
+            this.NonCombatGroupBox.ResumeLayout(false);
+            this.CombatGroupBox.ResumeLayout(false);
+            this.CombatThirdPreference.ResumeLayout(false);
+            this.CombatThirdPreference.PerformLayout();
+            this.CombatSecondPreference.ResumeLayout(false);
+            this.CombatSecondPreference.PerformLayout();
+            this.CombatFirstPreference.ResumeLayout(false);
+            this.CombatFirstPreference.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -550,6 +987,40 @@
         private System.Windows.Forms.Button GeneratorClear;
         private System.Windows.Forms.ListBox GeneratorListBox;
         private System.Windows.Forms.Label GeneratorLabel;
+        private System.Windows.Forms.TextBox GeneratorNameTextBox;
+        private System.Windows.Forms.Label GeneratorNameLabel;
+        private System.Windows.Forms.Label GeneratorLevelLabel;
+        private System.Windows.Forms.TextBox GeneratorLevelTextBox;
+        private System.Windows.Forms.GroupBox CombatSecondPreference;
+        private System.Windows.Forms.GroupBox CombatFirstPreference;
+        private System.Windows.Forms.GroupBox CombatThirdPreference;
+        private System.Windows.Forms.GroupBox NonCombatThirdPreference;
+        private System.Windows.Forms.GroupBox NonCombatSecondPreference;
+        private System.Windows.Forms.GroupBox NonCombatFirstPreference;
+        private System.Windows.Forms.RadioButton SurpriseCombatFirstPreference;
+        private System.Windows.Forms.RadioButton RandomCombatFirstPreference;
+        private System.Windows.Forms.RadioButton DodgeCombatFirstPreference;
+        private System.Windows.Forms.RadioButton BlockCombatFirstPreference;
+        private System.Windows.Forms.RadioButton MagicCombatFirstPreference;
+        private System.Windows.Forms.RadioButton RangedCombatFirstPreference;
+        private System.Windows.Forms.RadioButton MeleeCombatFirstPreference;
+        private System.Windows.Forms.RadioButton MoveCombatFirstPreference;
+        private System.Windows.Forms.RadioButton SupriseCombatSecondPreference;
+        private System.Windows.Forms.RadioButton RandomCombatSecondPreference;
+        private System.Windows.Forms.RadioButton DodgeCombatSecondPreference;
+        private System.Windows.Forms.RadioButton BlockCombatSecondPreference;
+        private System.Windows.Forms.RadioButton MagicCombatSecondPreference;
+        private System.Windows.Forms.RadioButton RangedCombatSecondPreference;
+        private System.Windows.Forms.RadioButton MeleeCombatSecondPreference;
+        private System.Windows.Forms.RadioButton MoveCombatSecondPreference;
+        private System.Windows.Forms.RadioButton SupriseCombatThirdPreference;
+        private System.Windows.Forms.RadioButton RandomCombatThirdPreference;
+        private System.Windows.Forms.RadioButton DodgeCombatThirdPreference;
+        private System.Windows.Forms.RadioButton BlockCombatThirdPreference;
+        private System.Windows.Forms.RadioButton MagicCombatThirdPreference;
+        private System.Windows.Forms.RadioButton RangedCombatThirdPreference;
+        private System.Windows.Forms.RadioButton MeleeCombatThirdPreference;
+        private System.Windows.Forms.RadioButton MoveCombatThirdPreference;
     }
 }
 
