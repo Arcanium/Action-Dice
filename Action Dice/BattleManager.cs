@@ -27,7 +27,7 @@ namespace Action_Dice
                 box.Items.Add(attackRoll + "d6 + " + attackBonus + " " + PASS);
             else if (defenseType.ToLower().Contains(BLOCK.ToLower()) || defenseType.ToUpper().Contains(BLOCK.ToUpper()))
                 box.Items.Add(attackRoll + "d6 + " + attackBonus + " " + BLOCK + " " + defenseRoll + "d6 + " + defenseBonus);
-            if (defenseType.ToLower().Contains(DODGE.ToLower()) || defenseType.ToUpper().Contains(DODGE.ToUpper()))
+            else if (defenseType.ToLower().Contains(DODGE.ToLower()) || defenseType.ToUpper().Contains(DODGE.ToUpper()))
                 box.Items.Add(attackRoll + "d6 + " + attackBonus + " " + DODGE + " " + defenseRoll + "d6 + " + defenseBonus);
         }
 

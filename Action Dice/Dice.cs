@@ -8,7 +8,6 @@ namespace Action_Dice
 {
     class Dice
     {
-
         private Random rando = new Random();
 
         public int roll(int diceSize, int numberOfDice = 1)
@@ -16,12 +15,8 @@ namespace Action_Dice
             int dieSum = 0;
 
             for (int i = 0; i < numberOfDice; i++)
-            {
                 dieSum += (rando.Next() % diceSize) + 1;
-            }
-
             return dieSum;
         }
-
     }
 }
