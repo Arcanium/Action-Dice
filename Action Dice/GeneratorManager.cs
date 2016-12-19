@@ -8,23 +8,25 @@ namespace Action_Dice
 {
     class GeneratorManager
     {
-
+        //Random is kinda broken.
         #region Private Static Members
-        static int move = 0;
-        static int melee = 0;
-        static int ranged = 0;
-        static int magic = 0;
-        static int block = 0;
-        static int dodge = 0;
+        private static Random rando = new Random();
 
-        static int animalHandling = 0;
-        static int arcaneArts = 0;
-        static int athletics = 0;
-        static int perception = 0;
-        static int practical = 0;
-        static int precision = 0;
-        static int speech = 0;
-        static int stealth = 0;
+        private static int move = 0;
+        private static int melee = 0;
+        private static int ranged = 0;
+        private static int magic = 0;
+        private static int block = 0;
+        private static int dodge = 0;
+
+        private static int animalHandling = 0;
+        private static int arcaneArts = 0;
+        private static int athletics = 0;
+        private static int perception = 0;
+        private static int practical = 0;
+        private static int precision = 0;
+        private static int speech = 0;
+        private static int stealth = 0;
 
         #endregion
 
@@ -145,8 +147,6 @@ namespace Action_Dice
             System.Windows.Forms.RadioButton magicButton, System.Windows.Forms.RadioButton blockButton, System.Windows.Forms.RadioButton dodgeButton,
             System.Windows.Forms.RadioButton randomButton)
         {
-            Random rando = new Random();
-
             int randomNumber = rando.Next(1, 8);
             switch (randomNumber)
             {
@@ -181,8 +181,6 @@ namespace Action_Dice
             System.Windows.Forms.RadioButton precisionButton, System.Windows.Forms.RadioButton speechButton, System.Windows.Forms.RadioButton stealthButton,
             System.Windows.Forms.RadioButton randomButton)
         {
-            Random rando = new Random();
-
             int randomNumber = rando.Next(1, 10);
             switch (randomNumber)
             {
@@ -222,8 +220,6 @@ namespace Action_Dice
         //Probably oughta test this. Random numbers never work quite right.
         public static int RandomCombatSkillSelect(int level)
         {
-            Random rando = new Random();
-
             for (;;)
             {
                 int randomNumber = rando.Next(1, 7);
@@ -262,8 +258,6 @@ namespace Action_Dice
         //Probably oughta test this. Random numbers never work quite right.
         public static int RandomNonCombatSkillSelect(int level)
         {
-            Random rando = new Random();
-
             for (;;)
             {
                 int randomNumber = rando.Next(1, 9);
@@ -417,7 +411,7 @@ namespace Action_Dice
                 }
                 if (lineCount > 0)
                 {
-                    char[] removeChars = { ',', ' '};
+                    char[] removeChars = { ',', ' ' };
                     line = line.TrimEnd(removeChars);
                     generatorBox.Items.Add(line);
                 }
