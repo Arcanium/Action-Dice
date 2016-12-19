@@ -8,7 +8,6 @@ namespace Action_Dice
 {
     class GeneratorManager
     {
-        //Random is kinda broken.
         #region Private Static Members
         private static Random rando = new Random();
 
@@ -53,94 +52,92 @@ namespace Action_Dice
             return skillPoints;
         }
 
-        public static int CombatSkillSelect(System.Windows.Forms.RadioButton moveButton, System.Windows.Forms.RadioButton meleeButton, System.Windows.Forms.RadioButton rangedButton,
+        public static void CombatSkillSelect(System.Windows.Forms.RadioButton moveButton, System.Windows.Forms.RadioButton meleeButton, System.Windows.Forms.RadioButton rangedButton,
             System.Windows.Forms.RadioButton magicButton, System.Windows.Forms.RadioButton blockButton, System.Windows.Forms.RadioButton dodgeButton,
             System.Windows.Forms.RadioButton randomButton, int level)
         {
             //Gotta check if the skill already is as high as the level.
             if (moveButton.Checked)
                 if (move < level)
-                    return ++move;
+                    ++move;
                 else
-                    return RandomCombatSkillSelect(level);
+                    RandomCombatSkillSelect(level);
             else if (meleeButton.Checked)
                 if (melee < level)
-                    return ++melee;
+                    ++melee;
                 else
-                    return RandomCombatSkillSelect(level);
+                    RandomCombatSkillSelect(level);
             else if (rangedButton.Checked)
                 if (ranged < level)
-                    return ++ranged;
+                    ++ranged;
                 else
-                    return RandomCombatSkillSelect(level);
+                    RandomCombatSkillSelect(level);
             else if (magicButton.Checked)
                 if (magic < level)
-                    return ++magic;
+                    ++magic;
                 else
-                    return RandomCombatSkillSelect(level);
+                    RandomCombatSkillSelect(level);
             else if (blockButton.Checked)
                 if (block < level)
-                    return ++block;
+                    ++block;
                 else
-                    return RandomCombatSkillSelect(level);
+                    RandomCombatSkillSelect(level);
             else if (dodgeButton.Checked)
                 if (dodge < level)
-                    return ++dodge;
+                    ++dodge;
                 else
-                    return RandomCombatSkillSelect(level);
+                    RandomCombatSkillSelect(level);
             else if (randomButton.Checked)
-                return RandomCombatSkillSelect(level);
-            return 0; //This is an error state, it should never be reached.
+                RandomCombatSkillSelect(level);
         }
 
-        public static int NonCombatSkillSelect(System.Windows.Forms.RadioButton animalHandlingButton, System.Windows.Forms.RadioButton arcaneArtsButton, System.Windows.Forms.RadioButton athleticsButton,
+        public static void NonCombatSkillSelect(System.Windows.Forms.RadioButton animalHandlingButton, System.Windows.Forms.RadioButton arcaneArtsButton, System.Windows.Forms.RadioButton athleticsButton,
            System.Windows.Forms.RadioButton perceptionButton, System.Windows.Forms.RadioButton practicalButton, System.Windows.Forms.RadioButton precisionButton,
            System.Windows.Forms.RadioButton speechButton, System.Windows.Forms.RadioButton stealthButton, System.Windows.Forms.RadioButton randomButton, int level)
         {
             //Gotta check if the skill already is as high as the level.
             if (animalHandlingButton.Checked)
                 if (animalHandling < level)
-                    return ++animalHandling;
+                    ++animalHandling;
                 else
-                    return RandomNonCombatSkillSelect(level);
+                    RandomNonCombatSkillSelect(level);
             else if (arcaneArtsButton.Checked)
                 if (arcaneArts < level)
-                    return ++arcaneArts;
+                    ++arcaneArts;
                 else
-                    return RandomNonCombatSkillSelect(level);
+                    RandomNonCombatSkillSelect(level);
             else if (athleticsButton.Checked)
                 if (athletics < level)
-                    return ++athletics;
+                    ++athletics;
                 else
-                    return RandomNonCombatSkillSelect(level);
+                    RandomNonCombatSkillSelect(level);
             else if (perceptionButton.Checked)
                 if (perception < level)
-                    return ++perception;
+                    ++perception;
                 else
-                    return RandomNonCombatSkillSelect(level);
+                    RandomNonCombatSkillSelect(level);
             else if (practicalButton.Checked)
                 if (practical < level)
-                    return ++practical;
+                    ++practical;
                 else
-                    return RandomNonCombatSkillSelect(level);
+                    RandomNonCombatSkillSelect(level);
             else if (precisionButton.Checked)
                 if (precision < level)
-                    return ++precision;
+                    ++precision;
                 else
-                    return RandomNonCombatSkillSelect(level);
+                    RandomNonCombatSkillSelect(level);
             else if (speechButton.Checked)
                 if (speech < level)
-                    return ++speech;
+                    ++speech;
                 else
-                    return RandomNonCombatSkillSelect(level);
+                    RandomNonCombatSkillSelect(level);
             else if (stealthButton.Checked)
                 if (stealth < level)
-                    return ++stealth;
+                    ++stealth;
                 else
-                    return RandomNonCombatSkillSelect(level);
+                    RandomNonCombatSkillSelect(level);
             else if (randomButton.Checked)
-                return RandomNonCombatSkillSelect(level);
-            return 0; //This is an error state, it should never be reached.
+                RandomNonCombatSkillSelect(level);
         }
 
         public static void CombatPreferenceSelect(System.Windows.Forms.RadioButton moveButton, System.Windows.Forms.RadioButton meleeButton, System.Windows.Forms.RadioButton rangedButton,
@@ -216,8 +213,9 @@ namespace Action_Dice
             }
 
         }
-
-        //Probably oughta test this. Random numbers never work quite right.
+        
+        //I don't need to return the int, but having the return there is useful for breaking the loop.
+        //Alternatively I could just put a blank return after every statement.
         public static int RandomCombatSkillSelect(int level)
         {
             for (;;)
@@ -254,8 +252,7 @@ namespace Action_Dice
                 }
             }
         }
-
-        //Probably oughta test this. Random numbers never work quite right.
+        
         public static int RandomNonCombatSkillSelect(int level)
         {
             for (;;)
