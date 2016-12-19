@@ -81,8 +81,38 @@
             this.GeneratorListBox = new System.Windows.Forms.ListBox();
             this.NonCombatGroupBox = new System.Windows.Forms.GroupBox();
             this.NonCombatThirdPreference = new System.Windows.Forms.GroupBox();
+            this.SupriseNonCombatThirdPreference = new System.Windows.Forms.RadioButton();
+            this.RandomNonCombatThirdPreference = new System.Windows.Forms.RadioButton();
+            this.SpeechNonCombatThirdPreference = new System.Windows.Forms.RadioButton();
+            this.StealthNonCombatThirdPreference = new System.Windows.Forms.RadioButton();
+            this.PrecisionNonCombatThirdPreference = new System.Windows.Forms.RadioButton();
+            this.PracticalNonCombatThirdPreference = new System.Windows.Forms.RadioButton();
+            this.PerceptionNonCombatThirdPreference = new System.Windows.Forms.RadioButton();
+            this.AthleticsNonCombatThirdPreference = new System.Windows.Forms.RadioButton();
+            this.ArcaneArtsNonCombatThirdPreference = new System.Windows.Forms.RadioButton();
+            this.AnimalHandlingNonCombatThirdPreference = new System.Windows.Forms.RadioButton();
             this.NonCombatSecondPreference = new System.Windows.Forms.GroupBox();
+            this.SurpriseNonCombatSecondPreference = new System.Windows.Forms.RadioButton();
+            this.RandomNonCombatSecondPreference = new System.Windows.Forms.RadioButton();
+            this.SpeechNonCombatSecondPreference = new System.Windows.Forms.RadioButton();
+            this.StealthNonCombatSecondPreference = new System.Windows.Forms.RadioButton();
+            this.PrecisionNonCombatSecondPreference = new System.Windows.Forms.RadioButton();
+            this.PracticalNonCombatSecondPreference = new System.Windows.Forms.RadioButton();
+            this.PerceptionNonCombatSecondPreference = new System.Windows.Forms.RadioButton();
+            this.AthleticsNonCombatSecondPreference = new System.Windows.Forms.RadioButton();
+            this.ArcaneArtsNonCombatSecondPreference = new System.Windows.Forms.RadioButton();
+            this.AnimalHandlingNonCombatSecondPreference = new System.Windows.Forms.RadioButton();
             this.NonCombatFirstPreference = new System.Windows.Forms.GroupBox();
+            this.SurpriseNonCombatFirstPreference = new System.Windows.Forms.RadioButton();
+            this.RandomNonCombatFirstPreference = new System.Windows.Forms.RadioButton();
+            this.SpeechNonCombatFirstPreference = new System.Windows.Forms.RadioButton();
+            this.StealthNonCombatFirstPreference = new System.Windows.Forms.RadioButton();
+            this.PrecisionNonCombatFirstPreference = new System.Windows.Forms.RadioButton();
+            this.PracticalNonCombatFirstPreference = new System.Windows.Forms.RadioButton();
+            this.PerceptionNonCombatFirstPreference = new System.Windows.Forms.RadioButton();
+            this.AthleticsNonCombatFirstPreference = new System.Windows.Forms.RadioButton();
+            this.ArcaneArtsNonCombatFirstPreference = new System.Windows.Forms.RadioButton();
+            this.AnimalHandlingNonCombatFirstPreference = new System.Windows.Forms.RadioButton();
             this.CombatGroupBox = new System.Windows.Forms.GroupBox();
             this.CombatThirdPreference = new System.Windows.Forms.GroupBox();
             this.SupriseCombatThirdPreference = new System.Windows.Forms.RadioButton();
@@ -116,6 +146,9 @@
             this.ManagerTab.SuspendLayout();
             this.GeneratorTab.SuspendLayout();
             this.NonCombatGroupBox.SuspendLayout();
+            this.NonCombatThirdPreference.SuspendLayout();
+            this.NonCombatSecondPreference.SuspendLayout();
+            this.NonCombatFirstPreference.SuspendLayout();
             this.CombatGroupBox.SuspendLayout();
             this.CombatThirdPreference.SuspendLayout();
             this.CombatSecondPreference.SuspendLayout();
@@ -510,6 +543,7 @@
             this.Generate.TabIndex = 3;
             this.Generate.Text = "Generate";
             this.Generate.UseVisualStyleBackColor = true;
+            this.Generate.Click += new System.EventHandler(this.Generate_Click);
             // 
             // GeneratorClear
             // 
@@ -519,6 +553,7 @@
             this.GeneratorClear.TabIndex = 2;
             this.GeneratorClear.Text = "Clear";
             this.GeneratorClear.UseVisualStyleBackColor = true;
+            this.GeneratorClear.Click += new System.EventHandler(this.GeneratorClear_Click);
             // 
             // GeneratorListBox
             // 
@@ -544,6 +579,16 @@
             // NonCombatThirdPreference
             // 
             this.NonCombatThirdPreference.BackColor = System.Drawing.Color.White;
+            this.NonCombatThirdPreference.Controls.Add(this.SupriseNonCombatThirdPreference);
+            this.NonCombatThirdPreference.Controls.Add(this.RandomNonCombatThirdPreference);
+            this.NonCombatThirdPreference.Controls.Add(this.SpeechNonCombatThirdPreference);
+            this.NonCombatThirdPreference.Controls.Add(this.StealthNonCombatThirdPreference);
+            this.NonCombatThirdPreference.Controls.Add(this.PrecisionNonCombatThirdPreference);
+            this.NonCombatThirdPreference.Controls.Add(this.PracticalNonCombatThirdPreference);
+            this.NonCombatThirdPreference.Controls.Add(this.PerceptionNonCombatThirdPreference);
+            this.NonCombatThirdPreference.Controls.Add(this.AthleticsNonCombatThirdPreference);
+            this.NonCombatThirdPreference.Controls.Add(this.ArcaneArtsNonCombatThirdPreference);
+            this.NonCombatThirdPreference.Controls.Add(this.AnimalHandlingNonCombatThirdPreference);
             this.NonCombatThirdPreference.Location = new System.Drawing.Point(667, 19);
             this.NonCombatThirdPreference.Name = "NonCombatThirdPreference";
             this.NonCombatThirdPreference.Size = new System.Drawing.Size(320, 325);
@@ -551,9 +596,129 @@
             this.NonCombatThirdPreference.TabStop = false;
             this.NonCombatThirdPreference.Text = "3rd Preference";
             // 
+            // SupriseNonCombatThirdPreference
+            // 
+            this.SupriseNonCombatThirdPreference.AutoSize = true;
+            this.SupriseNonCombatThirdPreference.Location = new System.Drawing.Point(188, 42);
+            this.SupriseNonCombatThirdPreference.Name = "SupriseNonCombatThirdPreference";
+            this.SupriseNonCombatThirdPreference.Size = new System.Drawing.Size(93, 17);
+            this.SupriseNonCombatThirdPreference.TabIndex = 9;
+            this.SupriseNonCombatThirdPreference.TabStop = true;
+            this.SupriseNonCombatThirdPreference.Text = "Choose for me";
+            this.SupriseNonCombatThirdPreference.UseVisualStyleBackColor = true;
+            // 
+            // RandomNonCombatThirdPreference
+            // 
+            this.RandomNonCombatThirdPreference.AutoSize = true;
+            this.RandomNonCombatThirdPreference.Location = new System.Drawing.Point(188, 19);
+            this.RandomNonCombatThirdPreference.Name = "RandomNonCombatThirdPreference";
+            this.RandomNonCombatThirdPreference.Size = new System.Drawing.Size(65, 17);
+            this.RandomNonCombatThirdPreference.TabIndex = 8;
+            this.RandomNonCombatThirdPreference.TabStop = true;
+            this.RandomNonCombatThirdPreference.Text = "Random";
+            this.RandomNonCombatThirdPreference.UseVisualStyleBackColor = true;
+            // 
+            // SpeechNonCombatThirdPreference
+            // 
+            this.SpeechNonCombatThirdPreference.AutoSize = true;
+            this.SpeechNonCombatThirdPreference.Location = new System.Drawing.Point(6, 180);
+            this.SpeechNonCombatThirdPreference.Name = "SpeechNonCombatThirdPreference";
+            this.SpeechNonCombatThirdPreference.Size = new System.Drawing.Size(62, 17);
+            this.SpeechNonCombatThirdPreference.TabIndex = 7;
+            this.SpeechNonCombatThirdPreference.TabStop = true;
+            this.SpeechNonCombatThirdPreference.Text = "Speech";
+            this.SpeechNonCombatThirdPreference.UseVisualStyleBackColor = true;
+            // 
+            // StealthNonCombatThirdPreference
+            // 
+            this.StealthNonCombatThirdPreference.AutoSize = true;
+            this.StealthNonCombatThirdPreference.Location = new System.Drawing.Point(6, 157);
+            this.StealthNonCombatThirdPreference.Name = "StealthNonCombatThirdPreference";
+            this.StealthNonCombatThirdPreference.Size = new System.Drawing.Size(58, 17);
+            this.StealthNonCombatThirdPreference.TabIndex = 6;
+            this.StealthNonCombatThirdPreference.TabStop = true;
+            this.StealthNonCombatThirdPreference.Text = "Stealth";
+            this.StealthNonCombatThirdPreference.UseVisualStyleBackColor = true;
+            // 
+            // PrecisionNonCombatThirdPreference
+            // 
+            this.PrecisionNonCombatThirdPreference.AutoSize = true;
+            this.PrecisionNonCombatThirdPreference.Location = new System.Drawing.Point(6, 134);
+            this.PrecisionNonCombatThirdPreference.Name = "PrecisionNonCombatThirdPreference";
+            this.PrecisionNonCombatThirdPreference.Size = new System.Drawing.Size(68, 17);
+            this.PrecisionNonCombatThirdPreference.TabIndex = 5;
+            this.PrecisionNonCombatThirdPreference.TabStop = true;
+            this.PrecisionNonCombatThirdPreference.Text = "Precision";
+            this.PrecisionNonCombatThirdPreference.UseVisualStyleBackColor = true;
+            // 
+            // PracticalNonCombatThirdPreference
+            // 
+            this.PracticalNonCombatThirdPreference.AutoSize = true;
+            this.PracticalNonCombatThirdPreference.Location = new System.Drawing.Point(6, 111);
+            this.PracticalNonCombatThirdPreference.Name = "PracticalNonCombatThirdPreference";
+            this.PracticalNonCombatThirdPreference.Size = new System.Drawing.Size(66, 17);
+            this.PracticalNonCombatThirdPreference.TabIndex = 4;
+            this.PracticalNonCombatThirdPreference.TabStop = true;
+            this.PracticalNonCombatThirdPreference.Text = "Practical";
+            this.PracticalNonCombatThirdPreference.UseVisualStyleBackColor = true;
+            // 
+            // PerceptionNonCombatThirdPreference
+            // 
+            this.PerceptionNonCombatThirdPreference.AutoSize = true;
+            this.PerceptionNonCombatThirdPreference.Location = new System.Drawing.Point(6, 88);
+            this.PerceptionNonCombatThirdPreference.Name = "PerceptionNonCombatThirdPreference";
+            this.PerceptionNonCombatThirdPreference.Size = new System.Drawing.Size(76, 17);
+            this.PerceptionNonCombatThirdPreference.TabIndex = 3;
+            this.PerceptionNonCombatThirdPreference.TabStop = true;
+            this.PerceptionNonCombatThirdPreference.Text = "Perception";
+            this.PerceptionNonCombatThirdPreference.UseVisualStyleBackColor = true;
+            // 
+            // AthleticsNonCombatThirdPreference
+            // 
+            this.AthleticsNonCombatThirdPreference.AutoSize = true;
+            this.AthleticsNonCombatThirdPreference.Location = new System.Drawing.Point(6, 65);
+            this.AthleticsNonCombatThirdPreference.Name = "AthleticsNonCombatThirdPreference";
+            this.AthleticsNonCombatThirdPreference.Size = new System.Drawing.Size(65, 17);
+            this.AthleticsNonCombatThirdPreference.TabIndex = 2;
+            this.AthleticsNonCombatThirdPreference.TabStop = true;
+            this.AthleticsNonCombatThirdPreference.Text = "Athletics";
+            this.AthleticsNonCombatThirdPreference.UseVisualStyleBackColor = true;
+            // 
+            // ArcaneArtsNonCombatThirdPreference
+            // 
+            this.ArcaneArtsNonCombatThirdPreference.AutoSize = true;
+            this.ArcaneArtsNonCombatThirdPreference.Location = new System.Drawing.Point(6, 42);
+            this.ArcaneArtsNonCombatThirdPreference.Name = "ArcaneArtsNonCombatThirdPreference";
+            this.ArcaneArtsNonCombatThirdPreference.Size = new System.Drawing.Size(80, 17);
+            this.ArcaneArtsNonCombatThirdPreference.TabIndex = 1;
+            this.ArcaneArtsNonCombatThirdPreference.TabStop = true;
+            this.ArcaneArtsNonCombatThirdPreference.Text = "Arcane Arts";
+            this.ArcaneArtsNonCombatThirdPreference.UseVisualStyleBackColor = true;
+            // 
+            // AnimalHandlingNonCombatThirdPreference
+            // 
+            this.AnimalHandlingNonCombatThirdPreference.AutoSize = true;
+            this.AnimalHandlingNonCombatThirdPreference.Location = new System.Drawing.Point(6, 19);
+            this.AnimalHandlingNonCombatThirdPreference.Name = "AnimalHandlingNonCombatThirdPreference";
+            this.AnimalHandlingNonCombatThirdPreference.Size = new System.Drawing.Size(101, 17);
+            this.AnimalHandlingNonCombatThirdPreference.TabIndex = 0;
+            this.AnimalHandlingNonCombatThirdPreference.TabStop = true;
+            this.AnimalHandlingNonCombatThirdPreference.Text = "Animal Handling";
+            this.AnimalHandlingNonCombatThirdPreference.UseVisualStyleBackColor = true;
+            // 
             // NonCombatSecondPreference
             // 
             this.NonCombatSecondPreference.BackColor = System.Drawing.Color.White;
+            this.NonCombatSecondPreference.Controls.Add(this.SurpriseNonCombatSecondPreference);
+            this.NonCombatSecondPreference.Controls.Add(this.RandomNonCombatSecondPreference);
+            this.NonCombatSecondPreference.Controls.Add(this.SpeechNonCombatSecondPreference);
+            this.NonCombatSecondPreference.Controls.Add(this.StealthNonCombatSecondPreference);
+            this.NonCombatSecondPreference.Controls.Add(this.PrecisionNonCombatSecondPreference);
+            this.NonCombatSecondPreference.Controls.Add(this.PracticalNonCombatSecondPreference);
+            this.NonCombatSecondPreference.Controls.Add(this.PerceptionNonCombatSecondPreference);
+            this.NonCombatSecondPreference.Controls.Add(this.AthleticsNonCombatSecondPreference);
+            this.NonCombatSecondPreference.Controls.Add(this.ArcaneArtsNonCombatSecondPreference);
+            this.NonCombatSecondPreference.Controls.Add(this.AnimalHandlingNonCombatSecondPreference);
             this.NonCombatSecondPreference.Location = new System.Drawing.Point(341, 19);
             this.NonCombatSecondPreference.Name = "NonCombatSecondPreference";
             this.NonCombatSecondPreference.Size = new System.Drawing.Size(320, 325);
@@ -561,15 +726,245 @@
             this.NonCombatSecondPreference.TabStop = false;
             this.NonCombatSecondPreference.Text = "2nd Preference";
             // 
+            // SurpriseNonCombatSecondPreference
+            // 
+            this.SurpriseNonCombatSecondPreference.AutoSize = true;
+            this.SurpriseNonCombatSecondPreference.Location = new System.Drawing.Point(195, 42);
+            this.SurpriseNonCombatSecondPreference.Name = "SurpriseNonCombatSecondPreference";
+            this.SurpriseNonCombatSecondPreference.Size = new System.Drawing.Size(93, 17);
+            this.SurpriseNonCombatSecondPreference.TabIndex = 9;
+            this.SurpriseNonCombatSecondPreference.TabStop = true;
+            this.SurpriseNonCombatSecondPreference.Text = "Choose for me";
+            this.SurpriseNonCombatSecondPreference.UseVisualStyleBackColor = true;
+            // 
+            // RandomNonCombatSecondPreference
+            // 
+            this.RandomNonCombatSecondPreference.AutoSize = true;
+            this.RandomNonCombatSecondPreference.Location = new System.Drawing.Point(195, 19);
+            this.RandomNonCombatSecondPreference.Name = "RandomNonCombatSecondPreference";
+            this.RandomNonCombatSecondPreference.Size = new System.Drawing.Size(65, 17);
+            this.RandomNonCombatSecondPreference.TabIndex = 8;
+            this.RandomNonCombatSecondPreference.TabStop = true;
+            this.RandomNonCombatSecondPreference.Text = "Random";
+            this.RandomNonCombatSecondPreference.UseVisualStyleBackColor = true;
+            // 
+            // SpeechNonCombatSecondPreference
+            // 
+            this.SpeechNonCombatSecondPreference.AutoSize = true;
+            this.SpeechNonCombatSecondPreference.Location = new System.Drawing.Point(6, 180);
+            this.SpeechNonCombatSecondPreference.Name = "SpeechNonCombatSecondPreference";
+            this.SpeechNonCombatSecondPreference.Size = new System.Drawing.Size(62, 17);
+            this.SpeechNonCombatSecondPreference.TabIndex = 7;
+            this.SpeechNonCombatSecondPreference.TabStop = true;
+            this.SpeechNonCombatSecondPreference.Text = "Speech";
+            this.SpeechNonCombatSecondPreference.UseVisualStyleBackColor = true;
+            // 
+            // StealthNonCombatSecondPreference
+            // 
+            this.StealthNonCombatSecondPreference.AutoSize = true;
+            this.StealthNonCombatSecondPreference.Location = new System.Drawing.Point(6, 157);
+            this.StealthNonCombatSecondPreference.Name = "StealthNonCombatSecondPreference";
+            this.StealthNonCombatSecondPreference.Size = new System.Drawing.Size(58, 17);
+            this.StealthNonCombatSecondPreference.TabIndex = 6;
+            this.StealthNonCombatSecondPreference.TabStop = true;
+            this.StealthNonCombatSecondPreference.Text = "Stealth";
+            this.StealthNonCombatSecondPreference.UseVisualStyleBackColor = true;
+            // 
+            // PrecisionNonCombatSecondPreference
+            // 
+            this.PrecisionNonCombatSecondPreference.AutoSize = true;
+            this.PrecisionNonCombatSecondPreference.Location = new System.Drawing.Point(6, 134);
+            this.PrecisionNonCombatSecondPreference.Name = "PrecisionNonCombatSecondPreference";
+            this.PrecisionNonCombatSecondPreference.Size = new System.Drawing.Size(68, 17);
+            this.PrecisionNonCombatSecondPreference.TabIndex = 5;
+            this.PrecisionNonCombatSecondPreference.TabStop = true;
+            this.PrecisionNonCombatSecondPreference.Text = "Precision";
+            this.PrecisionNonCombatSecondPreference.UseVisualStyleBackColor = true;
+            // 
+            // PracticalNonCombatSecondPreference
+            // 
+            this.PracticalNonCombatSecondPreference.AutoSize = true;
+            this.PracticalNonCombatSecondPreference.Location = new System.Drawing.Point(6, 111);
+            this.PracticalNonCombatSecondPreference.Name = "PracticalNonCombatSecondPreference";
+            this.PracticalNonCombatSecondPreference.Size = new System.Drawing.Size(66, 17);
+            this.PracticalNonCombatSecondPreference.TabIndex = 4;
+            this.PracticalNonCombatSecondPreference.TabStop = true;
+            this.PracticalNonCombatSecondPreference.Text = "Practical";
+            this.PracticalNonCombatSecondPreference.UseVisualStyleBackColor = true;
+            // 
+            // PerceptionNonCombatSecondPreference
+            // 
+            this.PerceptionNonCombatSecondPreference.AutoSize = true;
+            this.PerceptionNonCombatSecondPreference.Location = new System.Drawing.Point(6, 88);
+            this.PerceptionNonCombatSecondPreference.Name = "PerceptionNonCombatSecondPreference";
+            this.PerceptionNonCombatSecondPreference.Size = new System.Drawing.Size(76, 17);
+            this.PerceptionNonCombatSecondPreference.TabIndex = 3;
+            this.PerceptionNonCombatSecondPreference.TabStop = true;
+            this.PerceptionNonCombatSecondPreference.Text = "Perception";
+            this.PerceptionNonCombatSecondPreference.UseVisualStyleBackColor = true;
+            // 
+            // AthleticsNonCombatSecondPreference
+            // 
+            this.AthleticsNonCombatSecondPreference.AutoSize = true;
+            this.AthleticsNonCombatSecondPreference.Location = new System.Drawing.Point(6, 65);
+            this.AthleticsNonCombatSecondPreference.Name = "AthleticsNonCombatSecondPreference";
+            this.AthleticsNonCombatSecondPreference.Size = new System.Drawing.Size(65, 17);
+            this.AthleticsNonCombatSecondPreference.TabIndex = 2;
+            this.AthleticsNonCombatSecondPreference.TabStop = true;
+            this.AthleticsNonCombatSecondPreference.Text = "Athletics";
+            this.AthleticsNonCombatSecondPreference.UseVisualStyleBackColor = true;
+            // 
+            // ArcaneArtsNonCombatSecondPreference
+            // 
+            this.ArcaneArtsNonCombatSecondPreference.AutoSize = true;
+            this.ArcaneArtsNonCombatSecondPreference.Location = new System.Drawing.Point(6, 42);
+            this.ArcaneArtsNonCombatSecondPreference.Name = "ArcaneArtsNonCombatSecondPreference";
+            this.ArcaneArtsNonCombatSecondPreference.Size = new System.Drawing.Size(80, 17);
+            this.ArcaneArtsNonCombatSecondPreference.TabIndex = 1;
+            this.ArcaneArtsNonCombatSecondPreference.TabStop = true;
+            this.ArcaneArtsNonCombatSecondPreference.Text = "Arcane Arts";
+            this.ArcaneArtsNonCombatSecondPreference.UseVisualStyleBackColor = true;
+            // 
+            // AnimalHandlingNonCombatSecondPreference
+            // 
+            this.AnimalHandlingNonCombatSecondPreference.AutoSize = true;
+            this.AnimalHandlingNonCombatSecondPreference.Location = new System.Drawing.Point(6, 19);
+            this.AnimalHandlingNonCombatSecondPreference.Name = "AnimalHandlingNonCombatSecondPreference";
+            this.AnimalHandlingNonCombatSecondPreference.Size = new System.Drawing.Size(101, 17);
+            this.AnimalHandlingNonCombatSecondPreference.TabIndex = 0;
+            this.AnimalHandlingNonCombatSecondPreference.TabStop = true;
+            this.AnimalHandlingNonCombatSecondPreference.Text = "Animal Handling";
+            this.AnimalHandlingNonCombatSecondPreference.UseVisualStyleBackColor = true;
+            // 
             // NonCombatFirstPreference
             // 
             this.NonCombatFirstPreference.BackColor = System.Drawing.Color.White;
+            this.NonCombatFirstPreference.Controls.Add(this.SurpriseNonCombatFirstPreference);
+            this.NonCombatFirstPreference.Controls.Add(this.RandomNonCombatFirstPreference);
+            this.NonCombatFirstPreference.Controls.Add(this.SpeechNonCombatFirstPreference);
+            this.NonCombatFirstPreference.Controls.Add(this.StealthNonCombatFirstPreference);
+            this.NonCombatFirstPreference.Controls.Add(this.PrecisionNonCombatFirstPreference);
+            this.NonCombatFirstPreference.Controls.Add(this.PracticalNonCombatFirstPreference);
+            this.NonCombatFirstPreference.Controls.Add(this.PerceptionNonCombatFirstPreference);
+            this.NonCombatFirstPreference.Controls.Add(this.AthleticsNonCombatFirstPreference);
+            this.NonCombatFirstPreference.Controls.Add(this.ArcaneArtsNonCombatFirstPreference);
+            this.NonCombatFirstPreference.Controls.Add(this.AnimalHandlingNonCombatFirstPreference);
             this.NonCombatFirstPreference.Location = new System.Drawing.Point(15, 19);
             this.NonCombatFirstPreference.Name = "NonCombatFirstPreference";
             this.NonCombatFirstPreference.Size = new System.Drawing.Size(320, 325);
             this.NonCombatFirstPreference.TabIndex = 0;
             this.NonCombatFirstPreference.TabStop = false;
             this.NonCombatFirstPreference.Text = "1st Preference";
+            // 
+            // SurpriseNonCombatFirstPreference
+            // 
+            this.SurpriseNonCombatFirstPreference.AutoSize = true;
+            this.SurpriseNonCombatFirstPreference.Location = new System.Drawing.Point(197, 42);
+            this.SurpriseNonCombatFirstPreference.Name = "SurpriseNonCombatFirstPreference";
+            this.SurpriseNonCombatFirstPreference.Size = new System.Drawing.Size(93, 17);
+            this.SurpriseNonCombatFirstPreference.TabIndex = 10;
+            this.SurpriseNonCombatFirstPreference.TabStop = true;
+            this.SurpriseNonCombatFirstPreference.Text = "Choose for me";
+            this.SurpriseNonCombatFirstPreference.UseVisualStyleBackColor = true;
+            // 
+            // RandomNonCombatFirstPreference
+            // 
+            this.RandomNonCombatFirstPreference.AutoSize = true;
+            this.RandomNonCombatFirstPreference.Location = new System.Drawing.Point(197, 19);
+            this.RandomNonCombatFirstPreference.Name = "RandomNonCombatFirstPreference";
+            this.RandomNonCombatFirstPreference.Size = new System.Drawing.Size(65, 17);
+            this.RandomNonCombatFirstPreference.TabIndex = 9;
+            this.RandomNonCombatFirstPreference.TabStop = true;
+            this.RandomNonCombatFirstPreference.Text = "Random";
+            this.RandomNonCombatFirstPreference.UseVisualStyleBackColor = true;
+            // 
+            // SpeechNonCombatFirstPreference
+            // 
+            this.SpeechNonCombatFirstPreference.AutoSize = true;
+            this.SpeechNonCombatFirstPreference.Location = new System.Drawing.Point(6, 180);
+            this.SpeechNonCombatFirstPreference.Name = "SpeechNonCombatFirstPreference";
+            this.SpeechNonCombatFirstPreference.Size = new System.Drawing.Size(62, 17);
+            this.SpeechNonCombatFirstPreference.TabIndex = 7;
+            this.SpeechNonCombatFirstPreference.TabStop = true;
+            this.SpeechNonCombatFirstPreference.Text = "Speech";
+            this.SpeechNonCombatFirstPreference.UseVisualStyleBackColor = true;
+            // 
+            // StealthNonCombatFirstPreference
+            // 
+            this.StealthNonCombatFirstPreference.AutoSize = true;
+            this.StealthNonCombatFirstPreference.Location = new System.Drawing.Point(6, 157);
+            this.StealthNonCombatFirstPreference.Name = "StealthNonCombatFirstPreference";
+            this.StealthNonCombatFirstPreference.Size = new System.Drawing.Size(58, 17);
+            this.StealthNonCombatFirstPreference.TabIndex = 6;
+            this.StealthNonCombatFirstPreference.TabStop = true;
+            this.StealthNonCombatFirstPreference.Text = "Stealth";
+            this.StealthNonCombatFirstPreference.UseVisualStyleBackColor = true;
+            // 
+            // PrecisionNonCombatFirstPreference
+            // 
+            this.PrecisionNonCombatFirstPreference.AutoSize = true;
+            this.PrecisionNonCombatFirstPreference.Location = new System.Drawing.Point(6, 134);
+            this.PrecisionNonCombatFirstPreference.Name = "PrecisionNonCombatFirstPreference";
+            this.PrecisionNonCombatFirstPreference.Size = new System.Drawing.Size(68, 17);
+            this.PrecisionNonCombatFirstPreference.TabIndex = 5;
+            this.PrecisionNonCombatFirstPreference.TabStop = true;
+            this.PrecisionNonCombatFirstPreference.Text = "Precision";
+            this.PrecisionNonCombatFirstPreference.UseVisualStyleBackColor = true;
+            // 
+            // PracticalNonCombatFirstPreference
+            // 
+            this.PracticalNonCombatFirstPreference.AutoSize = true;
+            this.PracticalNonCombatFirstPreference.Location = new System.Drawing.Point(6, 111);
+            this.PracticalNonCombatFirstPreference.Name = "PracticalNonCombatFirstPreference";
+            this.PracticalNonCombatFirstPreference.Size = new System.Drawing.Size(66, 17);
+            this.PracticalNonCombatFirstPreference.TabIndex = 4;
+            this.PracticalNonCombatFirstPreference.TabStop = true;
+            this.PracticalNonCombatFirstPreference.Text = "Practical";
+            this.PracticalNonCombatFirstPreference.UseVisualStyleBackColor = true;
+            // 
+            // PerceptionNonCombatFirstPreference
+            // 
+            this.PerceptionNonCombatFirstPreference.AutoSize = true;
+            this.PerceptionNonCombatFirstPreference.Location = new System.Drawing.Point(6, 88);
+            this.PerceptionNonCombatFirstPreference.Name = "PerceptionNonCombatFirstPreference";
+            this.PerceptionNonCombatFirstPreference.Size = new System.Drawing.Size(76, 17);
+            this.PerceptionNonCombatFirstPreference.TabIndex = 3;
+            this.PerceptionNonCombatFirstPreference.TabStop = true;
+            this.PerceptionNonCombatFirstPreference.Text = "Perception";
+            this.PerceptionNonCombatFirstPreference.UseVisualStyleBackColor = true;
+            // 
+            // AthleticsNonCombatFirstPreference
+            // 
+            this.AthleticsNonCombatFirstPreference.AutoSize = true;
+            this.AthleticsNonCombatFirstPreference.Location = new System.Drawing.Point(6, 65);
+            this.AthleticsNonCombatFirstPreference.Name = "AthleticsNonCombatFirstPreference";
+            this.AthleticsNonCombatFirstPreference.Size = new System.Drawing.Size(65, 17);
+            this.AthleticsNonCombatFirstPreference.TabIndex = 2;
+            this.AthleticsNonCombatFirstPreference.TabStop = true;
+            this.AthleticsNonCombatFirstPreference.Text = "Athletics";
+            this.AthleticsNonCombatFirstPreference.UseVisualStyleBackColor = true;
+            // 
+            // ArcaneArtsNonCombatFirstPreference
+            // 
+            this.ArcaneArtsNonCombatFirstPreference.AutoSize = true;
+            this.ArcaneArtsNonCombatFirstPreference.Location = new System.Drawing.Point(6, 42);
+            this.ArcaneArtsNonCombatFirstPreference.Name = "ArcaneArtsNonCombatFirstPreference";
+            this.ArcaneArtsNonCombatFirstPreference.Size = new System.Drawing.Size(80, 17);
+            this.ArcaneArtsNonCombatFirstPreference.TabIndex = 1;
+            this.ArcaneArtsNonCombatFirstPreference.TabStop = true;
+            this.ArcaneArtsNonCombatFirstPreference.Text = "Arcane Arts";
+            this.ArcaneArtsNonCombatFirstPreference.UseVisualStyleBackColor = true;
+            // 
+            // AnimalHandlingNonCombatFirstPreference
+            // 
+            this.AnimalHandlingNonCombatFirstPreference.AutoSize = true;
+            this.AnimalHandlingNonCombatFirstPreference.Location = new System.Drawing.Point(6, 19);
+            this.AnimalHandlingNonCombatFirstPreference.Name = "AnimalHandlingNonCombatFirstPreference";
+            this.AnimalHandlingNonCombatFirstPreference.Size = new System.Drawing.Size(101, 17);
+            this.AnimalHandlingNonCombatFirstPreference.TabIndex = 0;
+            this.AnimalHandlingNonCombatFirstPreference.TabStop = true;
+            this.AnimalHandlingNonCombatFirstPreference.Text = "Animal Handling";
+            this.AnimalHandlingNonCombatFirstPreference.UseVisualStyleBackColor = true;
             // 
             // CombatGroupBox
             // 
@@ -627,7 +1022,7 @@
             // DodgeCombatThirdPreference
             // 
             this.DodgeCombatThirdPreference.AutoSize = true;
-            this.DodgeCombatThirdPreference.Location = new System.Drawing.Point(7, 135);
+            this.DodgeCombatThirdPreference.Location = new System.Drawing.Point(6, 134);
             this.DodgeCombatThirdPreference.Name = "DodgeCombatThirdPreference";
             this.DodgeCombatThirdPreference.Size = new System.Drawing.Size(57, 17);
             this.DodgeCombatThirdPreference.TabIndex = 5;
@@ -638,7 +1033,7 @@
             // BlockCombatThirdPreference
             // 
             this.BlockCombatThirdPreference.AutoSize = true;
-            this.BlockCombatThirdPreference.Location = new System.Drawing.Point(7, 112);
+            this.BlockCombatThirdPreference.Location = new System.Drawing.Point(6, 111);
             this.BlockCombatThirdPreference.Name = "BlockCombatThirdPreference";
             this.BlockCombatThirdPreference.Size = new System.Drawing.Size(52, 17);
             this.BlockCombatThirdPreference.TabIndex = 4;
@@ -649,7 +1044,7 @@
             // MagicCombatThirdPreference
             // 
             this.MagicCombatThirdPreference.AutoSize = true;
-            this.MagicCombatThirdPreference.Location = new System.Drawing.Point(7, 89);
+            this.MagicCombatThirdPreference.Location = new System.Drawing.Point(6, 88);
             this.MagicCombatThirdPreference.Name = "MagicCombatThirdPreference";
             this.MagicCombatThirdPreference.Size = new System.Drawing.Size(54, 17);
             this.MagicCombatThirdPreference.TabIndex = 3;
@@ -660,7 +1055,7 @@
             // RangedCombatThirdPreference
             // 
             this.RangedCombatThirdPreference.AutoSize = true;
-            this.RangedCombatThirdPreference.Location = new System.Drawing.Point(7, 65);
+            this.RangedCombatThirdPreference.Location = new System.Drawing.Point(6, 65);
             this.RangedCombatThirdPreference.Name = "RangedCombatThirdPreference";
             this.RangedCombatThirdPreference.Size = new System.Drawing.Size(63, 17);
             this.RangedCombatThirdPreference.TabIndex = 2;
@@ -671,7 +1066,7 @@
             // MeleeCombatThirdPreference
             // 
             this.MeleeCombatThirdPreference.AutoSize = true;
-            this.MeleeCombatThirdPreference.Location = new System.Drawing.Point(7, 42);
+            this.MeleeCombatThirdPreference.Location = new System.Drawing.Point(6, 42);
             this.MeleeCombatThirdPreference.Name = "MeleeCombatThirdPreference";
             this.MeleeCombatThirdPreference.Size = new System.Drawing.Size(54, 17);
             this.MeleeCombatThirdPreference.TabIndex = 1;
@@ -682,7 +1077,7 @@
             // MoveCombatThirdPreference
             // 
             this.MoveCombatThirdPreference.AutoSize = true;
-            this.MoveCombatThirdPreference.Location = new System.Drawing.Point(7, 20);
+            this.MoveCombatThirdPreference.Location = new System.Drawing.Point(6, 19);
             this.MoveCombatThirdPreference.Name = "MoveCombatThirdPreference";
             this.MoveCombatThirdPreference.Size = new System.Drawing.Size(52, 17);
             this.MoveCombatThirdPreference.TabIndex = 0;
@@ -733,7 +1128,7 @@
             // DodgeCombatSecondPreference
             // 
             this.DodgeCombatSecondPreference.AutoSize = true;
-            this.DodgeCombatSecondPreference.Location = new System.Drawing.Point(7, 137);
+            this.DodgeCombatSecondPreference.Location = new System.Drawing.Point(6, 134);
             this.DodgeCombatSecondPreference.Name = "DodgeCombatSecondPreference";
             this.DodgeCombatSecondPreference.Size = new System.Drawing.Size(57, 17);
             this.DodgeCombatSecondPreference.TabIndex = 5;
@@ -744,7 +1139,7 @@
             // BlockCombatSecondPreference
             // 
             this.BlockCombatSecondPreference.AutoSize = true;
-            this.BlockCombatSecondPreference.Location = new System.Drawing.Point(7, 113);
+            this.BlockCombatSecondPreference.Location = new System.Drawing.Point(6, 111);
             this.BlockCombatSecondPreference.Name = "BlockCombatSecondPreference";
             this.BlockCombatSecondPreference.Size = new System.Drawing.Size(52, 17);
             this.BlockCombatSecondPreference.TabIndex = 4;
@@ -755,7 +1150,7 @@
             // MagicCombatSecondPreference
             // 
             this.MagicCombatSecondPreference.AutoSize = true;
-            this.MagicCombatSecondPreference.Location = new System.Drawing.Point(7, 89);
+            this.MagicCombatSecondPreference.Location = new System.Drawing.Point(6, 88);
             this.MagicCombatSecondPreference.Name = "MagicCombatSecondPreference";
             this.MagicCombatSecondPreference.Size = new System.Drawing.Size(54, 17);
             this.MagicCombatSecondPreference.TabIndex = 3;
@@ -817,7 +1212,7 @@
             // SurpriseCombatFirstPreference
             // 
             this.SurpriseCombatFirstPreference.AutoSize = true;
-            this.SurpriseCombatFirstPreference.Location = new System.Drawing.Point(197, 44);
+            this.SurpriseCombatFirstPreference.Location = new System.Drawing.Point(197, 42);
             this.SurpriseCombatFirstPreference.Name = "SurpriseCombatFirstPreference";
             this.SurpriseCombatFirstPreference.Size = new System.Drawing.Size(93, 17);
             this.SurpriseCombatFirstPreference.TabIndex = 7;
@@ -839,7 +1234,7 @@
             // DodgeCombatFirstPreference
             // 
             this.DodgeCombatFirstPreference.AutoSize = true;
-            this.DodgeCombatFirstPreference.Location = new System.Drawing.Point(6, 135);
+            this.DodgeCombatFirstPreference.Location = new System.Drawing.Point(6, 134);
             this.DodgeCombatFirstPreference.Name = "DodgeCombatFirstPreference";
             this.DodgeCombatFirstPreference.Size = new System.Drawing.Size(57, 17);
             this.DodgeCombatFirstPreference.TabIndex = 5;
@@ -850,7 +1245,7 @@
             // BlockCombatFirstPreference
             // 
             this.BlockCombatFirstPreference.AutoSize = true;
-            this.BlockCombatFirstPreference.Location = new System.Drawing.Point(6, 112);
+            this.BlockCombatFirstPreference.Location = new System.Drawing.Point(6, 111);
             this.BlockCombatFirstPreference.Name = "BlockCombatFirstPreference";
             this.BlockCombatFirstPreference.Size = new System.Drawing.Size(52, 17);
             this.BlockCombatFirstPreference.TabIndex = 4;
@@ -861,7 +1256,7 @@
             // MagicCombatFirstPreference
             // 
             this.MagicCombatFirstPreference.AutoSize = true;
-            this.MagicCombatFirstPreference.Location = new System.Drawing.Point(6, 89);
+            this.MagicCombatFirstPreference.Location = new System.Drawing.Point(6, 88);
             this.MagicCombatFirstPreference.Name = "MagicCombatFirstPreference";
             this.MagicCombatFirstPreference.Size = new System.Drawing.Size(54, 17);
             this.MagicCombatFirstPreference.TabIndex = 3;
@@ -872,7 +1267,7 @@
             // RangedCombatFirstPreference
             // 
             this.RangedCombatFirstPreference.AutoSize = true;
-            this.RangedCombatFirstPreference.Location = new System.Drawing.Point(6, 66);
+            this.RangedCombatFirstPreference.Location = new System.Drawing.Point(6, 65);
             this.RangedCombatFirstPreference.Name = "RangedCombatFirstPreference";
             this.RangedCombatFirstPreference.Size = new System.Drawing.Size(63, 17);
             this.RangedCombatFirstPreference.TabIndex = 2;
@@ -883,7 +1278,7 @@
             // MeleeCombatFirstPreference
             // 
             this.MeleeCombatFirstPreference.AutoSize = true;
-            this.MeleeCombatFirstPreference.Location = new System.Drawing.Point(6, 43);
+            this.MeleeCombatFirstPreference.Location = new System.Drawing.Point(6, 42);
             this.MeleeCombatFirstPreference.Name = "MeleeCombatFirstPreference";
             this.MeleeCombatFirstPreference.Size = new System.Drawing.Size(54, 17);
             this.MeleeCombatFirstPreference.TabIndex = 1;
@@ -894,7 +1289,7 @@
             // MoveCombatFirstPreference
             // 
             this.MoveCombatFirstPreference.AutoSize = true;
-            this.MoveCombatFirstPreference.Location = new System.Drawing.Point(6, 20);
+            this.MoveCombatFirstPreference.Location = new System.Drawing.Point(6, 19);
             this.MoveCombatFirstPreference.Name = "MoveCombatFirstPreference";
             this.MoveCombatFirstPreference.Size = new System.Drawing.Size(52, 17);
             this.MoveCombatFirstPreference.TabIndex = 0;
@@ -926,6 +1321,12 @@
             this.GeneratorTab.ResumeLayout(false);
             this.GeneratorTab.PerformLayout();
             this.NonCombatGroupBox.ResumeLayout(false);
+            this.NonCombatThirdPreference.ResumeLayout(false);
+            this.NonCombatThirdPreference.PerformLayout();
+            this.NonCombatSecondPreference.ResumeLayout(false);
+            this.NonCombatSecondPreference.PerformLayout();
+            this.NonCombatFirstPreference.ResumeLayout(false);
+            this.NonCombatFirstPreference.PerformLayout();
             this.CombatGroupBox.ResumeLayout(false);
             this.CombatThirdPreference.ResumeLayout(false);
             this.CombatThirdPreference.PerformLayout();
@@ -1021,6 +1422,36 @@
         private System.Windows.Forms.RadioButton RangedCombatThirdPreference;
         private System.Windows.Forms.RadioButton MeleeCombatThirdPreference;
         private System.Windows.Forms.RadioButton MoveCombatThirdPreference;
+        private System.Windows.Forms.RadioButton AnimalHandlingNonCombatFirstPreference;
+        private System.Windows.Forms.RadioButton SpeechNonCombatFirstPreference;
+        private System.Windows.Forms.RadioButton StealthNonCombatFirstPreference;
+        private System.Windows.Forms.RadioButton PrecisionNonCombatFirstPreference;
+        private System.Windows.Forms.RadioButton PracticalNonCombatFirstPreference;
+        private System.Windows.Forms.RadioButton PerceptionNonCombatFirstPreference;
+        private System.Windows.Forms.RadioButton AthleticsNonCombatFirstPreference;
+        private System.Windows.Forms.RadioButton ArcaneArtsNonCombatFirstPreference;
+        private System.Windows.Forms.RadioButton SurpriseNonCombatFirstPreference;
+        private System.Windows.Forms.RadioButton RandomNonCombatFirstPreference;
+        private System.Windows.Forms.RadioButton SurpriseNonCombatSecondPreference;
+        private System.Windows.Forms.RadioButton RandomNonCombatSecondPreference;
+        private System.Windows.Forms.RadioButton SpeechNonCombatSecondPreference;
+        private System.Windows.Forms.RadioButton StealthNonCombatSecondPreference;
+        private System.Windows.Forms.RadioButton PrecisionNonCombatSecondPreference;
+        private System.Windows.Forms.RadioButton PracticalNonCombatSecondPreference;
+        private System.Windows.Forms.RadioButton PerceptionNonCombatSecondPreference;
+        private System.Windows.Forms.RadioButton AthleticsNonCombatSecondPreference;
+        private System.Windows.Forms.RadioButton ArcaneArtsNonCombatSecondPreference;
+        private System.Windows.Forms.RadioButton AnimalHandlingNonCombatSecondPreference;
+        private System.Windows.Forms.RadioButton SpeechNonCombatThirdPreference;
+        private System.Windows.Forms.RadioButton StealthNonCombatThirdPreference;
+        private System.Windows.Forms.RadioButton PrecisionNonCombatThirdPreference;
+        private System.Windows.Forms.RadioButton PracticalNonCombatThirdPreference;
+        private System.Windows.Forms.RadioButton PerceptionNonCombatThirdPreference;
+        private System.Windows.Forms.RadioButton AthleticsNonCombatThirdPreference;
+        private System.Windows.Forms.RadioButton ArcaneArtsNonCombatThirdPreference;
+        private System.Windows.Forms.RadioButton AnimalHandlingNonCombatThirdPreference;
+        private System.Windows.Forms.RadioButton SupriseNonCombatThirdPreference;
+        private System.Windows.Forms.RadioButton RandomNonCombatThirdPreference;
     }
 }
 

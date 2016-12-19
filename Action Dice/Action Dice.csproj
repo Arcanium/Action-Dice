@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="BattleManager.cs" />
     <Compile Include="BattleNode.cs" />
+    <Compile Include="GeneratorManager.cs" />
     <Compile Include="Dice.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

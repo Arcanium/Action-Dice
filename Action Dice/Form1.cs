@@ -18,6 +18,8 @@ namespace Action_Dice
             InitializeComponent();
             InitiativeManager.Start(InitiativeListBox, PlayerTurnLabel);
             BattleManager.Start(BattleListBox, DamageListBox);
+            GeneratorManager.Start(MoveCombatFirstPreference, MoveCombatSecondPreference, MoveCombatThirdPreference,
+                AnimalHandlingNonCombatFirstPreference, AnimalHandlingNonCombatSecondPreference, AnimalHandlingNonCombatThirdPreference);
         }
 
         #region Initiative
@@ -322,5 +324,50 @@ namespace Action_Dice
 
         #endregion
 
+        #region Generator
+
+        #endregion
+
+        private void GeneratorClear_Click(object sender, EventArgs e)
+        {
+            GeneratorListBox.Items.Clear();
+        }
+
+        //Normally I would pass this workload off to the manager, but it would involve passing like 50+ objects until I figure out a better way to do it.
+        private void Generate_Click(object sender, EventArgs e)
+        {
+            if (GeneratorLevelTextBox.Text != "")
+            {
+                try
+                {
+                    int move = 0;
+                    int melee = 0;
+                    int ranged = 0;
+                    int magic = 0;
+                    int block = 0;
+                    int dodge = 0;
+
+                    int animalHandling = 0;
+                    int arcaneArts = 0;
+                    int athletics = 0;
+                    int perception = 0;
+                    int practical = 0;
+                    int precision = 0;
+                    int stealth = 0;
+                    int speech = 0;
+
+                    int level = Convert.ToInt32(GeneratorLevelTextBox.Text);
+                    for (int baseLevel = 1; baseLevel <= level; baseLevel++)
+                    {
+                        int combatSkillPoints = GeneratorManager.GetSkillPointsByLevel(baseLevel);
+                        int nonCombatSkillPoints = combatSkillPoints;
+
+                    }
+                }
+                catch (FormatException)
+                {
+                }
+            }
+        }
     }
 }
