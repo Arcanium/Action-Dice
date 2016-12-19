@@ -81,7 +81,7 @@
             this.GeneratorListBox = new System.Windows.Forms.ListBox();
             this.NonCombatGroupBox = new System.Windows.Forms.GroupBox();
             this.NonCombatThirdPreference = new System.Windows.Forms.GroupBox();
-            this.SupriseNonCombatThirdPreference = new System.Windows.Forms.RadioButton();
+            this.SurpriseNonCombatThirdPreference = new System.Windows.Forms.RadioButton();
             this.RandomNonCombatThirdPreference = new System.Windows.Forms.RadioButton();
             this.SpeechNonCombatThirdPreference = new System.Windows.Forms.RadioButton();
             this.StealthNonCombatThirdPreference = new System.Windows.Forms.RadioButton();
@@ -115,7 +115,7 @@
             this.AnimalHandlingNonCombatFirstPreference = new System.Windows.Forms.RadioButton();
             this.CombatGroupBox = new System.Windows.Forms.GroupBox();
             this.CombatThirdPreference = new System.Windows.Forms.GroupBox();
-            this.SupriseCombatThirdPreference = new System.Windows.Forms.RadioButton();
+            this.SurpriseCombatThirdPreference = new System.Windows.Forms.RadioButton();
             this.RandomCombatThirdPreference = new System.Windows.Forms.RadioButton();
             this.DodgeCombatThirdPreference = new System.Windows.Forms.RadioButton();
             this.BlockCombatThirdPreference = new System.Windows.Forms.RadioButton();
@@ -124,7 +124,7 @@
             this.MeleeCombatThirdPreference = new System.Windows.Forms.RadioButton();
             this.MoveCombatThirdPreference = new System.Windows.Forms.RadioButton();
             this.CombatSecondPreference = new System.Windows.Forms.GroupBox();
-            this.SupriseCombatSecondPreference = new System.Windows.Forms.RadioButton();
+            this.SurpriseCombatSecondPreference = new System.Windows.Forms.RadioButton();
             this.RandomCombatSecondPreference = new System.Windows.Forms.RadioButton();
             this.DodgeCombatSecondPreference = new System.Windows.Forms.RadioButton();
             this.BlockCombatSecondPreference = new System.Windows.Forms.RadioButton();
@@ -579,7 +579,7 @@
             // NonCombatThirdPreference
             // 
             this.NonCombatThirdPreference.BackColor = System.Drawing.Color.White;
-            this.NonCombatThirdPreference.Controls.Add(this.SupriseNonCombatThirdPreference);
+            this.NonCombatThirdPreference.Controls.Add(this.SurpriseNonCombatThirdPreference);
             this.NonCombatThirdPreference.Controls.Add(this.RandomNonCombatThirdPreference);
             this.NonCombatThirdPreference.Controls.Add(this.SpeechNonCombatThirdPreference);
             this.NonCombatThirdPreference.Controls.Add(this.StealthNonCombatThirdPreference);
@@ -596,16 +596,16 @@
             this.NonCombatThirdPreference.TabStop = false;
             this.NonCombatThirdPreference.Text = "3rd Preference";
             // 
-            // SupriseNonCombatThirdPreference
+            // SurpriseNonCombatThirdPreference
             // 
-            this.SupriseNonCombatThirdPreference.AutoSize = true;
-            this.SupriseNonCombatThirdPreference.Location = new System.Drawing.Point(188, 42);
-            this.SupriseNonCombatThirdPreference.Name = "SupriseNonCombatThirdPreference";
-            this.SupriseNonCombatThirdPreference.Size = new System.Drawing.Size(93, 17);
-            this.SupriseNonCombatThirdPreference.TabIndex = 9;
-            this.SupriseNonCombatThirdPreference.TabStop = true;
-            this.SupriseNonCombatThirdPreference.Text = "Choose for me";
-            this.SupriseNonCombatThirdPreference.UseVisualStyleBackColor = true;
+            this.SurpriseNonCombatThirdPreference.AutoSize = true;
+            this.SurpriseNonCombatThirdPreference.Location = new System.Drawing.Point(188, 42);
+            this.SurpriseNonCombatThirdPreference.Name = "SurpriseNonCombatThirdPreference";
+            this.SurpriseNonCombatThirdPreference.Size = new System.Drawing.Size(93, 17);
+            this.SurpriseNonCombatThirdPreference.TabIndex = 9;
+            this.SurpriseNonCombatThirdPreference.TabStop = true;
+            this.SurpriseNonCombatThirdPreference.Text = "Choose for me";
+            this.SurpriseNonCombatThirdPreference.UseVisualStyleBackColor = true;
             // 
             // RandomNonCombatThirdPreference
             // 
@@ -621,7 +621,7 @@
             // SpeechNonCombatThirdPreference
             // 
             this.SpeechNonCombatThirdPreference.AutoSize = true;
-            this.SpeechNonCombatThirdPreference.Location = new System.Drawing.Point(6, 180);
+            this.SpeechNonCombatThirdPreference.Location = new System.Drawing.Point(6, 157);
             this.SpeechNonCombatThirdPreference.Name = "SpeechNonCombatThirdPreference";
             this.SpeechNonCombatThirdPreference.Size = new System.Drawing.Size(62, 17);
             this.SpeechNonCombatThirdPreference.TabIndex = 7;
@@ -632,7 +632,7 @@
             // StealthNonCombatThirdPreference
             // 
             this.StealthNonCombatThirdPreference.AutoSize = true;
-            this.StealthNonCombatThirdPreference.Location = new System.Drawing.Point(6, 157);
+            this.StealthNonCombatThirdPreference.Location = new System.Drawing.Point(6, 180);
             this.StealthNonCombatThirdPreference.Name = "StealthNonCombatThirdPreference";
             this.StealthNonCombatThirdPreference.Size = new System.Drawing.Size(58, 17);
             this.StealthNonCombatThirdPreference.TabIndex = 6;
@@ -751,7 +751,7 @@
             // SpeechNonCombatSecondPreference
             // 
             this.SpeechNonCombatSecondPreference.AutoSize = true;
-            this.SpeechNonCombatSecondPreference.Location = new System.Drawing.Point(6, 180);
+            this.SpeechNonCombatSecondPreference.Location = new System.Drawing.Point(6, 157);
             this.SpeechNonCombatSecondPreference.Name = "SpeechNonCombatSecondPreference";
             this.SpeechNonCombatSecondPreference.Size = new System.Drawing.Size(62, 17);
             this.SpeechNonCombatSecondPreference.TabIndex = 7;
@@ -762,7 +762,7 @@
             // StealthNonCombatSecondPreference
             // 
             this.StealthNonCombatSecondPreference.AutoSize = true;
-            this.StealthNonCombatSecondPreference.Location = new System.Drawing.Point(6, 157);
+            this.StealthNonCombatSecondPreference.Location = new System.Drawing.Point(6, 180);
             this.StealthNonCombatSecondPreference.Name = "StealthNonCombatSecondPreference";
             this.StealthNonCombatSecondPreference.Size = new System.Drawing.Size(58, 17);
             this.StealthNonCombatSecondPreference.TabIndex = 6;
@@ -881,7 +881,7 @@
             // SpeechNonCombatFirstPreference
             // 
             this.SpeechNonCombatFirstPreference.AutoSize = true;
-            this.SpeechNonCombatFirstPreference.Location = new System.Drawing.Point(6, 180);
+            this.SpeechNonCombatFirstPreference.Location = new System.Drawing.Point(6, 157);
             this.SpeechNonCombatFirstPreference.Name = "SpeechNonCombatFirstPreference";
             this.SpeechNonCombatFirstPreference.Size = new System.Drawing.Size(62, 17);
             this.SpeechNonCombatFirstPreference.TabIndex = 7;
@@ -892,7 +892,7 @@
             // StealthNonCombatFirstPreference
             // 
             this.StealthNonCombatFirstPreference.AutoSize = true;
-            this.StealthNonCombatFirstPreference.Location = new System.Drawing.Point(6, 157);
+            this.StealthNonCombatFirstPreference.Location = new System.Drawing.Point(6, 180);
             this.StealthNonCombatFirstPreference.Name = "StealthNonCombatFirstPreference";
             this.StealthNonCombatFirstPreference.Size = new System.Drawing.Size(58, 17);
             this.StealthNonCombatFirstPreference.TabIndex = 6;
@@ -982,7 +982,7 @@
             // CombatThirdPreference
             // 
             this.CombatThirdPreference.BackColor = System.Drawing.Color.White;
-            this.CombatThirdPreference.Controls.Add(this.SupriseCombatThirdPreference);
+            this.CombatThirdPreference.Controls.Add(this.SurpriseCombatThirdPreference);
             this.CombatThirdPreference.Controls.Add(this.RandomCombatThirdPreference);
             this.CombatThirdPreference.Controls.Add(this.DodgeCombatThirdPreference);
             this.CombatThirdPreference.Controls.Add(this.BlockCombatThirdPreference);
@@ -997,16 +997,16 @@
             this.CombatThirdPreference.TabStop = false;
             this.CombatThirdPreference.Text = "3rd Preference";
             // 
-            // SupriseCombatThirdPreference
+            // SurpriseCombatThirdPreference
             // 
-            this.SupriseCombatThirdPreference.AutoSize = true;
-            this.SupriseCombatThirdPreference.Location = new System.Drawing.Point(188, 42);
-            this.SupriseCombatThirdPreference.Name = "SupriseCombatThirdPreference";
-            this.SupriseCombatThirdPreference.Size = new System.Drawing.Size(93, 17);
-            this.SupriseCombatThirdPreference.TabIndex = 7;
-            this.SupriseCombatThirdPreference.TabStop = true;
-            this.SupriseCombatThirdPreference.Text = "Choose for me";
-            this.SupriseCombatThirdPreference.UseVisualStyleBackColor = true;
+            this.SurpriseCombatThirdPreference.AutoSize = true;
+            this.SurpriseCombatThirdPreference.Location = new System.Drawing.Point(188, 42);
+            this.SurpriseCombatThirdPreference.Name = "SurpriseCombatThirdPreference";
+            this.SurpriseCombatThirdPreference.Size = new System.Drawing.Size(93, 17);
+            this.SurpriseCombatThirdPreference.TabIndex = 7;
+            this.SurpriseCombatThirdPreference.TabStop = true;
+            this.SurpriseCombatThirdPreference.Text = "Choose for me";
+            this.SurpriseCombatThirdPreference.UseVisualStyleBackColor = true;
             // 
             // RandomCombatThirdPreference
             // 
@@ -1088,7 +1088,7 @@
             // CombatSecondPreference
             // 
             this.CombatSecondPreference.BackColor = System.Drawing.Color.White;
-            this.CombatSecondPreference.Controls.Add(this.SupriseCombatSecondPreference);
+            this.CombatSecondPreference.Controls.Add(this.SurpriseCombatSecondPreference);
             this.CombatSecondPreference.Controls.Add(this.RandomCombatSecondPreference);
             this.CombatSecondPreference.Controls.Add(this.DodgeCombatSecondPreference);
             this.CombatSecondPreference.Controls.Add(this.BlockCombatSecondPreference);
@@ -1103,16 +1103,16 @@
             this.CombatSecondPreference.TabStop = false;
             this.CombatSecondPreference.Text = "2nd Preference";
             // 
-            // SupriseCombatSecondPreference
+            // SurpriseCombatSecondPreference
             // 
-            this.SupriseCombatSecondPreference.AutoSize = true;
-            this.SupriseCombatSecondPreference.Location = new System.Drawing.Point(195, 44);
-            this.SupriseCombatSecondPreference.Name = "SupriseCombatSecondPreference";
-            this.SupriseCombatSecondPreference.Size = new System.Drawing.Size(93, 17);
-            this.SupriseCombatSecondPreference.TabIndex = 7;
-            this.SupriseCombatSecondPreference.TabStop = true;
-            this.SupriseCombatSecondPreference.Text = "Choose for me";
-            this.SupriseCombatSecondPreference.UseVisualStyleBackColor = true;
+            this.SurpriseCombatSecondPreference.AutoSize = true;
+            this.SurpriseCombatSecondPreference.Location = new System.Drawing.Point(195, 44);
+            this.SurpriseCombatSecondPreference.Name = "SurpriseCombatSecondPreference";
+            this.SurpriseCombatSecondPreference.Size = new System.Drawing.Size(93, 17);
+            this.SurpriseCombatSecondPreference.TabIndex = 7;
+            this.SurpriseCombatSecondPreference.TabStop = true;
+            this.SurpriseCombatSecondPreference.Text = "Choose for me";
+            this.SurpriseCombatSecondPreference.UseVisualStyleBackColor = true;
             // 
             // RandomCombatSecondPreference
             // 
@@ -1296,7 +1296,7 @@
             this.MoveCombatFirstPreference.TabStop = true;
             this.MoveCombatFirstPreference.Text = "Move";
             this.MoveCombatFirstPreference.UseVisualStyleBackColor = true;
-            // 
+            // Mercanary -- Because Isaac asked me to put this here.
             // EncounterTab
             // 
             this.EncounterTab.BackColor = System.Drawing.Color.Silver;
@@ -1406,7 +1406,7 @@
         private System.Windows.Forms.RadioButton RangedCombatFirstPreference;
         private System.Windows.Forms.RadioButton MeleeCombatFirstPreference;
         private System.Windows.Forms.RadioButton MoveCombatFirstPreference;
-        private System.Windows.Forms.RadioButton SupriseCombatSecondPreference;
+        private System.Windows.Forms.RadioButton SurpriseCombatSecondPreference;
         private System.Windows.Forms.RadioButton RandomCombatSecondPreference;
         private System.Windows.Forms.RadioButton DodgeCombatSecondPreference;
         private System.Windows.Forms.RadioButton BlockCombatSecondPreference;
@@ -1414,7 +1414,7 @@
         private System.Windows.Forms.RadioButton RangedCombatSecondPreference;
         private System.Windows.Forms.RadioButton MeleeCombatSecondPreference;
         private System.Windows.Forms.RadioButton MoveCombatSecondPreference;
-        private System.Windows.Forms.RadioButton SupriseCombatThirdPreference;
+        private System.Windows.Forms.RadioButton SurpriseCombatThirdPreference;
         private System.Windows.Forms.RadioButton RandomCombatThirdPreference;
         private System.Windows.Forms.RadioButton DodgeCombatThirdPreference;
         private System.Windows.Forms.RadioButton BlockCombatThirdPreference;
@@ -1450,7 +1450,7 @@
         private System.Windows.Forms.RadioButton AthleticsNonCombatThirdPreference;
         private System.Windows.Forms.RadioButton ArcaneArtsNonCombatThirdPreference;
         private System.Windows.Forms.RadioButton AnimalHandlingNonCombatThirdPreference;
-        private System.Windows.Forms.RadioButton SupriseNonCombatThirdPreference;
+        private System.Windows.Forms.RadioButton SurpriseNonCombatThirdPreference;
         private System.Windows.Forms.RadioButton RandomNonCombatThirdPreference;
     }
 }

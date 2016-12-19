@@ -326,48 +326,107 @@ namespace Action_Dice
 
         #region Generator
 
-        #endregion
+
 
         private void GeneratorClear_Click(object sender, EventArgs e)
         {
             GeneratorListBox.Items.Clear();
         }
 
-        //Normally I would pass this workload off to the manager, but it would involve passing like 50+ objects until I figure out a better way to do it.
         private void Generate_Click(object sender, EventArgs e)
         {
             if (GeneratorLevelTextBox.Text != "")
             {
                 try
                 {
-                    int move = 0;
-                    int melee = 0;
-                    int ranged = 0;
-                    int magic = 0;
-                    int block = 0;
-                    int dodge = 0;
-
-                    int animalHandling = 0;
-                    int arcaneArts = 0;
-                    int athletics = 0;
-                    int perception = 0;
-                    int practical = 0;
-                    int precision = 0;
-                    int stealth = 0;
-                    int speech = 0;
-
                     int level = Convert.ToInt32(GeneratorLevelTextBox.Text);
+
+                    if (SurpriseCombatFirstPreference.Checked)
+                        GeneratorManager.CombatPreferenceSelect(MoveCombatFirstPreference, MeleeCombatFirstPreference, RangedCombatFirstPreference,
+                            MagicCombatFirstPreference, BlockCombatFirstPreference, DodgeCombatFirstPreference, RandomCombatFirstPreference);
+                    if (SurpriseCombatSecondPreference.Checked)
+                        GeneratorManager.CombatPreferenceSelect(MoveCombatSecondPreference, MeleeCombatSecondPreference, RangedCombatSecondPreference,
+                            MagicCombatSecondPreference, BlockCombatSecondPreference, DodgeCombatSecondPreference, RandomCombatSecondPreference);
+                    if (SurpriseCombatThirdPreference.Checked)
+                        GeneratorManager.CombatPreferenceSelect(MoveCombatThirdPreference, MeleeCombatThirdPreference, RangedCombatThirdPreference,
+                            MagicCombatThirdPreference, BlockCombatThirdPreference, DodgeCombatThirdPreference, RandomCombatThirdPreference);
+
+                    //Make this work for non-combat
+                    if (SurpriseNonCombatFirstPreference.Checked)
+                        GeneratorManager.NonCombatPreferenceSelect(AnimalHandlingNonCombatFirstPreference, ArcaneArtsNonCombatFirstPreference, AthleticsNonCombatFirstPreference,
+                            PerceptionNonCombatFirstPreference, PracticalNonCombatFirstPreference, PrecisionNonCombatFirstPreference, SpeechNonCombatFirstPreference,
+                            StealthNonCombatFirstPreference, RandomNonCombatFirstPreference);
+                    if (SurpriseNonCombatSecondPreference.Checked)
+                        GeneratorManager.NonCombatPreferenceSelect(AnimalHandlingNonCombatSecondPreference, ArcaneArtsNonCombatSecondPreference, AthleticsNonCombatSecondPreference,
+                            PerceptionNonCombatSecondPreference, PracticalNonCombatSecondPreference, PrecisionNonCombatSecondPreference, SpeechNonCombatSecondPreference,
+                            StealthNonCombatSecondPreference, RandomNonCombatSecondPreference);
+                    if (SurpriseNonCombatThirdPreference.Checked)
+                        GeneratorManager.NonCombatPreferenceSelect(AnimalHandlingNonCombatThirdPreference, ArcaneArtsNonCombatThirdPreference, AthleticsNonCombatThirdPreference,
+                            PerceptionNonCombatThirdPreference, PracticalNonCombatThirdPreference, PrecisionNonCombatThirdPreference, SpeechNonCombatThirdPreference,
+                            StealthNonCombatThirdPreference, RandomNonCombatThirdPreference);
+
                     for (int baseLevel = 1; baseLevel <= level; baseLevel++)
                     {
                         int combatSkillPoints = GeneratorManager.GetSkillPointsByLevel(baseLevel);
                         int nonCombatSkillPoints = combatSkillPoints;
 
+                        GeneratorManager.CombatSkillSelect(MoveCombatFirstPreference, MeleeCombatFirstPreference, RangedCombatFirstPreference,
+                            MagicCombatFirstPreference, BlockCombatFirstPreference, DodgeCombatFirstPreference, RandomCombatFirstPreference, baseLevel);
+                        combatSkillPoints--;
+                        if (combatSkillPoints > 0)
+                        {
+                            GeneratorManager.CombatSkillSelect(MoveCombatSecondPreference, MeleeCombatSecondPreference, RangedCombatSecondPreference,
+                            MagicCombatSecondPreference, BlockCombatSecondPreference, DodgeCombatSecondPreference, RandomCombatSecondPreference, baseLevel);
+                            combatSkillPoints--;
+                        }
+                        if (combatSkillPoints > 0)
+                        {
+                            GeneratorManager.CombatSkillSelect(MoveCombatThirdPreference, MeleeCombatThirdPreference, RangedCombatThirdPreference,
+                            MagicCombatThirdPreference, BlockCombatThirdPreference, DodgeCombatThirdPreference, RandomCombatThirdPreference, baseLevel);
+                            combatSkillPoints--;
+                        }
+                        while (combatSkillPoints > 0)
+                        {
+                            GeneratorManager.RandomCombatSkillSelect(baseLevel);
+                            combatSkillPoints--;
+                        }
+
+                        GeneratorManager.NonCombatSkillSelect(AnimalHandlingNonCombatFirstPreference, ArcaneArtsNonCombatFirstPreference, AthleticsNonCombatFirstPreference,
+                            PerceptionNonCombatFirstPreference, PracticalNonCombatFirstPreference, PrecisionNonCombatFirstPreference, SpeechNonCombatFirstPreference,
+                            StealthNonCombatFirstPreference, RandomNonCombatFirstPreference, baseLevel);
+                        nonCombatSkillPoints--;
+                        if (nonCombatSkillPoints > 0)
+                        {
+                            GeneratorManager.NonCombatSkillSelect(AnimalHandlingNonCombatSecondPreference, ArcaneArtsNonCombatSecondPreference, AthleticsNonCombatSecondPreference,
+                                PerceptionNonCombatSecondPreference, PracticalNonCombatSecondPreference, PrecisionNonCombatSecondPreference, SpeechNonCombatSecondPreference,
+                                StealthNonCombatSecondPreference, RandomNonCombatSecondPreference, baseLevel);
+                            nonCombatSkillPoints--;
+                        }
+                        if (nonCombatSkillPoints > 0)
+                        {
+                            GeneratorManager.NonCombatSkillSelect(AnimalHandlingNonCombatThirdPreference, ArcaneArtsNonCombatThirdPreference, AthleticsNonCombatThirdPreference,
+                                PerceptionNonCombatThirdPreference, PracticalNonCombatThirdPreference, PrecisionNonCombatThirdPreference, SpeechNonCombatThirdPreference,
+                                StealthNonCombatThirdPreference, RandomNonCombatThirdPreference, baseLevel);
+                            nonCombatSkillPoints--;
+                        }
+                        while (nonCombatSkillPoints > 0)
+                        {
+                            GeneratorManager.RandomNonCombatSkillSelect(baseLevel);
+                            nonCombatSkillPoints--;
+                        }
                     }
+                    //Print out the results.
+                    if (GeneratorLevelTextBox.Text != "")
+                        GeneratorManager.CreateCharacter(GeneratorListBox, level, GeneratorNameTextBox.Text);
+                    else
+                        GeneratorManager.CreateCharacter(GeneratorListBox, level);
                 }
                 catch (FormatException)
                 {
                 }
             }
         }
+
+        #endregion
     }
 }
