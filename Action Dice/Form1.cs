@@ -326,8 +326,6 @@ namespace Action_Dice
 
         #region Generator
 
-
-
         private void GeneratorClear_Click(object sender, EventArgs e)
         {
             GeneratorListBox.Items.Clear();
@@ -351,7 +349,6 @@ namespace Action_Dice
                         GeneratorManager.CombatPreferenceSelect(MoveCombatThirdPreference, MeleeCombatThirdPreference, RangedCombatThirdPreference,
                             MagicCombatThirdPreference, BlockCombatThirdPreference, DodgeCombatThirdPreference, RandomCombatThirdPreference);
 
-                    //Make this work for non-combat
                     if (SurpriseNonCombatFirstPreference.Checked)
                         GeneratorManager.NonCombatPreferenceSelect(AnimalHandlingNonCombatFirstPreference, ArcaneArtsNonCombatFirstPreference, AthleticsNonCombatFirstPreference,
                             PerceptionNonCombatFirstPreference, PracticalNonCombatFirstPreference, PrecisionNonCombatFirstPreference, SpeechNonCombatFirstPreference,
@@ -415,11 +412,10 @@ namespace Action_Dice
                             nonCombatSkillPoints--;
                         }
                     }
+
                     //Print out the results.
-                    if (GeneratorLevelTextBox.Text != "")
-                        GeneratorManager.CreateCharacter(GeneratorListBox, level, GeneratorNameTextBox.Text);
-                    else
-                        GeneratorManager.CreateCharacter(GeneratorListBox, level);
+                    GeneratorManager.CreateCharacter(GeneratorListBox, level, GeneratorNameTextBox.Text);
+
                 }
                 catch (FormatException)
                 {

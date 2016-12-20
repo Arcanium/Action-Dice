@@ -1,0 +1,9 @@
+C:\Users\Arcanium\Documents\GitHub\Action-Dice\Action Dice\bin\Release\Action Dice.exe.config
+C:\Users\Arcanium\Documents\GitHub\Action-Dice\Action Dice\bin\Release\Action Dice.exe
+C:\Users\Arcanium\Documents\GitHub\Action-Dice\Action Dice\bin\Release\Action Dice.pdb
+C:\Users\Arcanium\Documents\GitHub\Action-Dice\Action Dice\obj\Release\Action Dice.csprojResolveAssemblyReference.cache
+C:\Users\Arcanium\Documents\GitHub\Action-Dice\Action Dice\obj\Release\Action_Dice.Form1.resources
+C:\Users\Arcanium\Documents\GitHub\Action-Dice\Action Dice\obj\Release\Action_Dice.Properties.Resources.resources
+C:\Users\Arcanium\Documents\GitHub\Action-Dice\Action Dice\obj\Release\Action Dice.csproj.GenerateResource.Cache
+C:\Users\Arcanium\Documents\GitHub\Action-Dice\Action Dice\obj\Release\Action Dice.exe
+C:\Users\Arcanium\Documents\GitHub\Action-Dice\Action Dice\obj\Release\Action Dice.pdb

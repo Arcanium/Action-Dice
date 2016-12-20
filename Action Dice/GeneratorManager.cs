@@ -218,6 +218,9 @@ namespace Action_Dice
         //Alternatively I could just put a blank return after every statement.
         public static int RandomCombatSkillSelect(int level)
         {
+            if (move == level && melee == level && ranged == level &&
+                magic == level && block == level && dodge == level)
+                return 0;
             for (;;)
             {
                 int randomNumber = rando.Next(1, 7);
@@ -255,6 +258,9 @@ namespace Action_Dice
         
         public static int RandomNonCombatSkillSelect(int level)
         {
+            if (animalHandling == level && arcaneArts == level && athletics == level && perception == level &&
+                practical == level && precision == level && speech == level && stealth == level)
+                return 0;
             for (;;)
             {
                 int randomNumber = rando.Next(1, 9);
@@ -298,9 +304,9 @@ namespace Action_Dice
             }
         }
 
-        public static void CreateCharacter(System.Windows.Forms.ListBox generatorBox, int level, string name = "")
+        public static void CreateCharacter(System.Windows.Forms.ListBox generatorBox, int level, string name)
         {
-            int health = level * 6;
+            int health = level * 6; //"Magic number" -- But it comes straight out of the Action Dice Manual.
             string title = "";
             if (name != "")
             {
