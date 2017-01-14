@@ -144,7 +144,7 @@ namespace Action_Dice
             System.Windows.Forms.RadioButton magicButton, System.Windows.Forms.RadioButton blockButton, System.Windows.Forms.RadioButton dodgeButton,
             System.Windows.Forms.RadioButton randomButton)
         {
-            int randomNumber = rando.Next(1, 8);
+            int randomNumber = rando.Next(1, 7);
             switch (randomNumber)
             {
                 case 1:
@@ -165,9 +165,6 @@ namespace Action_Dice
                 case 6:
                     dodgeButton.Select();
                     break;
-                case 7:
-                    randomButton.Select();
-                    break;
                 default:
                     break;
             }
@@ -178,7 +175,7 @@ namespace Action_Dice
             System.Windows.Forms.RadioButton precisionButton, System.Windows.Forms.RadioButton speechButton, System.Windows.Forms.RadioButton stealthButton,
             System.Windows.Forms.RadioButton randomButton)
         {
-            int randomNumber = rando.Next(1, 10);
+            int randomNumber = rando.Next(1, 9);
             switch (randomNumber)
             {
                 case 1:
@@ -204,9 +201,6 @@ namespace Action_Dice
                     break;
                 case 8:
                     stealthButton.Select();
-                    break;
-                case 9:
-                    randomButton.Select();
                     break;
                 default:
                     break;

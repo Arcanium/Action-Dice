@@ -18,8 +18,8 @@ namespace Action_Dice
             InitializeComponent();
             InitiativeManager.Start(InitiativeListBox, PlayerTurnLabel);
             BattleManager.Start(BattleListBox, DamageListBox);
-            GeneratorManager.Start(MoveCombatFirstPreference, MoveCombatSecondPreference, MoveCombatThirdPreference,
-                AnimalHandlingNonCombatFirstPreference, AnimalHandlingNonCombatSecondPreference, AnimalHandlingNonCombatThirdPreference);
+            GeneratorManager.Start(SurpriseCombatFirstPreference, SurpriseCombatSecondPreference, SurpriseCombatThirdPreference,
+                SurpriseNonCombatFirstPreference, SurpriseNonCombatSecondPreference, SurpriseNonCombatThirdPreference);
         }
 
         #region Initiative

@@ -13,7 +13,7 @@ namespace Action_Dice
 
         public const string TOP_OF_ROUND = "0 Top Of The Round";
         public const string TOP_LABEL_TEXT = "Top of the Round -- All Action Dice refill!";
-        public const string DOWN = " Down";
+        public const string DOWN = "Down"; //I removed a space at the start. Hopefully this doesn't create more problems.
 
         #endregion
 
