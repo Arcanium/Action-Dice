@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Action_Dice
@@ -25,7 +19,7 @@ namespace Action_Dice
         #region Initiative
 
         private int undoRedoTracker = 0;
-        private List<System.Windows.Forms.ListBox> undoInitiativeListBox = new List<ListBox>();
+        private List<ListBox> undoInitiativeListBox = new List<ListBox>();
 
         //adds to the specific spot in the list.
         //Rat 3 would put rat at index 3 in the list.
@@ -92,7 +86,7 @@ namespace Action_Dice
                     Dice roller = new Dice();
                     for (int count = 0; count < Convert.ToInt32(contents[1]); count++)
                     {
-                        InitiativeManager.AddRollPlace(InitiativeListBox, contents[0] + Convert.ToString(count + 1), roller.roll(6, 2));
+                        InitiativeManager.AddRollPlace(InitiativeListBox, contents[0] + Convert.ToString(count + 1), roller.Roll(6, 2));
                     }
 
                     undoRedoTracker = InitiativeManager.UpdateUndoBox(InitiativeListBox, undoInitiativeListBox, undoRedoTracker);
@@ -234,7 +228,7 @@ namespace Action_Dice
                 try
                 {
                     TreasureListBox.Items.Clear();
-                    TreasureListBox.Items.Add(Treasure.compute(Convert.ToInt32(TreasureTextBox.Text)));
+                    TreasureListBox.Items.Add(Treasure.Compute(Convert.ToInt32(TreasureTextBox.Text)));
                     TreasureTextBox.Focus();
                 }
                 catch (FormatException)

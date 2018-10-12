@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Action_Dice
 {
@@ -10,7 +6,7 @@ namespace Action_Dice
     {
         private Random rando = new Random();
 
-        public int roll(int diceSize, int numberOfDice = 1)
+        public int Roll(int diceSize, int numberOfDice = 1)
         {
             int dieSum = 0;
 

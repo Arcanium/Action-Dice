@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Action_Dice
@@ -19,21 +16,23 @@ namespace Action_Dice
 
         #region Public Static Methods
 
-        public static void Start(System.Windows.Forms.ListBox box, System.Windows.Forms.Label label)
+        public static void Start(ListBox box, Label label)
         {
             box.Items.Clear();
             box.Items.Add(TOP_OF_ROUND);
             label.Text = TOP_LABEL_TEXT;
         }
 
-        public static void AddListPlace(System.Windows.Forms.ListBox box, string name, int position = -1)
+        public static void AddListPlace(ListBox box, string name, int position = -1)
         {
             if (position > box.Items.Count || position < 0)
                 position = box.Items.Count;
 
-            InitiativeListNode node = new InitiativeListNode();
-            node.Location = GetLocationList(box, position);
-            node.Name = name;
+            InitiativeListNode node = new InitiativeListNode
+            {
+                Location = GetLocationList(box, position),
+                Name = name
+            };
 
             int positionBelow = ((position + 1) < box.Items.Count) ? position + 1 : 0;
             int positionAbove = ((position - 1) >= 0) ? position - 1 : box.Items.Count - 1;
@@ -51,28 +50,30 @@ namespace Action_Dice
             UpdatePositions(box);
         }
 
-        public static void AddRollPlace(System.Windows.Forms.ListBox box, string name, int roll = -1)
+        public static void AddRollPlace(ListBox box, string name, int roll = -1)
         {
             Dice roller = new Dice();
             if (roll > 12)
                 roll = 12;
             else if (roll < 2)
-                roll = roller.roll(6, 2);
+                roll = roller.Roll(6, 2);
 
-            InitiativeListNode node = new InitiativeListNode();
-            node.Roll = roll;
-            node.Name = name;
+            InitiativeListNode node = new InitiativeListNode
+            {
+                Roll = roll,
+                Name = name,
 
-            node.Location = GetLocationRoll(box, roll);
+                Location = GetLocationRoll(box, roll)
+            };
 
             box.Items.Insert(node.Location, node.ListItem);
 
             UpdatePositions(box);
         }
 
-        public static int UpdateUndoBox(System.Windows.Forms.ListBox box, List<System.Windows.Forms.ListBox> undoBox, int tracker)
+        public static int UpdateUndoBox(ListBox box, List<ListBox> undoBox, int tracker)
         {
-            System.Windows.Forms.ListBox tmp = new ListBox();
+            ListBox tmp = new ListBox();
             tmp.Items.AddRange(box.Items);
 
             TrimUndoListBox(undoBox, tracker);
@@ -81,7 +82,7 @@ namespace Action_Dice
             return ++tracker;
         }
 
-        public static void UpdatePositions(System.Windows.Forms.ListBox box)
+        public static void UpdatePositions(ListBox box)
         {
             int locOfTopOfRound = -1;
             while (!box.Items[++locOfTopOfRound].ToString().Contains(TOP_OF_ROUND)) ;
@@ -94,7 +95,7 @@ namespace Action_Dice
                 {
                     string[] contents = box.Items[locOfTopOfRound].ToString().Split(' ');
                     contents[0] = "0";
-                    string pushVal = String.Join(" ", contents);
+                    string pushVal = string.Join(" ", contents);
                     box.Items.RemoveAt(locOfTopOfRound);
                     box.Items.Insert(locOfTopOfRound, pushVal);
                 }
@@ -113,7 +114,7 @@ namespace Action_Dice
             } while (!box.Items[locOfTopOfRound].ToString().Contains(TOP_OF_ROUND) && box.Items.Count > 1);
         }
 
-        public static void TrimUndoListBox(List<System.Windows.Forms.ListBox> undoBox, int currentPosition)
+        public static void TrimUndoListBox(List<ListBox> undoBox, int currentPosition)
         {
             while (currentPosition < undoBox.Count)
             {
@@ -121,19 +122,19 @@ namespace Action_Dice
             }
         }
 
-        public static string UpdatePlayerTurnLabel(System.Windows.Forms.ListBox box)
+        public static string UpdatePlayerTurnLabel(ListBox box)
         {
-            if (!box.Items[0].ToString().Contains(InitiativeManager.TOP_OF_ROUND))
+            if (!box.Items[0].ToString().Contains(TOP_OF_ROUND))
                 return box.Items[0].ToString().Split(' ')[1];
             else
-                return InitiativeManager.TOP_LABEL_TEXT;
+                return TOP_LABEL_TEXT;
         }
 
         #endregion
 
         #region Private Static Methods
 
-        private static int GetLocationList(System.Windows.Forms.ListBox box, int position)
+        private static int GetLocationList(ListBox box, int position)
         {
             int locOfTopOfRound = 0;
             while (!box.Items[locOfTopOfRound++].ToString().Contains(TOP_OF_ROUND)) ;
@@ -148,7 +149,7 @@ namespace Action_Dice
             return locOfTopOfRound;
         }
 
-        private static int GetLocationRoll(System.Windows.Forms.ListBox box, int roll)
+        private static int GetLocationRoll(ListBox box, int roll)
         {
             for (int position = 0; position < box.Items.Count; position++)
             {

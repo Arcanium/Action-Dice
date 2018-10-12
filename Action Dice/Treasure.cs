@@ -1,21 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Action_Dice
 {
     class Treasure
     {
 
-        public static string compute(int dungeonLevel)
+        public static string Compute(int dungeonLevel)
         {
             Dice roller = new Dice();
             String result = "";
             bool gear = false;
 
-            int comNonCom = roller.roll(2);
+            int comNonCom = roller.Roll(2);
             bool combatSkills;
 
             if (comNonCom == 1)
@@ -27,7 +23,7 @@ namespace Action_Dice
                 combatSkills = false;
             }
 
-            int lootType = roller.roll(20);
+            int lootType = roller.Roll(20);
 
             if (lootType == 1)
             {
@@ -72,7 +68,7 @@ namespace Action_Dice
 
             if (gear)
             {
-                int gearType = roller.roll(4);
+                int gearType = roller.Roll(4);
 
                 switch (gearType)
                 {
@@ -96,7 +92,7 @@ namespace Action_Dice
 
             if (combatSkills)
             {
-                int skillChoice = roller.roll(6);
+                int skillChoice = roller.Roll(6);
 
                 switch (skillChoice)
                 {
@@ -125,7 +121,7 @@ namespace Action_Dice
             }
             else
             {
-                int skillChoice = roller.roll(8);
+                int skillChoice = roller.Roll(8);
 
                 switch (skillChoice)
                 {

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Action_Dice
 {
@@ -70,24 +66,26 @@ namespace Action_Dice
             {
                 if (box.Items[index].ToString().Split(' ').Length > 3)
                 {
-                    BattleNode node = new BattleNode();
-                    node.BattleItem = box.Items[index].ToString();
+                    BattleNode node = new BattleNode
+                    {
+                        BattleItem = box.Items[index].ToString()
+                    };
                     box.Items.RemoveAt(index);
                     if (node.DefenseType == PASS)
                     {
-                        int attack = roller.roll(6, node.AttackRoll) + node.AttackBonus;
+                        int attack = roller.Roll(6, node.AttackRoll) + node.AttackBonus;
                         damage = damage + attack;
                     }
                     else if (node.DefenseType == BLOCK)
                     {
-                        int attack = roller.roll(6, node.AttackRoll) + node.AttackBonus;
-                        int defend = roller.roll(6, node.DefenseRoll) + node.DefenseBonus;
+                        int attack = roller.Roll(6, node.AttackRoll) + node.AttackBonus;
+                        int defend = roller.Roll(6, node.DefenseRoll) + node.DefenseBonus;
                         damage = (defend >= attack) ? damage + 1 : damage + attack - defend;
                     }
                     else if (node.DefenseType == DODGE)
                     {
-                        int attack = roller.roll(6, node.AttackRoll) + node.AttackBonus;
-                        int defend = roller.roll(6, node.DefenseRoll) + (node.DefenseBonus * 2);
+                        int attack = roller.Roll(6, node.AttackRoll) + node.AttackBonus;
+                        int defend = roller.Roll(6, node.DefenseRoll) + (node.DefenseBonus * 2);
                         if (attack > defend)
                             damage = damage + attack;
                     }

@@ -16,3 +16,13 @@ C:\Users\Arcanium\Documents\GitHub\Action-Dice\Action Dice\obj\Debug\Action_Dice
 C:\Users\Arcanium\Documents\GitHub\Action-Dice\Action Dice\obj\Debug\Action_Dice.Properties.Resources.resources
 C:\Users\Arcanium\Documents\GitHub\Action-Dice\Action Dice\obj\Debug\Action Dice.csproj.GenerateResource.Cache
 C:\Users\Arcanium\Documents\GitHub\Action-Dice\Action Dice\obj\Debug\Action Dice.csprojResolveAssemblyReference.cache
+C:\Users\arcth\Source\Repos\Arcanium\Action-Dice\Action Dice\bin\Debug\Action Dice.exe.config
+C:\Users\arcth\Source\Repos\Arcanium\Action-Dice\Action Dice\bin\Debug\Action Dice.exe
+C:\Users\arcth\Source\Repos\Arcanium\Action-Dice\Action Dice\bin\Debug\Action Dice.pdb
+C:\Users\arcth\Source\Repos\Arcanium\Action-Dice\Action Dice\obj\Debug\Action Dice.csprojAssemblyReference.cache
+C:\Users\arcth\Source\Repos\Arcanium\Action-Dice\Action Dice\obj\Debug\Action_Dice.Form1.resources
+C:\Users\arcth\Source\Repos\Arcanium\Action-Dice\Action Dice\obj\Debug\Action_Dice.Properties.Resources.resources
+C:\Users\arcth\Source\Repos\Arcanium\Action-Dice\Action Dice\obj\Debug\Action Dice.csproj.GenerateResource.cache
+C:\Users\arcth\Source\Repos\Arcanium\Action-Dice\Action Dice\obj\Debug\Action Dice.csproj.CoreCompileInputs.cache
+C:\Users\arcth\Source\Repos\Arcanium\Action-Dice\Action Dice\obj\Debug\Action Dice.exe
+C:\Users\arcth\Source\Repos\Arcanium\Action-Dice\Action Dice\obj\Debug\Action Dice.pdb
