@@ -73,16 +73,16 @@ namespace Action_Dice
                 switch (gearType)
                 {
                     case 1:
-                        result = result + "Helm of ";
+                        result += "Helm of ";
                         break;
                     case 2:
-                        result = result + "Armor of ";
+                        result += "Armor of ";
                         break;
                     case 3:
-                        result = result + "Bracers of ";
+                        result += "Bracers of ";
                         break;
                     case 4:
-                        result = result + "Boots of ";
+                        result += "Boots of ";
                         break;
                     default:
                         result += "--gearType is broken--";
@@ -97,25 +97,25 @@ namespace Action_Dice
                 switch (skillChoice)
                 {
                     case 1:
-                        result = result + "Move";
+                        result += "Move";
                         break;
                     case 2:
-                        result = result + "Melee";
+                        result += "Melee";
                         break;
                     case 3:
-                        result = result + "Ranged";
+                        result += "Ranged";
                         break;
                     case 4:
-                        result = result + "Magic";
+                        result += "Magic";
                         break;
                     case 5:
-                        result = result + "Block";
+                        result += "Block";
                         break;
                     case 6:
-                        result = result + "Dodge";
+                        result += "Dodge";
                         break;
                     default:
-                        result = result + "-1-combatSkills is broken--";
+                        result += "-1-combatSkills is broken--";
                         break;
                 }
             }
@@ -126,31 +126,31 @@ namespace Action_Dice
                 switch (skillChoice)
                 {
                     case 1:
-                        result = result + "Animal Handling";
+                        result += "Animal Handling";
                         break;
                     case 2:
-                        result = result + "Arcane Arts";
+                        result += "Arcane Arts";
                         break;
                     case 3:
-                        result = result + "Athletics";
+                        result += "Athletics";
                         break;
                     case 4:
-                        result = result + "Perception";
+                        result += "Perception";
                         break;
                     case 5:
-                        result = result + "Practical";
+                        result += "Practical";
                         break;
                     case 6:
-                        result = result + "Precision";
+                        result += "Precision";
                         break;
                     case 7:
-                        result = result + "Speech";
+                        result += "Speech";
                         break;
                     case 8:
-                        result = result + "Stealth";
+                        result += "Stealth";
                         break;
                     default:
-                        result = result + "-2-combatSkills is broken--";
+                        result += "-2-combatSkills is broken--";
                         break;
                 }
             }

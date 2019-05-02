@@ -43,7 +43,7 @@ namespace Action_Dice
             do
             {
                 skillPoints++;
-                level = level - 4;
+                level -= 4;
             } while (level >= 0);
             return skillPoints;
         }

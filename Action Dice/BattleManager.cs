@@ -74,7 +74,7 @@ namespace Action_Dice
                     if (node.DefenseType == PASS)
                     {
                         int attack = roller.Roll(6, node.AttackRoll) + node.AttackBonus;
-                        damage = damage + attack;
+                        damage += attack;
                     }
                     else if (node.DefenseType == BLOCK)
                     {
@@ -87,7 +87,7 @@ namespace Action_Dice
                         int attack = roller.Roll(6, node.AttackRoll) + node.AttackBonus;
                         int defend = roller.Roll(6, node.DefenseRoll) + (node.DefenseBonus * 2);
                         if (attack > defend)
-                            damage = damage + attack;
+                            damage += attack;
                     }
                 }
                 else
