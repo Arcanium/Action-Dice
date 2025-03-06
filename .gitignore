@@ -64,3 +64,12 @@ Temporary Items
 /Action Dice/obj/Debug/Action Dice.csproj.FileListAbsolute.txt
 *.json
 /.vs/Action-Dice/copilot-chat/1c251ab6/sessions/2f664509-9845-4226-b920-1a90096a0fea
+/.vs/Action Dice/CopilotIndices/17.13.433.20974/CodeChunks.db
+/.vs/Action Dice/CopilotIndices/17.13.433.20974/CodeChunks.db-shm
+/.vs/Action Dice/CopilotIndices/17.13.433.20974/CodeChunks.db-wal
+/.vs/Action Dice/CopilotIndices/17.13.433.20974/SemanticSymbols.db
+/.vs/Action Dice/CopilotIndices/17.13.433.20974/SemanticSymbols.db-shm
+/.vs/Action Dice/CopilotIndices/17.13.433.20974/SemanticSymbols.db-wal
+*.v2
+/.vs/Action Dice/v17/.suo
+*.bin
