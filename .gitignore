@@ -49,3 +49,4 @@ Temporary Items
 /.vs/Action Dice/v16/Server/sqlite3
 /.vs/Action-Dice/FileContentIndex/6b676a0e-9dac-4f15-862e-0d6602800b43.vsidx
 /.vs/slnx.sqlite
+*.vsidx
