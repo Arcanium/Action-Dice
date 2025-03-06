@@ -1,0 +1,17 @@
+C:\Users\User\Source\Repos\Arcanium\Action-Dice\Action Dice\bin\Debug\net9.0-windows\Action Dice.exe
+C:\Users\User\Source\Repos\Arcanium\Action-Dice\Action Dice\bin\Debug\net9.0-windows\Action Dice.dll.config
+C:\Users\User\Source\Repos\Arcanium\Action-Dice\Action Dice\bin\Debug\net9.0-windows\Action Dice.deps.json
+C:\Users\User\Source\Repos\Arcanium\Action-Dice\Action Dice\bin\Debug\net9.0-windows\Action Dice.runtimeconfig.json
+C:\Users\User\Source\Repos\Arcanium\Action-Dice\Action Dice\bin\Debug\net9.0-windows\Action Dice.dll
+C:\Users\User\Source\Repos\Arcanium\Action-Dice\Action Dice\bin\Debug\net9.0-windows\Action Dice.pdb
+C:\Users\User\Source\Repos\Arcanium\Action-Dice\Action Dice\obj\Debug\net9.0-windows\Action_Dice.Form1.resources
+C:\Users\User\Source\Repos\Arcanium\Action-Dice\Action Dice\obj\Debug\net9.0-windows\Action_Dice.Properties.Resources.resources
+C:\Users\User\Source\Repos\Arcanium\Action-Dice\Action Dice\obj\Debug\net9.0-windows\Action Dice.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\Arcanium\Action-Dice\Action Dice\obj\Debug\net9.0-windows\Action Dice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Source\Repos\Arcanium\Action-Dice\Action Dice\obj\Debug\net9.0-windows\Action Dice.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Arcanium\Action-Dice\Action Dice\obj\Debug\net9.0-windows\Action Dice.sourcelink.json
+C:\Users\User\Source\Repos\Arcanium\Action-Dice\Action Dice\obj\Debug\net9.0-windows\Action Dice.dll
+C:\Users\User\Source\Repos\Arcanium\Action-Dice\Action Dice\obj\Debug\net9.0-windows\refint\Action Dice.dll
+C:\Users\User\Source\Repos\Arcanium\Action-Dice\Action Dice\obj\Debug\net9.0-windows\Action Dice.pdb
+C:\Users\User\Source\Repos\Arcanium\Action-Dice\Action Dice\obj\Debug\net9.0-windows\Action Dice.genruntimeconfig.cache
+C:\Users\User\Source\Repos\Arcanium\Action-Dice\Action Dice\obj\Debug\net9.0-windows\ref\Action Dice.dll
