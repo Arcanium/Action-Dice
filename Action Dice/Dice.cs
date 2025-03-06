@@ -4,7 +4,7 @@ namespace Action_Dice
 {
     class Dice
     {
-        private Random rando = new Random();
+        private readonly Random rando = new();
 
         public int Roll(int diceSize, int numberOfDice = 1)
         {
